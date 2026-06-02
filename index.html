@@ -2,225 +2,310 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamza Shahid | Fullstack & Android Developer</title>
+  <title>Hamza Shahid | Android Developer</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-
   <div id="lightbox" onclick="closeLightbox()">
-    <span>&times;</span>
-    <img id="lightbox-img" src="" alt="Fullscreen Screenshot">
-  </div>
-
-  <header class="hero">
+  <span>&times;</span>
+  <img id="lightbox-img" src="" alt="Fullscreen Screenshot">
+</div>
+<body>
+  <header>
     <h1>Hamza Shahid</h1>
-    <p class="subtitle">Fullstack Developer | Kotlin | Java | Laravel | Firebase | Vue.js</p>
-    <a href="resume.pdf" class="btn-primary" download>Download Resume</a>
+    <p>Fullstack Developer | Kotlin | Java | Laravel | Firebase | Vue.js | Mobile Apps | Web | REST APIs</p>
+    <a href="resume.pdf" download>Download Resume</a>
   </header>
 
-  <section id="projects" class="container">
-    <h2>Selected Works</h2>
+  <section id="projects">
+    <h2>Projects Done</h2>
     <div class="project-grid">
 
-      <div class="project-card" onclick="showModal('socialapp')">
-        <img src="apps/laughlogo.png" alt="Social App Logo">
-        <div class="card-content">
-          <h3>Social App</h3>
-          <p>Short videos, professional profiles, and real-time engagement.</p>
-        </div>
-      </div>
+        <div class="project-card" onclick="showModal('socialapp')">
+        <img src="apps/laughlogo.png" alt="Socialapp Logo">
+        <h3>Social App</h3>
+<p>A powerful social media app blending short videos, professional profiles, and real-time engagement.</p>
 
+      </div>
+    
+      
       <a class="project-card" href="https://play.google.com/store/apps/details?id=com.msolution.shopmanagment" target="_blank" rel="noopener noreferrer">
-        <img src="apps/repairingshop_logo.png" alt="Mobile Repairing Shop Logo">
-        <div class="card-content">
-          <h3>Mobile Repairing Shop</h3>
-          <p>Repairing Shop Manager & Computer Service Software.</p>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://play.google.com/store/apps/details?id=com.blackbox.mobile" target="_blank" rel="noopener noreferrer">
-        <img src="apps/blackboxlogo.webp" alt="Black Box Backup Logo">
-        <div class="card-content">
-          <h3>Black Box Backup</h3>
-          <p>Encrypted backup solution to protect and recover important data securely.</p>
-        </div>
-      </a>
-
+  <img src="apps/repairingshop_logo.png" alt="repairingshop Logo">
+  <h3>Mobile Repairing Shop Manager</h3>
+  <p>Repairing Shop Manager & Computer Service Software</p>
+</a>
+       
+<a class="project-card" href="https://play.google.com/store/apps/details?id=com.blackbox.mobile" target="_blank" rel="noopener noreferrer">
+  <img src="apps/blackboxlogo.webp" alt="blackboxlogo">
+  <h3>Black Box Backup</h3>
+  <p>It's a Encrypted backup solution that helps you protect and recover your important data anytime. Your photos, contacts, files and notes are safely backed up and can be restored easily when needed</p>
+</a>
+      
       <div class="project-card" onclick="showModal('musicshare')">
-        <img src="apps/musicshare_logo.webp" alt="Sync Beat Logo">
-        <div class="card-content">
-          <h3>Sync Beat - MusicShare</h3>
-          <p>Real-time music sharing app with call & sync features.</p>
-        </div>
+        <img src="apps/musicshare_logo.webp" alt="MusicShare Logo">
+        <h3>Sync Beat - MusicShare</h3>
+        <p>Real-time music sharing app with call & sync features.</p>
       </div>
 
-      <a class="project-card" href="https://play.google.com/store/apps/details?id=com.business.magicreviews" target="_blank" rel="noopener noreferrer">
-        <img src="apps/magicreviews-logo.webp" alt="Magic Reviews Logo">
-        <div class="card-content">
-          <h3>Magic Reviews</h3>
-          <p>Streamlines customer feedback collection for business managers.</p>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://play.google.com/store/apps/details?id=video.download.downloader.snap.tubex&hl=en" target="_blank" rel="noopener noreferrer">
+         <a class="project-card" href="https://play.google.com/store/apps/details?id=com.business.magicreviews" target="_blank" rel="noopener noreferrer">
+  <img src="apps/magicreviews-logo.webp" alt="repairingshop Logo">
+  <h3>Magic Reviews-Business Manager</h3>
+  <p>Magic Review streamlines customer feedback collection, allowing businesses to gather valuable insights with just a single click</p>
+</a>
+      
+<!--       <div class="project-card" onclick="showModal('videosaver')">
         <img src="apps/videosaver_logo.webp" alt="VideoSaver Logo">
-        <div class="card-content">
-          <h3>VideoSaver</h3>
-          <p>Video downloader with multi-source background downloads.</p>
-        </div>
-      </a>
+        <h3>VideoSaver</h3>
+        <p>Video downloader with multi-source background downloads.</p>
+      </div>
+ -->
+  <a class="project-card" href="https://play.google.com/store/apps/details?id=video.download.downloader.snap.tubex&hl=en" target="_blank" rel="noopener noreferrer">
+  <img src="apps/videosaver_logo.webp" alt="repairingshop Logo">
+  <h3>VideoSaver</h3>
+  <p>Video downloader with multi-source background downloads.</p>
+</a>
 
-      <div class="project-card" onclick="showModal('geofarming')">
-        <img src="apps/geofarmingapp_logo.webp" alt="GeoFarming Logo">
-        <div class="card-content">
-          <h3>GeoFarming</h3>
-          <p>Precision farming app using geospatial mapping for grazing zones.</p>
-        </div>
+      
+          <div class="project-card" onclick="showModal('geofarming')">
+        <img src="apps/geofarmingapp_logo.webp" alt="geofarming Logo">
+        <h3>GeoFarming</h3>
+<p>A precision farming app that uses a custom algorithm to divide paddocks into equal grazing zones using geospatial mapping.</p>
+      </div>
+<!--         <div class="project-card" onclick="showModal('ebook')">
+        <img src="apps/ebook_logo.webp" alt="geofarming Logo">
+        <h3>Ebook Reader</h3>
+        <p>Video downloader with multi-source background downloads.</p>
+      </div> -->
+
+        <a class="project-card" href="https://play.google.com/store/apps/details?id=pdf.epubreader.quickbook.store.bin&hl=en" target="_blank" rel="noopener noreferrer">
+  <img src="apps/ebook_logo.webp" alt="repairingshop Logo">
+  <h3>Ebook Reader</h3>
+<p>A Java-based ebook reader supporting PDF/EPUB formats with Google Books integration and Amazon Affiliate monetization.</p>
+</a>
+
+      
+       <div class="project-card" onclick="showModal('notessnap')">
+        <img src="apps/notessnap_logo.jpg" alt="geofarming Logo">
+        <h3>Notessnap</h3>
+      <p>A student-driven learning app that lets users share study materials via a custom WordPress API—my second-ever app, started as a hobby project.</p>
+
       </div>
 
-      <a class="project-card" href="https://play.google.com/store/apps/details?id=pdf.epubreader.quickbook.store.bin&hl=en" target="_blank" rel="noopener noreferrer">
-        <img src="apps/ebook_logo.webp" alt="Ebook Reader Logo">
-        <div class="card-content">
-          <h3>Ebook Reader</h3>
-          <p>Java-based reader supporting PDF/EPUB with Google Books integration.</p>
-        </div>
-      </a>
-
-      <div class="project-card" onclick="showModal('notessnap')">
-        <img src="apps/notessnap_logo.jpg" alt="Notessnap Logo">
-        <div class="card-content">
-          <h3>Notessnap</h3>
-          <p>Student-driven learning app for sharing study materials via API.</p>
-        </div>
-      </div>
-
+      
     </div>
   </section>
-
-  <div class="modal" id="modal-socialapp">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('socialapp')">&times;</span>
-      <h2>Social App</h2>
-      <p>A feature-rich social platform combining TikTok-style video sharing and Facebook-like feeds with real-time interactions (like, comment, share). Users can create multiple professional profiles, manage gig calendars, and apply for roles directly. Includes a robust notification system and secure DASH-based video uploads for efficient streaming.</p>
-      <p><strong>Tech Stack:</strong> Java, Kotlin, Laravel, Firebase FCM</p>
-      
-      <div class="screenshot-wrapper">
-        <button class="scroll-btn" onclick="scrollScreenshots('left', this)">&#8592;</button>
-        <div class="screenshots">
-          <img src="apps/socialapp1.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp2.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp3.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-        </div>
-        <button class="scroll-btn" onclick="scrollScreenshots('right', this)">&#8594;</button>
-      </div>
-      <a href="apps/apps/socialapp.apk" download class="btn-secondary">Download APK</a>
-    </div>
-  </div>
 
   <div class="modal" id="modal-musicshare">
     <div class="modal-content">
       <span class="close" onclick="closeModal('musicshare')">&times;</span>
       <h2>SyncBeat</h2>
-      <p>A real-time music sharing app where users can listen together while chatting or even during a phone call. Built using Firebase Realtime Database, it syncs playback controls (play, pause, seek, track change) across devices. The player intelligently switches to the earpiece during SIM calls, allowing shared listening over a call.</p>
-      <p><strong>Tech Stack:</strong> Java, Firebase Realtime Database</p>
+<p>
+  A real-time music sharing app where users can listen together while chatting or even during a phone call. Built using Firebase Realtime Database, it syncs playback controls (play, pause, seek, track change) across devices. The player intelligently switches to the earpiece during SIM calls, allowing shared listening over a call. Developed in 2015 right after graduation.
+</p>
+<p>
+  <strong>Tech Stack:</strong> Java, Firebase Realtime Database
+</p>   
       
       <div class="screenshot-wrapper">
-        <button class="scroll-btn" onclick="scrollScreenshots('left', this)">&#8592;</button>
-        <div class="screenshots">
-          <img src="apps/img01.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-          <img src="apps/img02.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-          <img src="apps/img03.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-        </div>
-        <button class="scroll-btn" onclick="scrollScreenshots('right', this)">&#8594;</button>
-      </div>
-      <a href="apps/apps/musicshare.apk" download class="btn-secondary">Download APK</a>
+  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+
+<div class="screenshots">
+<img src="apps/img01.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img02.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img03.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img04.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img05.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img06.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img07.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img08.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img09.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img10.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img11.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img12.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img13.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/img14.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
+
+</div>
+          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+</div>
+      <br>
+      <a href="apps/apps/musicshare.apk" download class="apk-button">Download APK</a>
     </div>
   </div>
 
-  <div class="modal" id="modal-geofarming">
+
+    <div class="modal" id="modal-geofarming">
     <div class="modal-content">
       <span class="close" onclick="closeModal('geofarming')">&times;</span>
       <h2>GeoFarming</h2>
-      <p>A smart solution for cattle paddock management using geospatial analysis. Built for large-scale farmers, it enables efficient paddock mapping, grazing optimization, and rotation planning.</p>
-      <p><strong>Tech Stack:</strong> Java, Firebase Realtime DB, Google Maps API</p>
-      
+ <p>
+  <strong>GeoFarming App:</strong> A smart solution for cattle paddock management using geospatial analysis. Built for large-scale farmers, it enables efficient paddock mapping, grazing optimization, and rotation planning.
+</p>
+
+<p>
+  Users can map paddocks using Google Maps (by marking or walking), input key parameters like grass cover and intake, and generate optimal divisions using Voronoi diagrams. The app streamlines grazing strategy, enhances productivity, and improves land utilization.
+</p>
+
+<p>
+  <strong>Key Features:</strong> Firebase user profiles, paddock mapping (mark/walk), division calculator, and wire placement guidance.
+</p>
+
+<p>
+  <strong>Tech Stack:</strong> Java, Firebase Realtime DB, Google Maps API
+</p>
       <div class="screenshot-wrapper">
-        <button class="scroll-btn" onclick="scrollScreenshots('left', this)">&#8592;</button>
-        <div class="screenshots">
-          <img src="apps/feofarming_screenshot_7.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_1.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_2.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-        </div>
-        <button class="scroll-btn" onclick="scrollScreenshots('right', this)">&#8594;</button>
-      </div>
+  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+
+<div class="screenshots">
+  <img src="apps/feofarming_screenshot_7.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_1.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_2.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_3.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_4.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_5.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_6.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_8.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_9.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_10.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_11.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_12.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_13.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_14.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/feofarming_screenshot_15.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
+
+
+</div>
+          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+</div>
+      <br>
+      <a href="apps/apps/musicshare.apk" download class="apk-button">Download APK</a>
+    </div>
+  </div>
+  
+  
+  <div class="modal" id="modal-videosaver">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('videosaver')">&times;</span>
+      <h2>VideoSaver</h2>
+      <p>Download videos from multiple sources with ease, supporting background downloads and file management.</p>
+      <br>
+      <a href="apps/apps/videosaver.apk" download class="apk-button">ðŸ“¥ Download APK</a>
     </div>
   </div>
 
-  <div class="modal" id="modal-notessnap">
+    <div class="modal" id="modal-notessnap">
     <div class="modal-content">
       <span class="close" onclick="closeModal('notessnap')">&times;</span>
       <h2>Notessnap</h2>
-      <p>A native Android app built early in my career, connected to a custom WordPress JSON API. NoteSnap empowers students to share and access study materials like quizzes, assignments, and past exams.</p>
-      <p><strong>Tech Stack:</strong> Java, WordPress, Custom JSON API</p>
+<p>
+  <strong>NoteSnap:</strong> A native Android app built early in my career (2nd project), connected to a custom WordPress JSON API. Initially a hobby project during my Mechatronics studies (Batch 2011–2015), NoteSnap empowers students to share and access study materials like quizzes, assignments, and past exams.
+</p>
+<p>
+  Students upload resources under their profiles, earn stars for contributions, and collaborate in a Stack Overflow-like environment. Smart tagging and categorization make content easy to find and organize.
+</p>
+<p>
+  <strong>Tech Stack:</strong> Java, WordPress, Custom JSON API
+</p> 
       
       <div class="screenshot-wrapper">
-        <button class="scroll-btn" onclick="scrollScreenshots('left', this)">&#8592;</button>
-        <div class="screenshots">
-          <img src="apps/notessnap_Screenshot_1.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_2.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-        </div>
-        <button class="scroll-btn" onclick="scrollScreenshots('right', this)">&#8594;</button>
-      </div>
+  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+     
+<div class="screenshots">
+        <img src="apps/notessnap_Screenshot_1.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_2.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_3.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_4.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_5.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_6.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_7.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_8.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_9.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_10.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_11.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_12.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_13.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_14.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_15.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_16.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/notessnap_Screenshot_17.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+   </div>
+          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+     </div>
+      <br>
+      <a href="apps/apps/videosaver.apk" download class="apk-button">Download APK</a>
     </div>
   </div>
 
-  <script>
-    function scrollScreenshots(direction, button) {
-      const container = button.parentElement.querySelector('.screenshots');
-      const scrollAmount = 250;
-      container.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
 
-    function openLightbox(src) {
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').style.display = 'flex';
-    }
+      <div class="modal" id="modal-socialapp">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('socialapp')">&times;</span>
+      <h2>Social App</h2>
+    <p>
+  A feature-rich social platform combining TikTok-style video sharing and Facebook-like feeds with real-time interactions (like, comment, share). Users can create multiple professional profiles, manage gig calendars, and apply for roles directly. Includes a robust notification system and secure DASH-based video uploads for efficient streaming.
+</p>
+<p>
+  <strong>Amazing Features:</strong> Multi-profile system, gig booking, video conversion to DASH, real-time notifications, interactive social feed.
+</p>
+<p>
+  <strong>Tech Stack:</strong> Java, Kotlin, Laravel, Firebase FCM
+</p>
+   <div class="screenshot-wrapper">
+  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+     
+<div class="screenshots">
+<img src="apps/socialapp1.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp2.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp3.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp4.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp5.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp6.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp7.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp8.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp9.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+  
+</div>
+          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+     </div>
+      <br>
+      <a href="apps/apps/videosaver.apk" download class="apk-button">Download APK</a>
+    </div>
+  </div>
 
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
+
+  
+<script>
+  function scrollScreenshots(direction, button) {
+    const container = button.parentElement.querySelector('.screenshots');
+    const scrollAmount = 200;
+    container.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
 
     function showModal(id) {
-      const modal = document.getElementById('modal-' + id);
-      if (modal) {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-      }
+    const modal = document.getElementById('modal-' + id);
+    if (modal) {
+      modal.style.display = 'block';
     }
+  }
 
-    function closeModal(id) {
-      const modal = document.getElementById('modal-' + id);
-      if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
+  function closeModal(id) {
+    const modal = document.getElementById('modal-' + id);
+    if (modal) {
+      modal.style.display = 'none';
     }
-
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-      if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
-    }
-  </script>
+  }
+</script>
 
 </body>
 </html>
