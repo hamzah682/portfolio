@@ -2,310 +2,891 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hamza Shahid | Android Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Graph Meta Tags -->
+  <title>Hamza Shahid | Full-Stack & Mobile Engineer (Flutter, React Native, iOS, Android, SaaS)</title>
+  <meta name="description" content="Senior Fullstack Developer & Mobile App Engineer (iOS & Android / Flutter & React Native). Product builder and all-rounder partner for fast-growing startups and mid-sized businesses.">
+  <meta name="keywords" content="Hamza Shahid, Fullstack Developer, Full Stack Engineer, Mobile App Developer, Flutter Developer, React Native Developer, iOS Developer, Android Developer, Kotlin, Swift, Laravel Developer, Vue.js, React, Node.js, Firebase, SaaS Developer, Startup MVP Builder, REST APIs, PostgreSQL, AWS, The Co-Living Matrix, Repairing Shop Manager, Feaths Games">
+  <meta name="author" content="Hamza Shahid">
+  
+  <meta property="og:title" content="Hamza Shahid | Full-Stack & Mobile Engineer">
+  <meta property="og:description" content="All-rounder Fullstack & Mobile Engineer (Flutter, React Native, iOS, Android, Laravel, Vue, React, SaaS) for startups and growing businesses.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-  <div id="lightbox" onclick="closeLightbox()">
-  <span>&times;</span>
-  <img id="lightbox-img" src="" alt="Fullscreen Screenshot">
-</div>
 <body>
-  <header>
-    <h1>Hamza Shahid</h1>
-    <p>Fullstack Developer | Kotlin | Java | Laravel | Firebase | Vue.js | Mobile Apps | Web | REST APIs</p>
-    <a href="resume.pdf" download>Download Resume</a>
+
+  <!-- Lightbox Overlay for Image Previews -->
+  <div id="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+    <img id="lightbox-img" src="" alt="Fullscreen Preview">
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand">
+        <span class="brand-dot"></span>
+        <span>Hamza<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Expertise</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#why-me" class="nav-link">Why Startups</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="social-icon-link linkedin" title="LinkedIn Profile">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://wa.me/923456575495" target="_blank" rel="noopener noreferrer" class="social-icon-link whatsapp" title="Chat on WhatsApp">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <a href="resume.pdf" download class="btn btn-outline btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+      </div>
+    </div>
   </header>
 
-  <section id="projects">
-    <h2>Projects Done</h2>
-    <div class="project-grid">
-
-        <div class="project-card" onclick="showModal('socialapp')">
-        <img src="apps/laughlogo.png" alt="Socialapp Logo">
-        <h3>Social App</h3>
-<p>A powerful social media app blending short videos, professional profiles, and real-time engagement.</p>
-
-      </div>
-    
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="container hero-grid">
       
-      <a class="project-card" href="https://play.google.com/store/apps/details?id=com.msolution.shopmanagment" target="_blank" rel="noopener noreferrer">
-  <img src="apps/repairingshop_logo.png" alt="repairingshop Logo">
-  <h3>Mobile Repairing Shop Manager</h3>
-  <p>Repairing Shop Manager & Computer Service Software</p>
-</a>
-       
-<a class="project-card" href="https://play.google.com/store/apps/details?id=com.blackbox.mobile" target="_blank" rel="noopener noreferrer">
-  <img src="apps/blackboxlogo.webp" alt="blackboxlogo">
-  <h3>Black Box Backup</h3>
-  <p>It's a Encrypted backup solution that helps you protect and recover your important data anytime. Your photos, contacts, files and notes are safely backed up and can be restored easily when needed</p>
-</a>
-      
-      <div class="project-card" onclick="showModal('musicshare')">
-        <img src="apps/musicshare_logo.webp" alt="MusicShare Logo">
-        <h3>Sync Beat - MusicShare</h3>
-        <p>Real-time music sharing app with call & sync features.</p>
-      </div>
+      <!-- Hero Copy -->
+      <div class="hero-content">
+        <div class="badge-status">
+          <span class="pulse-dot"></span>
+          <span>Available for Startup & Mid-Sized Business Roles</span>
+        </div>
 
-         <a class="project-card" href="https://play.google.com/store/apps/details?id=com.business.magicreviews" target="_blank" rel="noopener noreferrer">
-  <img src="apps/magicreviews-logo.webp" alt="repairingshop Logo">
-  <h3>Magic Reviews-Business Manager</h3>
-  <p>Magic Review streamlines customer feedback collection, allowing businesses to gather valuable insights with just a single click</p>
-</a>
-      
-<!--       <div class="project-card" onclick="showModal('videosaver')">
-        <img src="apps/videosaver_logo.webp" alt="VideoSaver Logo">
-        <h3>VideoSaver</h3>
-        <p>Video downloader with multi-source background downloads.</p>
-      </div>
- -->
-  <a class="project-card" href="https://play.google.com/store/apps/details?id=video.download.downloader.snap.tubex&hl=en" target="_blank" rel="noopener noreferrer">
-  <img src="apps/videosaver_logo.webp" alt="repairingshop Logo">
-  <h3>VideoSaver</h3>
-  <p>Video downloader with multi-source background downloads.</p>
-</a>
+        <h1 class="hero-title">
+          Full-Stack Engineer & <br>
+          <span class="gradient-text">Product Builder</span>
+        </h1>
 
-      
-          <div class="project-card" onclick="showModal('geofarming')">
-        <img src="apps/geofarmingapp_logo.webp" alt="geofarming Logo">
-        <h3>GeoFarming</h3>
-<p>A precision farming app that uses a custom algorithm to divide paddocks into equal grazing zones using geospatial mapping.</p>
-      </div>
-<!--         <div class="project-card" onclick="showModal('ebook')">
-        <img src="apps/ebook_logo.webp" alt="geofarming Logo">
-        <h3>Ebook Reader</h3>
-        <p>Video downloader with multi-source background downloads.</p>
-      </div> -->
+        <p class="hero-subtitle">
+          Cross-Platform Mobile (iOS & Android) • Scalable Web Platforms • SaaS Architecture
+        </p>
 
-        <a class="project-card" href="https://play.google.com/store/apps/details?id=pdf.epubreader.quickbook.store.bin&hl=en" target="_blank" rel="noopener noreferrer">
-  <img src="apps/ebook_logo.webp" alt="repairingshop Logo">
-  <h3>Ebook Reader</h3>
-<p>A Java-based ebook reader supporting PDF/EPUB formats with Google Books integration and Amazon Affiliate monetization.</p>
-</a>
+        <p class="hero-bio">
+          I partner with early-stage startups and expanding mid-sized companies to turn ambitious ideas into robust, scalable software products. From full-cycle SaaS web applications to native and cross-platform mobile apps with <strong>Flutter, React Native, Kotlin, Java, and Swift</strong>, I build reliable systems with high velocity and clean architecture.
+        </p>
 
-      
-       <div class="project-card" onclick="showModal('notessnap')">
-        <img src="apps/notessnap_logo.jpg" alt="geofarming Logo">
-        <h3>Notessnap</h3>
-      <p>A student-driven learning app that lets users share study materials via a custom WordPress API—my second-ever app, started as a hobby project.</p>
+        <div class="hero-highlights">
+          <div class="highlight-pill"><span>⚡</span> Full-Stack SaaS (Laravel, Node, React, Vue)</div>
+          <div class="highlight-pill"><span>📱</span> Cross-Platform Mobile (Flutter & React Native)</div>
+          <div class="highlight-pill"><span>🍎</span> Native iOS & Android Engineering</div>
+          <div class="highlight-pill"><span>🚀</span> Rapid MVP to Production Scale</div>
+        </div>
 
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Featured Systems</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="https://wa.me/923456575495" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp Me</span>
+          </a>
+          <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="resume.pdf" download class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Resume</span>
+          </a>
+        </div>
       </div>
 
-      
+      <!-- Hero Visual / Headshot Card -->
+      <div class="hero-visual">
+        <div class="profile-card-wrapper">
+          <div class="profile-glow"></div>
+          <div class="profile-card">
+            <div class="headshot-img-container">
+              <img src="apps/hamza_headshot.jpg" alt="Hamza Shahid - Fullstack & Mobile Developer" class="headshot-img">
+            </div>
+            <div class="profile-info">
+              <h3 class="profile-name">Hamza Shahid</h3>
+              <p class="profile-role">Full-Stack & Mobile All-Rounder</p>
+              
+              <div class="profile-stats">
+                <div class="stat-box">
+                  <div class="stat-number">10+</div>
+                  <div class="stat-label">Live Systems</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number">End-to-End</div>
+                  <div class="stat-label">Web & Mobile</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- Skills & Keywords Matrix Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Competencies</span>
+        <h2 class="section-title">Technical Mastery & Stack</h2>
+        <p class="section-desc">A unified skillset spanning modern web frontends, heavy-duty backends, cross-platform mobile frameworks, and cloud infrastructure.</p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1: Full-Stack Web & SaaS -->
+        <div class="skill-category-card">
+          <div class="skill-card-icon">💻</div>
+          <h3 class="skill-card-title">Full-Stack Web & SaaS</h3>
+          <p class="skill-card-desc">Architecting responsive, high-converting platforms, multi-tenant databases, and modern SPAs.</p>
+          <div class="skill-tags">
+            <span class="skill-badge">Vue.js</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Next.js</span>
+            <span class="skill-badge">Laravel (PHP)</span>
+            <span class="skill-badge">Node.js</span>
+            <span class="skill-badge">RESTful APIs</span>
+            <span class="skill-badge">GraphQL</span>
+            <span class="skill-badge">PostgreSQL</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">Redis</span>
+            <span class="skill-badge">TailwindCSS</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Mobile Apps (iOS & Android) -->
+        <div class="skill-category-card">
+          <div class="skill-card-icon">📱</div>
+          <h3 class="skill-card-title">Mobile Engineering (iOS & Android)</h3>
+          <p class="skill-card-desc">Cross-platform and native apps built for smooth 60fps performance, offline caching, and native hardware features.</p>
+          <div class="skill-tags">
+            <span class="skill-badge">Flutter (Dart)</span>
+            <span class="skill-badge">React Native</span>
+            <span class="skill-badge">Kotlin</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">Swift / iOS</span>
+            <span class="skill-badge">Firebase Suite</span>
+            <span class="skill-badge">Push Notifications (FCM/APNs)</span>
+            <span class="skill-badge">In-App Purchases</span>
+            <span class="skill-badge">Google Maps API</span>
+            <span class="skill-badge">Background Services</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Cloud, Real-Time & DevOps -->
+        <div class="skill-category-card">
+          <div class="skill-card-icon">☁️</div>
+          <h3 class="skill-card-title">Cloud, Real-Time & DevOps</h3>
+          <p class="skill-card-desc">Production-grade deployments, automated CI/CD pipelines, containerization, and real-time sockets.</p>
+          <div class="skill-tags">
+            <span class="skill-badge">AWS (EC2, S3, RDS)</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">CI/CD Pipelines</span>
+            <span class="skill-badge">WebSockets</span>
+            <span class="skill-badge">Firebase Realtime DB</span>
+            <span class="skill-badge">Nginx</span>
+            <span class="skill-badge">Linux Administration</span>
+            <span class="skill-badge">Payment Gateways (Stripe)</span>
+            <span class="skill-badge">DASH Media Streaming</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Startup & Product Velocity -->
+        <div class="skill-category-card">
+          <div class="skill-card-icon">🚀</div>
+          <h3 class="skill-card-title">Startup Product Strategy</h3>
+          <p class="skill-card-desc">Bridging technical execution with commercial product goals to maximize product-market fit.</p>
+          <div class="skill-tags">
+            <span class="skill-badge">MVP 0-to-1 Build</span>
+            <span class="skill-badge">Multi-Tenant Architecture</span>
+            <span class="skill-badge">Database Modeling</span>
+            <span class="skill-badge">App Store Deployment</span>
+            <span class="skill-badge">Performance Auditing</span>
+            <span class="skill-badge">SEO Optimization</span>
+            <span class="skill-badge">Agile Scrum</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio Showcase</span>
+        <h2 class="section-title">Featured Systems & Production Apps</h2>
+        <p class="section-desc">A selection of live SaaS platforms, cross-platform mobile apps, and real-time software delivered for global users.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-container">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects (10)</button>
+        <button class="filter-btn" onclick="filterProjects('saas', this)">Full-Stack & SaaS</button>
+        <button class="filter-btn" onclick="filterProjects('mobile', this)">Mobile (iOS & Android)</button>
+        <button class="filter-btn" onclick="filterProjects('realtime', this)">Real-Time & Scale</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- 1. The Co-Living Matrix -->
+        <div class="project-card featured" data-category="saas realtime">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">The Co-Living Matrix</h3>
+              <span class="project-category">Fullstack SaaS & Matching Platform</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              A comprehensive shared living & roommate matchmaking platform designed for single parents, professionals, and military members. Includes verified profile verification, smart lifestyle search algorithms, rent/utility calculations, and secure messaging.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Fullstack Web</span>
+              <span class="meta-tag">Laravel</span>
+              <span class="meta-tag">PostgreSQL</span>
+              <span class="meta-tag">Search Algorithm</span>
+              <span class="meta-tag">SEO Optimized</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://thecolivingmatrix.com/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Visit Platform</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <span class="meta-tag">Live in Production</span>
+          </div>
+        </div>
+
+        <!-- 2. Repairing Shop Manager -->
+        <div class="project-card featured" data-category="saas mobile">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <img src="apps/repairingshop_logo.png" alt="Repairing Shop Manager">
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">Repairing Shop Manager</h3>
+              <span class="project-category">Cross-Platform SaaS & Mobile ERP</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              All-in-one service center & repair shop software suite. Empowers shop owners to manage device repair job-sheets, barcode inventory tracking, automated customer status SMS/emails, POS invoices, and cloud reporting across multi-branches.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Cross-Platform</span>
+              <span class="meta-tag">SaaS Web + Mobile</span>
+              <span class="meta-tag">Inventory ERP</span>
+              <span class="meta-tag">Cloud Sync</span>
+              <span class="meta-tag">Invoicing</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://repairingshopmanager.com/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Web SaaS</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.msolution.shopmanagment" target="_blank" rel="noopener noreferrer" class="project-link-btn secondary">
+              <span>Google Play</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Feaths Games / Arena Social -->
+        <div class="project-card featured" data-category="saas realtime">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><polygon points="6 2 18 2 18 6 6 6 6 2"/><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="9" cy="13" r="1.5"/><circle cx="15" cy="13" r="1.5"/></svg>
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">Feaths Games / Arena Social</h3>
+              <span class="project-category">Interactive Social & Real-Time Gaming</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              A high-performance interactive gaming hub and social feed platform. Features real-time multiplayer timelines, dynamic theme personalization, touch-optimized mobile web layout, and low-latency social engagement modules.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Vue / Modern JS</span>
+              <span class="meta-tag">Real-Time Hub</span>
+              <span class="meta-tag">Interactive Gaming</span>
+              <span class="meta-tag">Dynamic UI</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://feaths.games/#/social" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Launch Arena</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <span class="meta-tag">Live Gaming Web</span>
+          </div>
+        </div>
+
+        <!-- 4. Social App & Talent Marketplace -->
+        <div class="project-card" data-category="saas mobile realtime">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <img src="apps/laughlogo.png" alt="Social App">
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">Social Media & Gig Hub</h3>
+              <span class="project-category">Fullstack Mobile + Laravel API</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              A rich social media platform blending TikTok-style short video feeds with gig bookings and multi-profile talent portfolios. Features automatic DASH video transcode streaming and push notifications.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Kotlin</span>
+              <span class="meta-tag">Laravel Backend</span>
+              <span class="meta-tag">DASH Streaming</span>
+              <span class="meta-tag">Firebase FCM</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <button onclick="showModal('socialapp')" class="project-link-btn">
+              <span>View Details & Gallery</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </button>
+            <span class="meta-tag">9 Screenshots</span>
+          </div>
+        </div>
+
+        <!-- 5. Black Box Backup -->
+        <div class="project-card" data-category="mobile">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <img src="apps/blackboxlogo.webp" alt="Black Box Backup">
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">Black Box Backup</h3>
+              <span class="project-category">Cloud Storage & Security Utility</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              An encrypted cloud backup solution that safeguards personal and enterprise data anytime. Enables one-tap secure backup and instant restoration for photos, contacts, notes, and sensitive documents.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Android</span>
+              <span class="meta-tag">AES Encryption</span>
+              <span class="meta-tag">Cloud Restore</span>
+              <span class="meta-tag">Data Sync</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.blackbox.mobile" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Google Play</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <span class="meta-tag">Published</span>
+          </div>
+        </div>
+
+        <!-- 6. Sync Beat - MusicShare -->
+        <div class="project-card" data-category="mobile realtime">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <img src="apps/musicshare_logo.webp" alt="Sync Beat">
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">Sync Beat - MusicShare</h3>
+              <span class="project-category">Real-Time Audio Sync & Calls</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              A synchronized music streaming application enabling friends to listen together in real-time. Features smart audio routing that dynamically switches playback to the phone earpiece during live calls.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Java</span>
+              <span class="meta-tag">Firebase Realtime DB</span>
+              <span class="meta-tag">Audio Handover</span>
+              <span class="meta-tag">Multi-Device Sync</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <button onclick="showModal('musicshare')" class="project-link-btn">
+              <span>View Gallery & APK</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </button>
+            <span class="meta-tag">14 Screenshots</span>
+          </div>
+        </div>
+
+        <!-- 7. Magic Reviews -->
+        <div class="project-card" data-category="saas mobile">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <img src="apps/magicreviews-logo.webp" alt="Magic Reviews">
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">Magic Reviews</h3>
+              <span class="project-category">Business Reputation Automation</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Customer review collection and reputation management tool that helps local and mid-sized businesses capture positive customer ratings and actionable feedback via automated prompts.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Mobile App</span>
+              <span class="meta-tag">Customer Feedback</span>
+              <span class="meta-tag">Reputation SaaS</span>
+              <span class="meta-tag">Analytics</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.business.magicreviews" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Google Play</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <span class="meta-tag">Published</span>
+          </div>
+        </div>
+
+        <!-- 8. GeoFarming -->
+        <div class="project-card" data-category="mobile realtime">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <img src="apps/geofarmingapp_logo.webp" alt="GeoFarming">
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">GeoFarming</h3>
+              <span class="project-category">Geospatial AgriTech & Mapping</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Precision farming and pasture management platform. Uses Voronoi diagram geometric algorithms and GPS mapping to divide pastures into mathematically balanced grazing zones for dairy and cattle farmers.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Voronoi Algorithms</span>
+              <span class="meta-tag">Google Maps API</span>
+              <span class="meta-tag">Geospatial Calc</span>
+              <span class="meta-tag">AgriTech</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <button onclick="showModal('geofarming')" class="project-link-btn">
+              <span>View Gallery & Details</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </button>
+            <span class="meta-tag">15 Screenshots</span>
+          </div>
+        </div>
+
+        <!-- 9. VideoSaver -->
+        <div class="project-card" data-category="mobile">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <img src="apps/videosaver_logo.webp" alt="VideoSaver">
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">VideoSaver</h3>
+              <span class="project-category">High-Speed Background Downloader</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Multi-source background media downloader supporting parallel segment downloads, paused state persistence, and native Android file management.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Android</span>
+              <span class="meta-tag">Multi-threading</span>
+              <span class="meta-tag">Background Tasks</span>
+              <span class="meta-tag">Media Storage</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <a href="https://play.google.com/store/apps/details?id=video.download.downloader.snap.tubex&hl=en" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+              <span>Google Play</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <span class="meta-tag">High Traffic</span>
+          </div>
+        </div>
+
+        <!-- 10. NoteSnap -->
+        <div class="project-card" data-category="mobile">
+          <div class="project-header-area">
+            <div class="project-logo-box">
+              <img src="apps/notessnap_logo.jpg" alt="NoteSnap">
+            </div>
+            <div class="project-title-group">
+              <h3 class="project-name">NoteSnap</h3>
+              <span class="project-category">Collaborative Learning & Content API</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              A student-driven knowledge exchange platform with star rewards and smart study resource categorization, powered by a custom REST JSON backend API.
+            </p>
+            <div class="project-meta-tags">
+              <span class="meta-tag">Mobile Client</span>
+              <span class="meta-tag">Custom REST API</span>
+              <span class="meta-tag">Gamification</span>
+              <span class="meta-tag">Community</span>
+            </div>
+          </div>
+          <div class="project-footer-actions">
+            <button onclick="showModal('notessnap')" class="project-link-btn">
+              <span>View Gallery</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </button>
+            <span class="meta-tag">17 Screenshots</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Startups & Mid-Sized Businesses Choose Hamza -->
+  <section class="section" id="why-me">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Value Proposition</span>
+        <h2 class="section-title">Why Startups & Businesses Partner With Me</h2>
+        <p class="section-desc">You don't need a siloed 5-person team to ship your next big release. Here is what I bring to the table.</p>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3 class="value-title">Zero-to-One Product Speed</h3>
+          <p class="value-desc">I take vague specifications or wireframes and deliver production-ready MVPs with robust foundations, cutting your time-to-market in half.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">📱</div>
+          <h3 class="value-title">Unified Web & Mobile Stack</h3>
+          <p class="value-desc">Seamlessly bridge your backend APIs, responsive web apps, and native/cross-platform iOS & Android mobile clients (Flutter & React Native) without coordination lag.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🛡️</div>
+          <h3 class="value-title">Production Reliability</h3>
+          <p class="value-desc">Clean architecture, automated pipelines, secure database schema design, and cloud deployments that effortlessly scale when user traffic spikes.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3 class="value-title">Business & User First</h3>
+          <p class="value-desc">Engineering focused on customer retention, conversion velocity, and low technical debt—ensuring your tech investment directly drives ROI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & CTA Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="cta-title">Ready to Build or Scale Your Product?</h2>
+        <p class="cta-desc">
+          Whether you need a fullstack SaaS platform built from scratch, a cross-platform mobile app for iOS & Android, or a dedicated senior engineer to supercharge your startup team—let's make it happen.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="https://wa.me/923456575495" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp (+92 345 6575495)</span>
+          </a>
+          <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="mailto:hamzashahid682@gmail.com" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Send Email</span>
+          </a>
+          <a href="resume.pdf" download class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Resume (PDF)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div style="display: flex; gap: 14px; margin-bottom: 8px;">
+        <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="social-icon-link linkedin" title="LinkedIn Profile">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://wa.me/923456575495" target="_blank" rel="noopener noreferrer" class="social-icon-link whatsapp" title="WhatsApp (+92 345 6575495)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <a href="mailto:hamzashahid682@gmail.com" class="social-icon-link" title="Email: hamzashahid682@gmail.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+      <p>© 2026 Hamza Shahid — Full-Stack & Mobile Engineer (Flutter • React Native • iOS • Android • SaaS)</p>
+      <p style="font-size: 0.82rem; color: var(--text-light);">Built with clean HTML5 & Vanilla CSS. Fast, responsive, and SEO optimized.</p>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+
+  <!-- Modal: Social App -->
+  <div class="modal" id="modal-socialapp">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('socialapp')">&times;</span>
+      <h2 class="modal-title">Social App & Gig Marketplace</h2>
+      <p class="modal-body-text">
+        A feature-rich social platform combining short-form video feeds with professional multi-profile portfolios and direct gig booking calendars. Powered by a custom Laravel backend with automated DASH video transcoding for seamless adaptive streaming.
+      </p>
+      <div class="modal-tech-box">
+        <strong>Tech Stack:</strong> Java, Kotlin, Laravel, MySQL, DASH Streaming, Firebase Cloud Messaging (FCM)
+      </div>
+      
+      <div class="screenshot-carousel-container">
+        <button class="carousel-scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+        <div class="screenshots-row">
+          <img src="apps/socialapp1.jpg" alt="Social App Screenshot 1" onclick="openLightbox(this.src)">
+          <img src="apps/socialapp2.jpg" alt="Social App Screenshot 2" onclick="openLightbox(this.src)">
+          <img src="apps/socialapp3.jpg" alt="Social App Screenshot 3" onclick="openLightbox(this.src)">
+          <img src="apps/socialapp4.jpg" alt="Social App Screenshot 4" onclick="openLightbox(this.src)">
+          <img src="apps/socialapp5.jpg" alt="Social App Screenshot 5" onclick="openLightbox(this.src)">
+          <img src="apps/socialapp6.jpg" alt="Social App Screenshot 6" onclick="openLightbox(this.src)">
+          <img src="apps/socialapp7.jpg" alt="Social App Screenshot 7" onclick="openLightbox(this.src)">
+          <img src="apps/socialapp8.jpg" alt="Social App Screenshot 8" onclick="openLightbox(this.src)">
+          <img src="apps/socialapp9.jpg" alt="Social App Screenshot 9" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: MusicShare -->
   <div class="modal" id="modal-musicshare">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('musicshare')">&times;</span>
-      <h2>SyncBeat</h2>
-<p>
-  A real-time music sharing app where users can listen together while chatting or even during a phone call. Built using Firebase Realtime Database, it syncs playback controls (play, pause, seek, track change) across devices. The player intelligently switches to the earpiece during SIM calls, allowing shared listening over a call. Developed in 2015 right after graduation.
-</p>
-<p>
-  <strong>Tech Stack:</strong> Java, Firebase Realtime Database
-</p>   
+      <span class="close-btn" onclick="closeModal('musicshare')">&times;</span>
+      <h2 class="modal-title">Sync Beat - MusicShare</h2>
+      <p class="modal-body-text">
+        A real-time music sharing application where users can listen simultaneously while chatting or on a phone call. Built using Firebase Realtime Database to synchronize playback controls (play, pause, seek, track queue) across devices. The player dynamically switches to the earpiece during active SIM calls.
+      </p>
+      <div class="modal-tech-box">
+        <strong>Tech Stack:</strong> Java, Firebase Realtime Database, Audio Routing Manager
+      </div>
       
-      <div class="screenshot-wrapper">
-  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
-
-<div class="screenshots">
-<img src="apps/img01.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img02.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img03.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img04.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img05.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img06.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img07.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img08.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img09.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img10.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img11.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img12.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img13.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/img14.jpeg" alt="Screenshot" onclick="openLightbox(this.src)">
-
-</div>
-          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
-</div>
-      <br>
-      <a href="apps/apps/musicshare.apk" download class="apk-button">Download APK</a>
+      <div class="screenshot-carousel-container">
+        <button class="carousel-scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+        <div class="screenshots-row">
+          <img src="apps/img01.jpg" alt="MusicShare Screenshot 1" onclick="openLightbox(this.src)">
+          <img src="apps/img02.jpg" alt="MusicShare Screenshot 2" onclick="openLightbox(this.src)">
+          <img src="apps/img03.jpg" alt="MusicShare Screenshot 3" onclick="openLightbox(this.src)">
+          <img src="apps/img04.jpg" alt="MusicShare Screenshot 4" onclick="openLightbox(this.src)">
+          <img src="apps/img05.jpg" alt="MusicShare Screenshot 5" onclick="openLightbox(this.src)">
+          <img src="apps/img06.jpeg" alt="MusicShare Screenshot 6" onclick="openLightbox(this.src)">
+          <img src="apps/img07.jpeg" alt="MusicShare Screenshot 7" onclick="openLightbox(this.src)">
+          <img src="apps/img08.jpeg" alt="MusicShare Screenshot 8" onclick="openLightbox(this.src)">
+          <img src="apps/img09.jpeg" alt="MusicShare Screenshot 9" onclick="openLightbox(this.src)">
+          <img src="apps/img10.jpeg" alt="MusicShare Screenshot 10" onclick="openLightbox(this.src)">
+          <img src="apps/img11.jpeg" alt="MusicShare Screenshot 11" onclick="openLightbox(this.src)">
+          <img src="apps/img12.jpeg" alt="MusicShare Screenshot 12" onclick="openLightbox(this.src)">
+          <img src="apps/img13.jpeg" alt="MusicShare Screenshot 13" onclick="openLightbox(this.src)">
+          <img src="apps/img14.jpeg" alt="MusicShare Screenshot 14" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+      </div>
     </div>
   </div>
 
-
-    <div class="modal" id="modal-geofarming">
+  <!-- Modal: GeoFarming -->
+  <div class="modal" id="modal-geofarming">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('geofarming')">&times;</span>
-      <h2>GeoFarming</h2>
- <p>
-  <strong>GeoFarming App:</strong> A smart solution for cattle paddock management using geospatial analysis. Built for large-scale farmers, it enables efficient paddock mapping, grazing optimization, and rotation planning.
-</p>
-
-<p>
-  Users can map paddocks using Google Maps (by marking or walking), input key parameters like grass cover and intake, and generate optimal divisions using Voronoi diagrams. The app streamlines grazing strategy, enhances productivity, and improves land utilization.
-</p>
-
-<p>
-  <strong>Key Features:</strong> Firebase user profiles, paddock mapping (mark/walk), division calculator, and wire placement guidance.
-</p>
-
-<p>
-  <strong>Tech Stack:</strong> Java, Firebase Realtime DB, Google Maps API
-</p>
-      <div class="screenshot-wrapper">
-  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
-
-<div class="screenshots">
-  <img src="apps/feofarming_screenshot_7.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_1.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_2.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_3.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_4.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_5.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_6.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_8.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_9.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_10.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_11.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_12.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_13.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_14.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/feofarming_screenshot_15.jpeg" alt="FeoFarming Screenshot" onclick="openLightbox(this.src)">
-
-
-</div>
-          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
-</div>
-      <br>
-      <a href="apps/apps/musicshare.apk" download class="apk-button">Download APK</a>
-    </div>
-  </div>
-  
-  
-  <div class="modal" id="modal-videosaver">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('videosaver')">&times;</span>
-      <h2>VideoSaver</h2>
-      <p>Download videos from multiple sources with ease, supporting background downloads and file management.</p>
-      <br>
-      <a href="apps/apps/videosaver.apk" download class="apk-button">ðŸ“¥ Download APK</a>
-    </div>
-  </div>
-
-    <div class="modal" id="modal-notessnap">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('notessnap')">&times;</span>
-      <h2>Notessnap</h2>
-<p>
-  <strong>NoteSnap:</strong> A native Android app built early in my career (2nd project), connected to a custom WordPress JSON API. Initially a hobby project during my Mechatronics studies (Batch 2011–2015), NoteSnap empowers students to share and access study materials like quizzes, assignments, and past exams.
-</p>
-<p>
-  Students upload resources under their profiles, earn stars for contributions, and collaborate in a Stack Overflow-like environment. Smart tagging and categorization make content easy to find and organize.
-</p>
-<p>
-  <strong>Tech Stack:</strong> Java, WordPress, Custom JSON API
-</p> 
+      <span class="close-btn" onclick="closeModal('geofarming')">&times;</span>
+      <h2 class="modal-title">GeoFarming - Smart Geospatial Paddock Manager</h2>
+      <p class="modal-body-text">
+        A smart solution for livestock paddock management using geospatial analysis. Built for dairy & cattle farmers to enable efficient paddock boundary mapping, grazing optimization, and automatic wire placement calculations based on Voronoi diagram partitioning algorithms.
+      </p>
+      <div class="modal-tech-box">
+        <strong>Tech Stack:</strong> Java, Google Maps API, Computational Geometry Algorithms, Firebase
+      </div>
       
-      <div class="screenshot-wrapper">
-  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
-     
-<div class="screenshots">
-        <img src="apps/notessnap_Screenshot_1.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_2.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_3.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_4.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_5.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_6.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_7.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_8.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_9.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_10.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_11.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_12.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_13.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_14.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_15.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_16.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/notessnap_Screenshot_17.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-   </div>
-          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
-     </div>
-      <br>
-      <a href="apps/apps/videosaver.apk" download class="apk-button">Download APK</a>
+      <div class="screenshot-carousel-container">
+        <button class="carousel-scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+        <div class="screenshots-row">
+          <img src="apps/feofarming_screenshot_7.jpeg" alt="GeoFarming Screenshot 7" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_1.jpeg" alt="GeoFarming Screenshot 1" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_2.jpeg" alt="GeoFarming Screenshot 2" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_3.jpeg" alt="GeoFarming Screenshot 3" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_4.jpeg" alt="GeoFarming Screenshot 4" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_5.jpeg" alt="GeoFarming Screenshot 5" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_6.jpeg" alt="GeoFarming Screenshot 6" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_8.jpeg" alt="GeoFarming Screenshot 8" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_9.jpeg" alt="GeoFarming Screenshot 9" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_10.jpeg" alt="GeoFarming Screenshot 10" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_11.jpeg" alt="GeoFarming Screenshot 11" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_12.jpeg" alt="GeoFarming Screenshot 12" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_13.jpeg" alt="GeoFarming Screenshot 13" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_14.jpeg" alt="GeoFarming Screenshot 14" onclick="openLightbox(this.src)">
+          <img src="apps/feofarming_screenshot_15.jpeg" alt="GeoFarming Screenshot 15" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+      </div>
     </div>
   </div>
 
-
-      <div class="modal" id="modal-socialapp">
+  <!-- Modal: NoteSnap -->
+  <div class="modal" id="modal-notessnap">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('socialapp')">&times;</span>
-      <h2>Social App</h2>
-    <p>
-  A feature-rich social platform combining TikTok-style video sharing and Facebook-like feeds with real-time interactions (like, comment, share). Users can create multiple professional profiles, manage gig calendars, and apply for roles directly. Includes a robust notification system and secure DASH-based video uploads for efficient streaming.
-</p>
-<p>
-  <strong>Amazing Features:</strong> Multi-profile system, gig booking, video conversion to DASH, real-time notifications, interactive social feed.
-</p>
-<p>
-  <strong>Tech Stack:</strong> Java, Kotlin, Laravel, Firebase FCM
-</p>
-   <div class="screenshot-wrapper">
-  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
-     
-<div class="screenshots">
-<img src="apps/socialapp1.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/socialapp2.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/socialapp3.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/socialapp4.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/socialapp5.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/socialapp6.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/socialapp7.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/socialapp8.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-<img src="apps/socialapp9.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
-  
-</div>
-          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
-     </div>
-      <br>
-      <a href="apps/apps/videosaver.apk" download class="apk-button">Download APK</a>
+      <span class="close-btn" onclick="closeModal('notessnap')">&times;</span>
+      <h2 class="modal-title">NoteSnap - Academic Resource Sharing</h2>
+      <p class="modal-body-text">
+        A student-driven study materials sharing platform connected to a custom JSON REST API. Empowers students to discover, share, and collaborate on quizzes, past exams, and assignments with gamified contributor reputations.
+      </p>
+      <div class="modal-tech-box">
+        <strong>Tech Stack:</strong> Java, Custom WordPress REST API, Cloud Database
+      </div>
+      
+      <div class="screenshot-carousel-container">
+        <button class="carousel-scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+        <div class="screenshots-row">
+          <img src="apps/notessnap_Screenshot_1.jpg" alt="NoteSnap Screenshot 1" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_2.jpg" alt="NoteSnap Screenshot 2" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_3.jpg" alt="NoteSnap Screenshot 3" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_4.jpg" alt="NoteSnap Screenshot 4" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_5.jpg" alt="NoteSnap Screenshot 5" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_6.jpg" alt="NoteSnap Screenshot 6" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_7.jpg" alt="NoteSnap Screenshot 7" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_8.jpg" alt="NoteSnap Screenshot 8" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_9.jpg" alt="NoteSnap Screenshot 9" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_10.jpg" alt="NoteSnap Screenshot 10" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_11.jpg" alt="NoteSnap Screenshot 11" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_12.jpg" alt="NoteSnap Screenshot 12" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_13.jpg" alt="NoteSnap Screenshot 13" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_14.jpg" alt="NoteSnap Screenshot 14" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_15.jpg" alt="NoteSnap Screenshot 15" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_16.jpg" alt="NoteSnap Screenshot 16" onclick="openLightbox(this.src)">
+          <img src="apps/notessnap_Screenshot_17.jpg" alt="NoteSnap Screenshot 17" onclick="openLightbox(this.src)">
+        </div>
+        <button class="carousel-scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+      </div>
     </div>
   </div>
 
+  <!-- JavaScript Interaction Logic -->
+  <script>
+    // Project Category Filtering
+    function filterProjects(category, button) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
 
-  
-<script>
-  function scrollScreenshots(direction, button) {
-    const container = button.parentElement.querySelector('.screenshots');
-    const scrollAmount = 200;
-    container.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth'
-    });
-  }
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'flex';
+        } else {
+          const categories = card.getAttribute('data-category') || '';
+          if (categories.includes(category)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
 
-  function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox').style.display = 'flex';
-  }
+    // Screenshot Carousel Scrolling
+    function scrollScreenshots(direction, button) {
+      const row = button.parentElement.querySelector('.screenshots-row');
+      const scrollAmount = 360;
+      row.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
 
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-  }
-
+    // Modal Handling
     function showModal(id) {
-    const modal = document.getElementById('modal-' + id);
-    if (modal) {
-      modal.style.display = 'block';
+      const modal = document.getElementById('modal-' + id);
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
     }
-  }
 
-  function closeModal(id) {
-    const modal = document.getElementById('modal-' + id);
-    if (modal) {
-      modal.style.display = 'none';
+    function closeModal(id) {
+      const modal = document.getElementById('modal-' + id);
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
     }
-  }
-</script>
+
+    // Lightbox Handling
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightbox').style.display = 'none';
+        // Only re-enable scrolling if no other modal is open
+        const anyModalOpen = Array.from(document.querySelectorAll('.modal')).some(m => m.style.display === 'flex' || m.style.display === 'block');
+        if (!anyModalOpen) {
+          document.body.style.overflow = 'auto';
+        }
+      }
+    }
+
+    // Close on Outside Click or Esc Key
+    window.addEventListener('click', function(e) {
+      if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox && lightbox.style.display === 'flex') {
+          lightbox.style.display = 'none';
+        } else {
+          document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+        }
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
 
 </body>
 </html>
