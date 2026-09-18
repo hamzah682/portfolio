@@ -51,15 +51,55 @@
         </ul>
 
         <div class="nav-actions">
-          <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+          <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="social-link desktop-only" title="LinkedIn Profile">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
-          <a href="https://wa.me/923456575495" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp Chat">
+          <a href="https://wa.me/923456575495" target="_blank" rel="noopener noreferrer" class="social-link desktop-only" title="WhatsApp Chat">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           </a>
-          <a href="#contact" class="btn btn-primary btn-sm">Talk to Hamza</a>
+          <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">Talk to Hamza</a>
+          
+          <!-- Mobile Menu Toggle Button -->
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" onclick="toggleMobileNav()">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
         </div>
       </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobile-nav">
+        <div class="mobile-nav-inner">
+          <div class="mobile-nav-header">
+            <span class="mobile-nav-label">Navigation</span>
+            <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu">&times;</button>
+          </div>
+          <ul class="mobile-nav-list">
+            <li><a href="#blueprint" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">🗺️</span> How It Works</a></li>
+            <li><a href="#skills" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">⚡</span> What I Build</a></li>
+            <li><a href="#projects" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">📱</span> Live Projects</a></li>
+            <li><a href="#why-partner" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">🤝</span> Why Choose Me</a></li>
+            <li><a href="#packages" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">📦</span> Packages</a></li>
+            <li><a href="#faq" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">💬</span> FAQ</a></li>
+          </ul>
+          <div class="mobile-nav-footer">
+            <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20have%20an%20app%20idea%20I%27d%20like%20to%20discuss." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;" onclick="closeMobileNav()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Instant Chat on WhatsApp</span>
+            </a>
+            <div class="mobile-nav-socials">
+              <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:hamzashahid682@gmail.com" class="social-link" title="Email Hamza">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-nav-overlay" id="mobile-nav-overlay" onclick="closeMobileNav()"></div>
     </header>
 
     <!-- Hero Section -->
@@ -249,7 +289,7 @@
     </section>
 
     <!-- Technical Capabilities & What I Build Section -->
-    <section class="section" id="skills" style="padding: 90px 0; background: #FAF9F6; border-bottom: 1px solid var(--border-subtle);">
+    <section class="section skills-section" id="skills">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">What I Can Build For You</span>
@@ -259,16 +299,16 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <div class="skills-grid">
           
           <!-- Web Platforms -->
-          <div style="background: #FFFFFF; border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-sm);">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--bg-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 18px;">💻</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Web Platforms & Portals</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 18px;">
+          <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3 class="skill-title">Web Platforms & Portals</h3>
+            <p class="skill-desc">
               Websites where customers log in, book appointments, order services, and manage their profiles with an easy admin panel for you.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <div class="skill-tags">
               <span class="tech-tag">Customer Portals</span>
               <span class="tech-tag">Booking Systems</span>
               <span class="tech-tag">Admin Dashboards</span>
@@ -278,13 +318,13 @@
           </div>
 
           <!-- Mobile Apps -->
-          <div style="background: #FFFFFF; border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-sm);">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--bg-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 18px;">📱</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Mobile Apps (iPhone & Android)</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 18px;">
+          <div class="skill-card">
+            <div class="skill-icon">📱</div>
+            <h3 class="skill-title">Mobile Apps (iPhone & Android)</h3>
+            <p class="skill-desc">
               Fast, beautiful apps users download from Apple App Store and Google Play—with push notifications, camera access, and offline use.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <div class="skill-tags">
               <span class="tech-tag">Apple App Store</span>
               <span class="tech-tag">Google Play</span>
               <span class="tech-tag">Push Notifications</span>
@@ -294,13 +334,13 @@
           </div>
 
           <!-- Payments & Security -->
-          <div style="background: #FFFFFF; border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-sm);">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--bg-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 18px;">💳</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Payments & Automations</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 18px;">
+          <div class="skill-card">
+            <div class="skill-icon">💳</div>
+            <h3 class="skill-title">Payments & Automations</h3>
+            <p class="skill-desc">
               Automating credit card checkouts, recurring monthly subscriptions, sending customer SMS/emails, and keeping your data safe.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <div class="skill-tags">
               <span class="tech-tag">Stripe Checkout</span>
               <span class="tech-tag">Subscriptions</span>
               <span class="tech-tag">Auto SMS & Emails</span>
@@ -310,13 +350,13 @@
           </div>
 
           <!-- Product Velocity -->
-          <div style="background: #FFFFFF; border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-sm);">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--bg-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 18px;">🚀</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Zero-to-Launch Partnership</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 18px;">
+          <div class="skill-card">
+            <div class="skill-icon">🚀</div>
+            <h3 class="skill-title">Zero-to-Launch Partnership</h3>
+            <p class="skill-desc">
               Guiding you through technical choices so your budget is spent on features that actually get you users and sales, avoiding costly mistakes.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <div class="skill-tags">
               <span class="tech-tag">Fast MVP Delivery</span>
               <span class="tech-tag">Moderate Budget</span>
               <span class="tech-tag">Plain English Comms</span>
@@ -826,43 +866,49 @@
             <div class="comp-table-header">
               <h3>Side-by-Side Comparison</h3>
               <p>How hiring me compares to typical agency alternatives</p>
+              <div class="mobile-table-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <span>Swipe table horizontally to compare</span>
+              </div>
             </div>
-            <table class="comp-table">
-              <thead>
-                <tr>
-                  <th>Factor</th>
-                  <th>Working with Hamza</th>
-                  <th>Hiring an Agency</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Pricing / Cost</strong></td>
-                  <td><span class="check-green">✓</span> Moderate, Founder-Friendly</td>
-                  <td><span class="cross-red">✗</span> $25k – $50k+ Marked Up</td>
-                </tr>
-                <tr>
-                  <td><strong>Speed to Launch</strong></td>
-                  <td><span class="check-green">✓</span> 3 - 5 Weeks Fast</td>
-                  <td><span class="cross-red">✗</span> 3 - 6 Months Slow</td>
-                </tr>
-                <tr>
-                  <td><strong>Communication</strong></td>
-                  <td><span class="check-green">✓</span> Direct with the Developer</td>
-                  <td><span class="cross-red">✗</span> Filtered by Middlemen</td>
-                </tr>
-                <tr>
-                  <td><strong>App Store Setup</strong></td>
-                  <td><span class="check-green">✓</span> Fully Handled For You</td>
-                  <td><span class="cross-red">✗</span> Often Billed as an Add-On</td>
-                </tr>
-                <tr>
-                  <td><strong>Post-Launch Warranty</strong></td>
-                  <td><span class="check-green">✓</span> Included Free (14-30 Days)</td>
-                  <td><span class="cross-red">✗</span> Expensive Monthly Retainer</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="comparison-table-wrapper">
+              <table class="comp-table">
+                <thead>
+                  <tr>
+                    <th>Factor</th>
+                    <th>Working with Hamza</th>
+                    <th>Hiring an Agency</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Pricing / Cost</strong></td>
+                    <td><span class="check-green">✓</span> Moderate, Founder-Friendly</td>
+                    <td><span class="cross-red">✗</span> $25k – $50k+ Marked Up</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Speed to Launch</strong></td>
+                    <td><span class="check-green">✓</span> 3 - 5 Weeks Fast</td>
+                    <td><span class="cross-red">✗</span> 3 - 6 Months Slow</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Communication</strong></td>
+                    <td><span class="check-green">✓</span> Direct with the Developer</td>
+                    <td><span class="cross-red">✗</span> Filtered by Middlemen</td>
+                  </tr>
+                  <tr>
+                    <td><strong>App Store Setup</strong></td>
+                    <td><span class="check-green">✓</span> Fully Handled For You</td>
+                    <td><span class="cross-red">✗</span> Often Billed as an Add-On</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Post-Launch Warranty</strong></td>
+                    <td><span class="check-green">✓</span> Included Free (14-30 Days)</td>
+                    <td><span class="cross-red">✗</span> Expensive Monthly Retainer</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
         </div>
@@ -1319,8 +1365,60 @@
     </div>
   </div>
 
+  <!-- Mobile Floating Quick-Action Bar (High Conversion On-The-Go) -->
+  <div class="mobile-floating-bar" id="mobile-floating-bar">
+    <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20have%20an%20app%20idea%20I%27d%20like%20to%20discuss." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-floating">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <span>Chat on WhatsApp</span>
+    </a>
+    <a href="#contact" class="btn btn-primary btn-floating">
+      <span>Get in Touch</span>
+    </a>
+  </div>
+
   <!-- Interactive Logic -->
   <script>
+    // Mobile Navigation Drawer Toggle
+    function toggleMobileNav() {
+      const drawer = document.getElementById('mobile-nav');
+      const overlay = document.getElementById('mobile-nav-overlay');
+      const toggleBtn = document.getElementById('nav-toggle');
+      const isOpen = drawer.classList.contains('active');
+
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        toggleBtn.classList.add('active');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileNav() {
+      const drawer = document.getElementById('mobile-nav');
+      const overlay = document.getElementById('mobile-nav-overlay');
+      const toggleBtn = document.getElementById('nav-toggle');
+      if (drawer) drawer.classList.remove('active');
+      if (overlay) overlay.classList.remove('active');
+      if (toggleBtn) {
+        toggleBtn.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+      document.body.style.overflow = '';
+    }
+
+    // Scroll listener for Mobile Floating Quick-Action Bar
+    const floatingBar = document.getElementById('mobile-floating-bar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 450) {
+        floatingBar.classList.add('visible');
+      } else {
+        floatingBar.classList.remove('visible');
+      }
+    }, { passive: true });
+
     // Project Category Filtering
     function filterProjects(category, button) {
       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
@@ -1358,7 +1456,7 @@
     // Screenshot Carousel Scrolling
     function scrollScreenshots(direction, button) {
       const row = button.parentElement.querySelector('.screenshots-row');
-      const scrollAmount = 360;
+      const scrollAmount = Math.min(window.innerWidth * 0.75, 360);
       row.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
@@ -1378,7 +1476,7 @@
       const modal = document.getElementById('modal-' + id);
       if (modal) {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
       }
     }
 
@@ -1396,7 +1494,7 @@
         document.getElementById('lightbox').style.display = 'none';
         const anyModalOpen = Array.from(document.querySelectorAll('.modal')).some(m => m.style.display === 'flex');
         if (!anyModalOpen) {
-          document.body.style.overflow = 'auto';
+          document.body.style.overflow = '';
         }
       }
     }
@@ -1405,7 +1503,7 @@
     window.addEventListener('click', function(e) {
       if (e.target.classList.contains('modal')) {
         e.target.style.display = 'none';
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
       }
     });
 
@@ -1417,9 +1515,17 @@
         } else {
           document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
         }
-        document.body.style.overflow = 'auto';
+        closeMobileNav();
+        document.body.style.overflow = '';
       }
     });
+
+    // Close mobile nav on resize to desktop
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 992) {
+        closeMobileNav();
+      }
+    }, { passive: true });
   </script>
 
 </body>
