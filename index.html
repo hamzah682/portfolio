@@ -21,6 +21,18 @@
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google tag (gtag.js) - Firebase Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ER42TVVG63"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ER42TVVG63', {
+      send_page_view: true
+    });
+  </script>
 </head>
 <body>
 
@@ -1469,6 +1481,12 @@
       if (modal) {
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        if (typeof gtag === 'function') {
+          gtag('event', 'modal_view', {
+            event_category: 'Projects',
+            modal_id: id
+          });
+        }
       }
     }
 
@@ -1487,6 +1505,12 @@
       img.src = src;
       lightbox.style.display = 'flex';
       document.body.style.overflow = 'hidden';
+      if (typeof gtag === 'function') {
+        gtag('event', 'screenshot_view', {
+          event_category: 'Engagement',
+          image_src: src
+        });
+      }
     }
 
     function closeLightbox(e) {
@@ -1526,6 +1550,72 @@
         closeMobileNav();
       }
     }, { passive: true });
+
+    // Automated Event Tracking for Firebase Analytics
+    document.addEventListener('DOMContentLoaded', function() {
+      // Track WhatsApp Clicks
+      document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'Contact',
+              event_label: this.textContent.trim() || 'WhatsApp CTA'
+            });
+          }
+        });
+      });
+
+      // Track LinkedIn Clicks
+      document.querySelectorAll('a[href*="linkedin.com"]').forEach(link => {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'linkedin_click', {
+              event_category: 'Contact',
+              event_label: 'LinkedIn Profile'
+            });
+          }
+        });
+      });
+
+      // Track Resume Downloads
+      document.querySelectorAll('a[href*="resume.pdf"]').forEach(link => {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'resume_download', {
+              event_category: 'Engagement',
+              event_label: 'Download Resume PDF'
+            });
+          }
+        });
+      });
+
+      // Track Email Clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'email_click', {
+              event_category: 'Contact',
+              event_label: this.href
+            });
+          }
+        });
+      });
+
+      // Track External Live Project Links
+      document.querySelectorAll('.project-footer-actions a').forEach(link => {
+        link.addEventListener('click', function() {
+          const card = this.closest('.project-card');
+          const projectName = card ? card.querySelector('.project-name')?.textContent.trim() : 'Project';
+          if (typeof gtag === 'function') {
+            gtag('event', 'project_visit', {
+              event_category: 'Projects',
+              project_name: projectName,
+              link_url: this.href
+            });
+          }
+        });
+      });
+    });
   </script>
 
 </body>
