@@ -127,11 +127,6 @@
             </div>
             <span>12 Apps Live</span>
           </div>
-
-          <div class="status-pill" id="hero-status-pill">
-            <span class="pulse-dot"></span>
-            <span id="hero-spots-text">1 Project Spot Left This Month</span>
-          </div>
         </div>
 
         <!-- Plain-English Outcome Headline -->
@@ -399,8 +394,8 @@
           <button class="filter-btn" onclick="filterProjects('saas', this)">Web Platforms & SaaS</button>
           <button class="filter-btn" onclick="filterProjects('mobile', this)">Mobile Apps (iOS & Android)</button>
           <button class="filter-btn" onclick="filterProjects('realtime', this)">Real-Time & Live Sync</button>
-          <button class="filter-btn" onclick="filterProjects('client', this)">Client Work</button>
-          <button class="filter-btn" onclick="filterProjects('product', this)">My Own Product</button>
+          <button class="filter-btn filter-btn-origin" onclick="filterProjects('client', this)">Client Work</button>
+          <button class="filter-btn filter-btn-origin" onclick="filterProjects('product', this)">My Own Product</button>
         </div>
 
         <!-- Projects Grid -->
@@ -1540,8 +1535,8 @@
     // PORTFOLIO CONFIGURATION (SINGLE SOURCE OF TRUTH)
     // ==========================================
 
-    // Task 7: Urgency spots configuration. Set to 0 to hide urgency badges across the page.
-    const spotsLeft = 1;
+    // Urgency spots configuration. Set to 0 to disable urgency badges across the page.
+    const spotsLeft = 0;
 
     // Task 8: Calendly / Consultation booking URL. If empty or placeholder, all booking buttons auto-hide.
     const calendlyUrl = "[CALENDLY_URL_TBD]";
@@ -1574,20 +1569,14 @@
     // Initialize dynamic features, urgency badge, and placeholders
     function initDynamicFeatures() {
       // Urgency Spots Controller
-      const heroStatusPill = document.getElementById('hero-status-pill');
-      const heroSpotsText = document.getElementById('hero-spots-text');
       const contactStatusPill = document.getElementById('contact-status-pill');
       const contactSpotsText = document.getElementById('contact-spots-text');
 
       if (spotsLeft > 0) {
-        const spotsText = spotsLeft === 1 ? '1 Project Spot Left This Month' : `${spotsLeft} Project Spots Left This Month`;
         const contactText = spotsLeft === 1 ? 'Taking 1 New Project This Month' : `Taking ${spotsLeft} New Projects This Month`;
-        if (heroSpotsText) heroSpotsText.textContent = spotsText;
-        if (heroStatusPill) heroStatusPill.style.display = 'inline-flex';
         if (contactSpotsText) contactSpotsText.textContent = contactText;
         if (contactStatusPill) contactStatusPill.style.display = 'inline-flex';
       } else {
-        if (heroStatusPill) heroStatusPill.style.display = 'none';
         if (contactStatusPill) contactStatusPill.style.display = 'none';
       }
 
@@ -1634,6 +1623,23 @@
         if (text.includes('[RESULT_TBD]') || text.trim() === '') {
           el.style.display = 'none';
         }
+      });
+
+      // Project Origin Tags Auto-Hide for [TAG_TBD]
+      document.querySelectorAll('.project-origin-tag').forEach(el => {
+        const text = el.textContent || '';
+        if (text.includes('[TAG_TBD]') || text.trim() === '') {
+          el.style.display = 'none';
+        }
+      });
+
+      // Filter Bar: Auto-hide Origin filter buttons if all cards still have [TAG_TBD]
+      const hasOriginTags = Array.from(document.querySelectorAll('.project-card')).some(card => {
+        const origin = card.getAttribute('data-origin') || '';
+        return origin && !origin.includes('[TAG_TBD]');
+      });
+      document.querySelectorAll('.filter-btn-origin').forEach(btn => {
+        btn.style.display = hasOriginTags ? '' : 'none';
       });
 
       // Project App Store Badges (Render only if url is provided)
