@@ -73,6 +73,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
   font-family: var(--font-body);
   background-color: var(--bg-page);
   color: var(--text-main);
@@ -304,6 +305,10 @@ a {
   margin-bottom: 56px;
 }
 
+section[id] {
+  scroll-margin-top: 85px;
+}
+
 /* ==========================================================================
    NAVIGATION BAR
    ========================================================================== */
@@ -331,6 +336,12 @@ a {
   gap: 16px;
 }
 
+.nav-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .nav-brand {
   display: flex;
   align-items: center;
@@ -341,6 +352,7 @@ a {
   color: var(--text-main);
   letter-spacing: -0.04em;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .brand-dot {
@@ -351,16 +363,30 @@ a {
   display: inline-block;
 }
 
+.brand-badge,
 .nav-brand .brand-badge {
   font-size: 0.72rem;
   font-family: var(--font-body);
   font-weight: 700;
-  padding: 2px 8px;
+  padding: 3px 9px;
   background: var(--bg-subtle);
   border: 1px solid var(--border-default);
   border-radius: var(--radius-full);
   color: var(--text-muted);
-  margin-left: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.brand-badge:hover,
+.nav-brand .brand-badge:hover {
+  background: var(--bg-surface);
+  color: var(--accent-orange);
+  border-color: var(--accent-orange);
+  transform: translateY(-1px);
 }
 
 .nav-menu {
@@ -378,9 +404,11 @@ a {
   transition: color 0.2s ease;
   position: relative;
   padding: 4px 0;
+  text-decoration: none;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-main);
 }
 
@@ -2442,7 +2470,8 @@ a {
     padding: 0 16px;
   }
 
-  .nav-brand .brand-badge {
+  .nav-brand .brand-badge,
+  .brand-badge {
     display: none;
   }
 
