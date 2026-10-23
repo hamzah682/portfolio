@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO & Authority Meta Tags -->
-  <title>Hamza Shahid | App & Web Product Engineer | Hamza.build</title>
-  <meta name="description" content="I plan, build, and ship your iPhone app, Android app, and website from scratch. No agency prices. Talk directly with Hamza Shahid.">
-  <meta name="keywords" content="Hamza Shahid, Hamza.build, App Developer, Mobile App Builder, iPhone App, Android App, SaaS Developer, Fullstack Developer, MVP Builder, Startup Developer, Flutter, React Native, Laravel, Web App">
-  <meta name="author" content="Hamza Shahid">
-  
-  <meta property="og:title" content="Hamza.build | Built by Hamza Shahid">
-  <meta property="og:description" content="I plan, build, and ship your iPhone app, Android app, and website from scratch. No agency prices. Talk directly with Hamza Shahid.">
-  <meta property="og:type" content="website">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Main Stylesheet -->
+  <!-- SEO & Authority Meta Tags -->
+  <title>Hamza Shahid — Full-Stack &amp; Mobile Product Engineer</title>
+  <meta name="description" content="Senior Full-Stack &amp; Mobile Product Engineer. Helping non-technical founders, startups, and companies turn ideas into live iPhone, Android apps and web platforms.">
+  <meta name="keywords" content="Hamza Shahid, App Developer, Mobile App Builder, iPhone App, Android App, SaaS Developer, Fullstack Developer, MVP Builder, Startup Developer, Flutter, React Native, Laravel, Web App">
+  <meta name="author" content="Hamza Shahid">
+
+  <meta property="og:title" content="Hamza Shahid — Full-Stack &amp; Mobile Product Engineer">
+  <meta property="og:description" content="Turn your app or software idea into a live, working product on iPhone, Android, and Web—without paying $30k+ to an agency.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hamzah682.github.io/portfolio/">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Google tag (gtag.js) - Firebase Analytics -->
@@ -28,1896 +24,750 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-ER42TVVG63', {
-      send_page_view: true
-    });
+    gtag('config', 'G-ER42TVVG63', { send_page_view: true });
   </script>
 </head>
 <body>
 
-  <!-- Fullscreen Lightbox for Screenshot Previews -->
-  <div id="lightbox" onclick="closeLightbox(event)">
-    <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
-    <img id="lightbox-img" src="" alt="Fullscreen Screenshot Preview">
+  <!-- ─────────────── Page-wide Halftone Backdrop (Bryl Lim Signature) ─────────────── -->
+  <div aria-hidden="true" style="pointer-events: none; position: fixed; inset: 0; z-index: 0;">
+    <div class="halftone halftone-wide mask-tr" style="position: absolute; right: 0; top: 0; height: 75vh; width: 65vw; opacity: 0.16;"></div>
+    <div class="halftone mask-bl" style="position: absolute; bottom: 0; left: 0; height: 60vh; width: 55vw; opacity: 0.13;"></div>
   </div>
 
-  <div class="page-wrapper">
+  <!-- ─────────────── Fixed Left Sidebar (Desktop lg+) ─────────────── -->
+  <nav class="sidebar" aria-label="Sidebar Navigation">
+    <a href="#" class="sidebar-brand">
+      <span>Hamza Shahid</span>
+    </a>
 
-    <!-- Sticky Navigation Bar -->
-    <header class="navbar">
-      <div class="container nav-container">
-        <div class="nav-brand-group">
-          <a href="#overview" class="nav-brand" title="Hamza.build - Home">
-            <span class="brand-dot"></span>
-            <span>Hamza<span style="color: var(--accent-orange);">.build</span></span>
-          </a>
-          <a href="#blueprint" class="brand-badge" title="How your idea gets to the App Store">Idea → App Store</a>
-        </div>
-
-        <ul class="nav-menu">
-          <li><a href="#blueprint" class="nav-link">How It Works</a></li>
-          <li><a href="#skills" class="nav-link">What I Build</a></li>
-          <li><a href="#projects" class="nav-link">Live Projects</a></li>
-          <li><a href="#why-partner" class="nav-link">Why Choose Me</a></li>
-          <li><a href="#packages" class="nav-link">Packages</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-        </ul>
-
-        <div class="nav-actions">
-          <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="social-link desktop-only" title="LinkedIn Profile">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-          <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20have%20an%20app%20idea%20I%27d%20like%20to%20discuss." target="_blank" rel="noopener noreferrer" class="social-link desktop-only" title="WhatsApp Chat">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          </a>
-          <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">Talk to Hamza</a>
-          
-          <!-- Mobile Menu Toggle Button -->
-          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" onclick="toggleMobileNav()">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
+    <div class="sidebar-nav-group">
+      <div class="sidebar-nav-sub">
+        <a href="#projects" class="sidebar-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Projects</span>
+        </a>
+        <a href="#experience" class="sidebar-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>Experience</span>
+        </a>
+        <a href="#stack" class="sidebar-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span>Stack</span>
+        </a>
+        <a href="#services" class="sidebar-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>What I Build</span>
+        </a>
       </div>
 
-      <!-- Mobile Navigation Drawer -->
-      <div class="mobile-nav-drawer" id="mobile-nav">
-        <div class="mobile-nav-inner">
-          <div class="mobile-nav-header">
-            <span class="mobile-nav-label">Navigation</span>
-            <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu">&times;</button>
+      <div class="sidebar-divider"></div>
+
+      <div class="sidebar-nav-sub">
+        <a href="#packages" class="sidebar-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <span>Packages</span>
+        </a>
+        <a href="#recommendations" class="sidebar-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span>Reviews</span>
+        </a>
+        <a href="#faq" class="sidebar-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>FAQ</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Interactive Actions: Ask Anything & Typing Test -->
+    <button type="button" onclick="openAsk()" class="sidebar-action-btn" title="Ask anything (⌘K)">
+      <span>Ask anything</span>
+      <span style="display: inline-flex; align-items: center; gap: 3px;">
+        <kbd class="kbd-badge ask-mod-key">⌘</kbd>
+        <span style="font-size: 10px; color: rgb(var(--g400));">+</span>
+        <kbd class="kbd-badge">K</kbd>
+      </span>
+    </button>
+
+    <button type="button" onclick="openTyping()" class="sidebar-action-btn" title="Typing test (⌘J)">
+      <span>Typing test</span>
+      <span style="display: inline-flex; align-items: center; gap: 3px;">
+        <kbd class="kbd-badge ask-mod-key">⌘</kbd>
+        <span style="font-size: 10px; color: rgb(var(--g400));">+</span>
+        <kbd class="kbd-badge">J</kbd>
+      </span>
+    </button>
+
+    <!-- Presence Box -->
+    <div class="presence-box">
+      <span class="presence-avatars">
+        <img class="presence-avatar" alt="Viewer" src="https://api.dicebear.com/9.x/notionists/svg?seed=Hamza&radius=50&backgroundColor=f1f1f1">
+        <img class="presence-avatar" alt="Viewer" src="https://api.dicebear.com/9.x/notionists/svg?seed=Alex&radius=50&backgroundColor=f1f1f1">
+      </span>
+      <p class="presence-label"><b class="presence-num">1</b> person viewing now</p>
+      <a href="https://wa.me/923456575495" target="_blank" rel="noopener noreferrer" class="presence-chat-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>instant chat ↗</span>
+      </a>
+    </div>
+
+    <!-- Controls: Theme Switcher & Interface Audio Toggle -->
+    <div class="sidebar-footer-controls">
+      <div class="theme-switch" role="group" aria-label="Theme Switcher">
+        <button type="button" data-theme-opt="system" onclick="setTheme('system', event)" class="theme-opt" title="System theme">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M9 21h6M12 17v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" data-theme-opt="light" onclick="setTheme('light', event)" class="theme-opt" title="Light theme">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" data-theme-opt="dark" onclick="setTheme('dark', event)" class="theme-opt" title="Dark theme">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 13.6A8 8 0 1 1 10.4 4a6.2 6.2 0 0 0 9.6 9.6z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <button type="button" data-sound-toggle onclick="window.siteAudio?.toggle()" class="sound-toggle-btn" title="Toggle audio cues" aria-label="Toggle interface sounds" aria-pressed="false">
+        <svg class="sound-icon-off" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+        <svg class="sound-icon-on" style="display: none;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+      </button>
+    </div>
+
+    <!-- Direct Reachout -->
+    <div>
+      <p class="sidebar-contact-text">For apps, software &amp; founders:</p>
+      <a href="mailto:hamzashahid682@gmail.com" class="sidebar-email-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+        <span>hamzashahid682@gmail.com</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─────────────── Mobile Top Bar (<lg) ─────────────── -->
+  <header class="mobile-header">
+    <a href="#" class="sidebar-brand">
+      <span>Hamza Shahid</span>
+    </a>
+    <button type="button" onclick="openMobileNav()" class="mobile-menu-btn" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </header>
+
+  <!-- ─────────────── Mobile Full-Screen Menu Drawer ─────────────── -->
+  <div id="mobileNavOverlay" class="mobile-nav-overlay">
+    <div class="mobile-header" style="border-bottom: 1px solid rgb(var(--g200));">
+      <span class="sidebar-brand">Hamza Shahid</span>
+      <button type="button" onclick="closeMobileNav()" class="mobile-menu-btn" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav-inner">
+      <div class="mobile-nav-links">
+        <a href="#projects" class="sidebar-link" onclick="closeMobileNav()">Projects</a>
+        <a href="#experience" class="sidebar-link" onclick="closeMobileNav()">Experience</a>
+        <a href="#stack" class="sidebar-link" onclick="closeMobileNav()">Tech Stack</a>
+        <a href="#services" class="sidebar-link" onclick="closeMobileNav()">What I Build</a>
+        <a href="#packages" class="sidebar-link" onclick="closeMobileNav()">Packages &amp; Pricing</a>
+        <a href="#recommendations" class="sidebar-link" onclick="closeMobileNav()">Founder Reviews</a>
+        <a href="#faq" class="sidebar-link" onclick="closeMobileNav()">FAQ</a>
+      </div>
+
+      <div class="sidebar-divider" style="margin: 1.5rem 0;"></div>
+
+      <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+        <button type="button" onclick="closeMobileNav(); openAsk();" class="sidebar-action-btn">
+          <span>Ask anything</span>
+          <kbd class="kbd-badge ask-mod-key">⌘</kbd><kbd class="kbd-badge">K</kbd>
+        </button>
+        <button type="button" onclick="closeMobileNav(); openTyping();" class="sidebar-action-btn">
+          <span>Typing test</span>
+          <kbd class="kbd-badge ask-mod-key">⌘</kbd><kbd class="kbd-badge">J</kbd>
+        </button>
+      </div>
+
+      <div style="margin-top: auto;">
+        <p class="sidebar-contact-text">Direct Contact Line:</p>
+        <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="sidebar-email-link" style="color: #25D366;">
+          <span>WhatsApp: +92 345 6575495 ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────── Main Wrapper & Content Container ─────────────── -->
+  <main class="main-wrapper">
+    <div class="content-container">
+
+      <!-- ── 1. Hero Section ── -->
+      <section class="hero-block">
+        <div class="hero-photo-wrap">
+          <img src="apps/hamza_headshot.jpg" alt="Hamza Shahid" class="hero-photo-img">
+        </div>
+
+        <div>
+          <h1 class="hero-title">Hamza Shahid</h1>
+
+          <div class="hero-role-pill">
+            <span class="pulse-dot"></span>
+            <span>Senior Full-Stack &amp; Mobile Product Engineer</span>
           </div>
-          <ul class="mobile-nav-list">
-            <li><a href="#blueprint" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">🗺️</span> How It Works</a></li>
-            <li><a href="#skills" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">⚡</span> What I Build</a></li>
-            <li><a href="#projects" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">📱</span> Live Projects</a></li>
-            <li><a href="#why-partner" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">🤝</span> Why Choose Me</a></li>
-            <li><a href="#packages" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">📦</span> Packages</a></li>
-            <li><a href="#faq" class="mobile-nav-link" onclick="closeMobileNav()"><span class="nav-icon">💬</span> FAQ</a></li>
-          </ul>
-          <div class="mobile-nav-footer">
-            <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20have%20an%20app%20idea%20I%27d%20like%20to%20discuss." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;" onclick="closeMobileNav()">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              <span>Instant Chat on WhatsApp</span>
-            </a>
-            <div class="mobile-nav-socials">
-              <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+
+          <p class="hero-bio">
+            I'm a full-stack engineer. I build modern web platforms, iOS, and Android applications that scale.
+          </p>
+
+          <p class="hero-bio">
+            I help non-technical founders, startups, and companies turn napkin sketches into live software on the <strong>Apple App Store &amp; Google Play in 3 to 5 weeks</strong>. Transparent, moderate budget — zero agency bloat.
+          </p>
+
+          <!-- Social Links Row -->
+          <div class="hero-socials-row">
+            <a href="https://github.com/hamzah682" target="_blank" rel="noopener" class="hero-social-link">github ↗</a>
+            <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener" class="hero-social-link">linkedin ↗</a>
+            <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="hero-social-link" style="color: #25D366; font-weight: 600;">whatsapp ↗</a>
+            <a href="mailto:hamzashahid682@gmail.com" class="hero-social-link">email ↗</a>
+            <a href="resume.pdf" target="_blank" rel="noopener" class="hero-social-link">resume.pdf ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 2. Live Production Stats Bar ── -->
+      <section class="stats-strip" aria-label="Key Engineering Metrics">
+        <div class="stat-cell">
+          <div class="stat-value">12<span>+</span></div>
+          <div class="stat-label">Live Systems Shipped</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-value">100<span>k+</span></div>
+          <div class="stat-label">Active Users Served</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-value">3<span>-</span>5 wks</div>
+          <div class="stat-label">Average Time to Store</div>
+        </div>
+      </section>
+
+      <!-- ── Halftone Accent Divider ── -->
+      <div aria-hidden="true" class="halftone halftone-wide mask-fade-x" style="height: 1.5rem; width: 100%; opacity: 0.18; margin: 1rem 0;"></div>
+
+      <!-- ── 3. Interactive Spotlight 3D Card Deck (Bryl Lim Signature Feature) ── -->
+      <section class="content-section" style="padding-top: 1rem;">
+        <div class="section-head-bar">
+          <h2 class="section-num-tag">01 — spotlight fleet</h2>
+          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">click cards to fan ↔</span>
+        </div>
+
+        <div class="deck-container" data-deck>
+          
+          <!-- Card 1 (Center): Sync Beat -->
+          <article class="deck-card is-center" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show Sync Beat Audio App">
+            <div class="deck-pill-row">
+              <span class="deck-badge-dark">Featured Mobile App</span>
+              <span class="deck-badge-outline">14 App Screens</span>
+            </div>
+            <div class="deck-app-header">
+              <img src="apps/musicshare_logo.webp" alt="Sync Beat logo" class="deck-app-icon">
+              <div>
+                <h3 class="deck-app-name">Sync Beat — Audio Sharing</h3>
+                <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Real-Time WebSocket Sync</span>
+              </div>
+            </div>
+            <p class="deck-app-desc">
+              Low-latency collaborative music and podcast listening app. Synchronizes streaming audio across multiple participant devices simultaneously.
+            </p>
+            <div class="deck-app-actions">
+              <button type="button" onclick="openGalleryModal('musicshare')" class="btn-inspect-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect 14 Screens</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2 (Left): GeoFarming GIS -->
+          <article class="deck-card is-left" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show GeoFarming GIS App">
+            <div class="deck-pill-row">
+              <span class="deck-badge-dark">AgTech GIS Platform</span>
+              <span class="deck-badge-outline">15 Screens</span>
+            </div>
+            <div class="deck-app-header">
+              <img src="apps/geofarmingapp_logo.webp" alt="GeoFarming logo" class="deck-app-icon">
+              <div>
+                <h3 class="deck-app-name">GeoFarming GIS Engine</h3>
+                <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Offline Map Polygons</span>
+              </div>
+            </div>
+            <p class="deck-app-desc">
+              Precision agriculture mapping platform for livestock pasture division, GPS paddock boundaries, and rotational grazing algorithms.
+            </p>
+            <div class="deck-app-actions">
+              <button type="button" onclick="openGalleryModal('geofarming')" class="btn-inspect-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect 15 Screens</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3 (Right): NoteSnap Academic -->
+          <article class="deck-card is-right" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show NoteSnap App">
+            <div class="deck-pill-row">
+              <span class="deck-badge-dark">EdTech Crowdsource</span>
+              <span class="deck-badge-outline">17 Screens</span>
+            </div>
+            <div class="deck-app-header">
+              <img src="apps/notessnap_logo.jpg" alt="NoteSnap logo" class="deck-app-icon">
+              <div>
+                <h3 class="deck-app-name">NoteSnap Knowledge Base</h3>
+                <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Academic Peer Sharing</span>
+              </div>
+            </div>
+            <p class="deck-app-desc">
+              Crowdsourced exam notes and textbook guide repository for university students with incentive reward points and cloud sync.
+            </p>
+            <div class="deck-app-actions">
+              <button type="button" onclick="openGalleryModal('notessnap')" class="btn-inspect-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect 17 Screens</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ── 4. Commercial Projects Fleet (`#projects`) ── -->
+      <section id="projects" class="content-section">
+        <div class="section-head-bar">
+          <h2 class="section-num-tag">02 — commercial projects</h2>
+          <a href="https://play.google.com/store/apps/dev?id=7932722599774181122" target="_blank" rel="noopener" class="section-action-link">google play hub →</a>
+        </div>
+
+        <div class="projects-table">
+          
+          <!-- Project 1: The Co-Living Matrix -->
+          <div class="project-row">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>The Co-Living Matrix</span>
+                <span class="tag-badge">Web SaaS Platform</span>
+              </div>
+              <p class="project-row-desc">
+                Algorithm-driven roommate matching &amp; verified co-living marketplace. Multi-factor personality quiz, instant chat, and identity verification.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">Vue.js</span>
+                <span class="tag-badge">Node.js</span>
+                <span class="tag-badge">Stripe Invoicing</span>
+                <span class="tag-badge">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <a href="https://thecolivingmatrix.com/" target="_blank" rel="noopener" class="btn-inspect-pill">
+                <span>Visit Live Platform ↗</span>
               </a>
-              <a href="mailto:hamzashahid682@gmail.com" class="social-link" title="Email Hamza">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+          </div>
+
+          <!-- Project 2: Repairing Shop Manager -->
+          <div class="project-row">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>Repairing Shop Manager</span>
+                <span class="tag-badge">Enterprise ERP</span>
+              </div>
+              <p class="project-row-desc">
+                Complete multi-tenant business operating system for device repair centers. Ticket lifecycle, inventory depletion alerts, automated customer SMS notifications.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">Multi-Tenant DB</span>
+                <span class="tag-badge">Twilio SMS</span>
+                <span class="tag-badge">Thermal Printing</span>
+                <span class="tag-badge">Analytics</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <a href="https://repairingshopmanager.com/" target="_blank" rel="noopener" class="btn-inspect-pill">
+                <span>Visit Live Platform ↗</span>
               </a>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="mobile-nav-overlay" id="mobile-nav-overlay" onclick="closeMobileNav()"></div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="overview">
-      <div class="container hero-wrapper">
-        
-        <!-- Social Proof & Availability Badges -->
-        <div class="hero-top-badges">
-          <div class="social-proof-pill">
-            <div class="avatar-stack">
-              <img src="apps/hamza_headshot.jpg" alt="Hamza Shahid headshot">
-              <span class="badge-icon">⚡</span>
-            </div>
-            <span>12 Apps Live</span>
-          </div>
-        </div>
-
-        <!-- Plain-English Outcome Headline -->
-        <h1 class="hero-headline">
-          Have an App Idea? <br>
-          <span class="serif-italic">I'll Build and Launch It.</span> <span class="accent-orange">No Agency Prices.</span>
-        </h1>
-
-        <!-- Crystal Clear Subtitle for Non-Techies -->
-        <p class="hero-subheadline">
-          I'm one developer. I plan, build, and ship your iPhone app, Android app, and website. You talk to me, not a sales team.
-        </p>
-
-        <!-- Primary Call to Actions -->
-        <div class="hero-cta-group">
-          <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20have%20an%20app%20idea%20I%27d%20like%20to%20discuss%20with%20you." target="_blank" rel="noopener noreferrer" class="btn btn-orange btn-lg">
-            <span>Discuss Your Idea on WhatsApp</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          
-          <a href="[CALENDLY_URL_TBD]" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg cal-booking-btn">
-            <span>Book a 20-min Call</span>
-          </a>
-
-          <a href="#projects" class="btn btn-outline btn-lg">
-            <span>See What I've Built</span>
-          </a>
-        </div>
-
-        <!-- Hero Showcase Card -->
-        <div class="hero-showcase">
-          <div class="showcase-chrome">
-            <div class="chrome-dots">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="chrome-url-bar">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              <span>https://hamza.build/systems/live</span>
-            </div>
-            <div class="chrome-badge">
-              <span class="pulse-dot"></span>
-              <span>Live Apps Serving Real Users</span>
-            </div>
-          </div>
-
-          <div class="showcase-content-grid">
-            <div class="showcase-lead-info">
-              <span class="showcase-badge">Featured Case Study</span>
-              <h2 class="showcase-lead-title">From Napkin Sketch to Real Paying Customers</h2>
-              <p class="showcase-lead-desc">
-                Real platforms like <strong>The Co-Living Matrix</strong> (roommate matchmaking) and <strong>Repairing Shop Manager</strong> (business management app). Built with online payments, customer logins, automatic notifications, and admin dashboards so business owners run smoothly without technical headaches.
-              </p>
-              <div class="showcase-tech-pills">
-                <span class="tech-tag">📱 iPhone & Android Apps</span>
-                <span class="tech-tag">💻 Web Dashboards</span>
-                <span class="tech-tag">💳 Credit Card Payments</span>
-                <span class="tech-tag">🔔 Auto SMS & Notifications</span>
-                <span class="tech-tag">🔒 Secure by design</span>
+          <!-- Project 3: VideoSaver Utility Engine -->
+          <div class="project-row">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>VideoSaver Utility Engine</span>
+                <span class="tag-badge">Android Utility</span>
               </div>
-              <a href="#projects" class="btn btn-primary btn-sm">
-                <span>See All 12 Live Projects</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <p class="project-row-desc">
+                High-throughput background download manager for Android devices. Parallel chunk downloading, pause/resume network recovery, and background gallery sync.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">Multi-Threading</span>
+                <span class="tag-badge">Native Background Services</span>
+                <span class="tag-badge">Google Play Live</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <a href="https://play.google.com/store/apps/details?id=video.download.downloader.snap.tubex" target="_blank" rel="noopener" class="btn-inspect-pill">
+                <span>Google Play Listing ↗</span>
               </a>
             </div>
+          </div>
 
-            <div class="showcase-preview-frame">
-              <img src="apps/repairingshop_logo.png" alt="SaaS Architecture Preview" style="object-fit: contain; padding: 30px; background: #0A0A0C;">
+          <!-- Project 4: Social Video & Creator Escrow Hub -->
+          <div class="project-row">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>Social Video &amp; Creator Escrow Hub</span>
+                <span class="tag-badge">Mobile Media</span>
+              </div>
+              <p class="project-row-desc">
+                Short-form video streaming and freelance commission marketplace. Users discover creators, watch streams, and fund milestone escrow bookings.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">Short Video Feed</span>
+                <span class="tag-badge">Live Chat</span>
+                <span class="tag-badge">Escrow Engine</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <button type="button" onclick="openGalleryModal('socialapp')" class="btn-inspect-pill">
+                <span>Inspect 9 Screens</span>
+              </button>
             </div>
           </div>
+
+          <!-- Project 5: Ocean Nail & Spa Platform -->
+          <div class="project-row">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>Ocean Nail &amp; Spa Portal</span>
+                <span class="tag-badge">Client Platform</span>
+              </div>
+              <p class="project-row-desc">
+                Luxury salon digital presence &amp; customer conversion engine. Live operating hours HUD, service menu chips, interactive session price calculator.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">Interactive Estimator</span>
+                <span class="tag-badge">Real-Time Hours HUD</span>
+                <span class="tag-badge">Instant Booking</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <a href="/projects/ocean-nail-and-spa/" target="_blank" rel="noopener" class="btn-inspect-pill">
+                <span>View Platform ↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── 5. Experience Timeline (`#experience`) ── -->
+      <section id="experience" class="content-section">
+        <div class="section-head-bar">
+          <h2 class="section-num-tag">03 — experience history</h2>
+          <a href="resume.pdf" target="_blank" rel="noopener" class="section-action-link">download resume →</a>
         </div>
 
-      </div>
-    </section>
-
-    <!-- Proof & Metrics Bar -->
-    <section class="proof-bar">
-      <div class="container">
-        <div class="metrics-grid">
-          <div class="metric-item">
-            <div class="metric-number">12</div>
-            <div class="metric-label">Live Apps in Production</div>
+        <div class="exp-table">
+          <div class="exp-row">
+            <span class="exp-year">2024–Now</span>
+            <span class="exp-role">Principal Engineer &amp; Founder</span>
+            <span class="exp-company">Soloship Studio</span>
           </div>
-          <div class="metric-item">
-            <div class="metric-number">100<span>%</span></div>
-            <div class="metric-label">Handled by Me (No Middlemen)</div>
+          <div class="exp-row">
+            <span class="exp-year">2022–2024</span>
+            <span class="exp-role">Senior Full-Stack &amp; Mobile Engineer</span>
+            <span class="exp-company">Venture Startups &amp; Clients</span>
           </div>
-          <div class="metric-item">
-            <div class="metric-number">Direct</div>
-            <div class="metric-label">With The Developer</div>
+          <div class="exp-row">
+            <span class="exp-year">2020–2022</span>
+            <span class="exp-role">Full-Stack SaaS &amp; API Developer</span>
+            <span class="exp-company">Cloud Product Teams</span>
           </div>
-          <div class="metric-item">
-            <div class="metric-number">3<span>-</span>6 Wks</div>
-            <div class="metric-label">Average Time to Working App</div>
+          <div class="exp-row">
+            <span class="exp-year">2018–2020</span>
+            <span class="exp-role">Mobile Application Developer</span>
+            <span class="exp-company">Android &amp; Cross-Platform</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 0-to-Production Blueprint Roadmap (In Plain English) -->
-    <section class="process-section" id="blueprint">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">How It Works</span>
-          <h2 class="section-title">The 4-Step Journey to Your Live App</h2>
-          <p class="section-desc">
-            You don't need any technical background. Here is the simple, stress-free process I use to take your idea from paper to user hands.
-          </p>
+      <!-- ── 6. Tech Stack (`#stack`) ── -->
+      <section id="stack" class="content-section">
+        <div class="section-head-bar">
+          <h2 class="section-num-tag">04 — engineering stack</h2>
+          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">battle-tested tools</span>
         </div>
 
-        <div class="roadmap-grid">
-          <!-- Step 1 -->
-          <div class="roadmap-card">
-            <div class="roadmap-step-badge">01</div>
-            <h3 class="roadmap-title">Planning & Screen Flows</h3>
-            <p class="roadmap-desc">
-              Before writing a line of code, we map out every screen, button, and user step. You'll see visually how the app works so we avoid surprises and keep costs down.
-            </p>
-            <ul class="roadmap-deliverables">
-              <li>Visual Screen Wireframes & Plan</li>
-              <li>Step-by-Step User Journey</li>
-              <li>Fixed Cost & Timeline Guarantee</li>
-            </ul>
-          </div>
+        <div class="stack-chips-wrap">
+          <span class="stack-chip">Flutter</span>
+          <span class="stack-chip">React Native</span>
+          <span class="stack-chip">iOS (Swift)</span>
+          <span class="stack-chip">Android (Kotlin)</span>
+          <span class="stack-chip">Next.js</span>
+          <span class="stack-chip">React</span>
+          <span class="stack-chip">TypeScript</span>
+          <span class="stack-chip">Node.js</span>
+          <span class="stack-chip">Laravel</span>
+          <span class="stack-chip">PostgreSQL</span>
+          <span class="stack-chip">Supabase</span>
+          <span class="stack-chip">Firebase</span>
+          <span class="stack-chip">Stripe Payments</span>
+          <span class="stack-chip">WebSockets</span>
+          <span class="stack-chip">Docker</span>
+          <span class="stack-chip">Git / CI-CD</span>
+        </div>
+      </section>
 
-          <!-- Step 2 -->
-          <div class="roadmap-card">
-            <div class="roadmap-step-badge">02</div>
-            <h3 class="roadmap-title">Building Your App & Web</h3>
-            <p class="roadmap-desc">
-              I design and code clean, smooth applications that look and feel amazing on iPhones, Android devices, and web browsers with fast, intuitive navigation.
-            </p>
-            <ul class="roadmap-deliverables">
-              <li>iPhone & Android App (Flutter/React Native)</li>
-              <li>Responsive Web Portal / Website</li>
-              <li>Easy, Non-Technical User Interface</li>
-            </ul>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="roadmap-card">
-            <div class="roadmap-step-badge">03</div>
-            <h3 class="roadmap-title">Payments, Logins & Security</h3>
-            <p class="roadmap-desc">
-              Hooking up online payments (credit card, Apple Pay), customer accounts, automated SMS/email alerts, and encrypted data security so you can collect revenue safely.
-            </p>
-            <ul class="roadmap-deliverables">
-              <li>Stripe / Card Payment Checkout</li>
-              <li>Customer Accounts & Password Resets</li>
-              <li>24/7 Secure Cloud Data Protection</li>
-            </ul>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="roadmap-card">
-            <div class="roadmap-step-badge">04</div>
-            <h3 class="roadmap-title">App Store Launch & Handover</h3>
-            <p class="roadmap-desc">
-              I handle the confusing paperwork and technical rules required by Apple and Google to get your app officially approved and live on the store catalogs.
-            </p>
-            <ul class="roadmap-deliverables">
-              <li>Live on Apple App Store & Google Play</li>
-              <li>Custom Web Domain & Email Setup</li>
-              <li>14-30 Days Free Warranty & Bugfix Support</li>
-            </ul>
-          </div>
+      <!-- ── 7. Transparent Packages & Interactive Estimator (`#packages`) ── -->
+      <section id="packages" class="content-section">
+        <div class="section-head-bar">
+          <h2 class="section-num-tag">05 — packages &amp; estimator</h2>
+          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">transparent budget</span>
         </div>
 
-      </div>
-    </section>
-
-    <!-- Technical Capabilities & What I Build Section -->
-    <section class="section skills-section" id="skills">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">What I Can Build For You</span>
-          <h2 class="section-title">Everything Your Software Needs to Succeed</h2>
-          <p class="section-desc">
-            Whether you need a mobile app for customers or an internal system to run your business operations, here is what I deliver:
-          </p>
-        </div>
-
-        <div class="skills-grid">
+        <div class="packages-grid">
           
-          <!-- Web Platforms -->
-          <div class="skill-card">
-            <div class="skill-icon">💻</div>
-            <h3 class="skill-title">Web Platforms & Portals</h3>
-            <p class="skill-desc">
-              Websites where customers log in, book appointments, order services, and manage their profiles with an easy admin panel for you.
-            </p>
-            <div class="skill-tags">
-              <span class="tech-tag">Customer Portals</span>
-              <span class="tech-tag">Booking Systems</span>
-              <span class="tech-tag">Admin Dashboards</span>
-              <span class="tech-tag">Vue.js / React</span>
-              <span class="tech-tag">Laravel Web</span>
-            </div>
-          </div>
-
-          <!-- Mobile Apps -->
-          <div class="skill-card">
-            <div class="skill-icon">📱</div>
-            <h3 class="skill-title">Mobile Apps (iPhone & Android)</h3>
-            <p class="skill-desc">
-              Fast, beautiful apps users download from Apple App Store and Google Play with push notifications, camera access, and offline use.
-            </p>
-            <div class="skill-tags">
-              <span class="tech-tag">Apple App Store</span>
-              <span class="tech-tag">Google Play</span>
-              <span class="tech-tag">Push Notifications</span>
-              <span class="tech-tag">Flutter & React Native</span>
-              <span class="tech-tag">GPS & Camera</span>
-            </div>
-          </div>
-
-          <!-- Payments & Security -->
-          <div class="skill-card">
-            <div class="skill-icon">💳</div>
-            <h3 class="skill-title">Payments & Automations</h3>
-            <p class="skill-desc">
-              Automating credit card checkouts, recurring monthly subscriptions, sending customer SMS/emails, and keeping your data safe.
-            </p>
-            <div class="skill-tags">
-              <span class="tech-tag">Stripe Checkout</span>
-              <span class="tech-tag">Subscriptions</span>
-              <span class="tech-tag">Auto SMS & Emails</span>
-              <span class="tech-tag">Invoicing</span>
-              <span class="tech-tag">Cloud Backups</span>
-            </div>
-          </div>
-
-          <!-- Product Velocity -->
-          <div class="skill-card">
-            <div class="skill-icon">🚀</div>
-            <h3 class="skill-title">Zero-to-Launch Partnership</h3>
-            <p class="skill-desc">
-              Guiding you through technical choices so your budget is spent on features that actually get you users and sales, avoiding costly mistakes.
-            </p>
-            <div class="skill-tags">
-              <span class="tech-tag">Fast MVP Delivery</span>
-              <span class="tech-tag">Moderate Budget</span>
-              <span class="tech-tag">Plain English Comms</span>
-              <span class="tech-tag">100% Code Ownership</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Systems & Apps Showcase (Clear User Outcomes) -->
-    <section class="showcase-section" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Proof of Work</span>
-          <h2 class="section-title">Real Apps & Systems I've Built</h2>
-          <p class="section-desc">
-            Explore 12 commercial apps and platforms currently in use by real businesses and everyday consumers worldwide.
-          </p>
-        </div>
-
-        <!-- Filter Tabs -->
-        <div class="filter-bar">
-          <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects (12)</button>
-          <button class="filter-btn" onclick="filterProjects('saas', this)">Web Platforms & SaaS</button>
-          <button class="filter-btn" onclick="filterProjects('mobile', this)">Mobile Apps (iOS & Android)</button>
-          <button class="filter-btn" onclick="filterProjects('realtime', this)">Real-Time & Live Sync</button>
-          <button class="filter-btn filter-btn-origin" onclick="filterProjects('client', this)">Client Work</button>
-          <button class="filter-btn filter-btn-origin" onclick="filterProjects('product', this)">My Own Product</button>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="projects-masonry">
-
-          <!-- 1. The Co-Living Matrix -->
-          <div class="project-card" data-category="saas realtime" data-origin="[TAG_TBD]">
-            <div class="project-viewport">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                <span>Live Web Platform</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 30px;">
-                <img src="apps/colivingmatrix_logo.png" alt="The Co-Living Matrix Logo" style="max-height: 200px; width: auto; max-width: 90%; object-fit: contain; filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.04));">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">The Co-Living Matrix</h3>
-                <span class="project-category-badge">Web Platform</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">Live business</div>
-              <p class="project-summary">
-                A roommate-finding and home-sharing website. It helps users find verified roommates, calculate split rent automatically, and chat securely.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Verified Profiles</span>
-                <span class="project-tag">Smart Matching</span>
-                <span class="project-tag">Rent Split Calculator</span>
-                <span class="project-tag">Secure Messaging</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://thecolivingmatrix.com/" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span>Visit Website</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-green); margin-left: auto;">● Active Business</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2. Repairing Shop Manager -->
-          <div class="project-card" data-category="saas mobile" data-origin="[TAG_TBD]">
-            <div class="project-viewport">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                <span>Live on Web & Google Play</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #0A0A0C;">
-                <img src="apps/repairingshop_logo.png" alt="Repairing Shop Manager" style="max-height: 180px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">Repairing Shop Manager</h3>
-                <span class="project-category-badge">Business Management App</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">Live on Web & Google Play</div>
-              <p class="project-summary">
-                Complete management software for phone and device repair shops. Owners track repair tickets, manage parts inventory, and send automated text updates to customers.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Barcode Scanners</span>
-                <span class="project-tag">Automated SMS Updates</span>
-                <span class="project-tag">Inventory Tracking</span>
-                <span class="project-tag">Invoicing & POS</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://repairingshopmanager.com/" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span>Web Portal</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.msolution.shopmanagment" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-ghost">
-                  <span>Google Play App</span>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-green); margin-left: auto;">● Live on Web & Play Store</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. Mobi Guru - Repair My Mobile -->
-          <div class="project-card" data-category="mobile saas" data-origin="[TAG_TBD]">
-            <div class="project-viewport">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                <span>Live on Google Play</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #18181B;">
-                <img src="apps/mobiguru_logo.png" alt="Mobi Guru - Repair My Mobile" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">Mobi Guru - Repair My Mobile</h3>
-                <span class="project-category-badge">Technician Help Tool</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">Live on Google Play</div>
-              <p class="project-summary">
-                A hardware diagnostic and repair guide app for mobile phone technicians. It offers step-by-step circuit solutions and component testing guides to fix complex device problems.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Hardware Diagnostics</span>
-                <span class="project-tag">Phone Repair Flows</span>
-                <span class="project-tag">Circuit Schematics</span>
-                <span class="project-tag">Shopkeeper Tool</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://play.google.com/store/apps/details?id=com.mobiguru.solutions.android&hl=en" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span>Google Play App</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-green); margin-left: auto;">● Live on Google Play</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. Black Box Backup -->
-          <div class="project-card" data-category="mobile" data-origin="[TAG_TBD]">
-            <div class="project-viewport">
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #111827;">
-                <img src="apps/blackboxlogo.webp" alt="Black Box Backup" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">Black Box Backup</h3>
-                <span class="project-category-badge">Data Security App</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">Live on Google Play</div>
-              <p class="project-summary">
-                A private cloud backup app for smartphones. Users securely back up personal photos, contacts, and files with 1-tap encrypted security.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">1-Tap Cloud Backup</span>
-                <span class="project-tag">Encrypted Security</span>
-                <span class="project-tag">Instant Data Restore</span>
-                <span class="project-tag">Android App</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://play.google.com/store/apps/details?id=com.blackbox.mobile" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span>Google Play App</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-green); margin-left: auto;">● Live on Google Play</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5. Magic Reviews -->
-          <div class="project-card" data-category="saas mobile" data-origin="[TAG_TBD]">
-            <div class="project-viewport">
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #1C1917;">
-                <img src="apps/magicreviews-logo.webp" alt="Magic Reviews" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">Magic Reviews</h3>
-                <span class="project-category-badge">Review Growth Tool</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">Live on Google Play</div>
-              <p class="project-summary">
-                A review collection tool for local service businesses. It automatically texts customers for 5-star Google reviews and routes negative feedback privately.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Automated Review Prompts</span>
-                <span class="project-tag">Boost Google Ranking</span>
-                <span class="project-tag">Negative Review Filter</span>
-                <span class="project-tag">Customer SMS Tool</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://play.google.com/store/apps/details?id=com.business.magicreviews" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span>Google Play App</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-green); margin-left: auto;">● Live on Google Play</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6. Sync Beat - MusicShare -->
-          <div class="project-card" data-category="mobile realtime" data-origin="[TAG_TBD]">
-            <div class="project-viewport" onclick="showModal('musicshare')">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <span>Click to View 14 Screenshots</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #0B132B;">
-                <img src="apps/musicshare_logo.webp" alt="Sync Beat" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">Sync Beat - MusicShare</h3>
-                <span class="project-category-badge">Real-Time Music App</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">[RESULT_TBD]</div>
-              <p class="project-summary">
-                A synchronized music streaming app that lets friends listen to songs together in real time. It automatically routes audio to the earpiece during phone calls so music never stops.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Real-Time Song Sync</span>
-                <span class="project-tag">Listen While on Calls</span>
-                <span class="project-tag">Shared Playlists</span>
-                <span class="project-tag">Audio Smart Routing</span>
-              </div>
-              <div class="project-actions">
-                <button onclick="showModal('musicshare')" class="btn-project btn-project-live">
-                  <span>View 14 App Screenshots</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                </button>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 7. Gullak - Money Saver & Budget -->
-          <div class="project-card" data-category="mobile" data-origin="[TAG_TBD]">
-            <div class="project-viewport">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                <span>Live on Google Play</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0A192F 0%, #172A46 100%);">
-                <img src="apps/gullak_logo.png" alt="Gullak Money Saver" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">Gullak - Money Saver & Budget</h3>
-                <span class="project-category-badge">Personal Finance App</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">Live on Google Play</div>
-              <p class="project-summary">
-                A daily expense tracker and money management app. Users log daily spending, set monthly category budgets, and track savings goals with clear visual charts.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Daily Expense Log</span>
-                <span class="project-tag">Category Budgets</span>
-                <span class="project-tag">Savings Goal Tracker</span>
-                <span class="project-tag">Visual Charts</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://play.google.com/store/apps/details?id=com.wallet.budget.expense.tracker.gullak&hl=en" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span>Google Play App</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-green); margin-left: auto;">● Live on Google Play</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 8. Feaths Games Arena -->
-          <div class="project-card" data-category="saas realtime" data-origin="[TAG_TBD]">
-            <div class="project-viewport">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                <span>Live Gaming Hub</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #180D38 0%, #311868 100%);">
-                <div style="text-align: center; padding: 20px;">
-                  <div style="width: 70px; height: 70px; border-radius: 20px; background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#A5B4FC" stroke-width="2"><polygon points="6 2 18 2 18 6 6 6 6 2"/><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="9" cy="13" r="1.5"/><circle cx="15" cy="13" r="1.5"/></svg>
-                  </div>
-                  <h4 style="color: #fff; font-size: 1.4rem; font-weight: 800; margin-bottom: 6px;">Feaths Games Arena</h4>
-                  <p style="color: #C7D2FE; font-size: 0.88rem;">Real-Time Social Gaming Community</p>
-                </div>
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">Feaths Games Arena</h3>
-                <span class="project-category-badge">Gaming Platform</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">Active traffic on live gaming hub</div>
-              <p class="project-summary">
-                A social multiplayer gaming platform that runs directly in mobile browsers. Users play games, post status updates, follow other players, and compete on live leaderboards.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Live Social Feed</span>
-                <span class="project-tag">Instant Game Play</span>
-                <span class="project-tag">Mobile Web Friendly</span>
-                <span class="project-tag">Player Profiles</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://feaths.games/#/social" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span>Launch Arena</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-green); margin-left: auto;">● Active Traffic</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 9. Social App & Gig Hub -->
-          <div class="project-card" data-category="saas mobile realtime" data-origin="[TAG_TBD]">
-            <div class="project-viewport" onclick="showModal('socialapp')">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <span>Click to View 9 Screenshots</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #0E0E12;">
-                <img src="apps/laughlogo.png" alt="Social Media App" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">Social App & Gig Hub</h3>
-                <span class="project-category-badge">Mobile App + Backend</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">[RESULT_TBD]</div>
-              <p class="project-summary">
-                A mobile app combining short video feeds with direct creator hiring. Users post videos, explore talent, and book paid gigs in one place.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Short-Video Feeds</span>
-                <span class="project-tag">Paid Gig Bookings</span>
-                <span class="project-tag">Creator Portfolios</span>
-                <span class="project-tag">Push Notifications</span>
-              </div>
-              <div class="project-actions">
-                <button onclick="showModal('socialapp')" class="btn-project btn-project-live">
-                  <span>View 9 App Screenshots</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                </button>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 10. GeoFarming -->
-          <div class="project-card" data-category="mobile realtime" data-origin="[TAG_TBD]">
-            <div class="project-viewport" onclick="showModal('geofarming')">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <span>Click to View 15 Screenshots</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #064E3B;">
-                <img src="apps/geofarmingapp_logo.webp" alt="GeoFarming" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">GeoFarming</h3>
-                <span class="project-category-badge">Smart Farm GPS App</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">[RESULT_TBD]</div>
-              <p class="project-summary">
-                A GPS farm mapping app for cattle and dairy farmers. It divides pasture fields on a satellite map and shows farmers where to run electric fence wire.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">GPS Satellite Mapping</span>
-                <span class="project-tag">Auto Pasture Division</span>
-                <span class="project-tag">Electric Wire Placement</span>
-                <span class="project-tag">Works in Fields Offline</span>
-              </div>
-              <div class="project-actions">
-                <button onclick="showModal('geofarming')" class="btn-project btn-project-live">
-                  <span>View 15 App Screenshots</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                </button>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 11. NoteSnap -->
-          <div class="project-card" data-category="mobile" data-origin="[TAG_TBD]">
-            <div class="project-viewport" onclick="showModal('notessnap')">
-              <div class="scroll-hint-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <span>Click to View 17 Screenshots</span>
-              </div>
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #18181B;">
-                <img src="apps/notessnap_logo.jpg" alt="NoteSnap" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">NoteSnap</h3>
-                <span class="project-category-badge">Study Materials App</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">[RESULT_TBD]</div>
-              <p class="project-summary">
-                A study materials app for university and college students. Students upload lecture notes and exam papers to earn rewards, while classmates search study guides by subject.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Study Guides & Notes</span>
-                <span class="project-tag">Subject Categorization</span>
-                <span class="project-tag">Student Rewards</span>
-                <span class="project-tag">Search & Download</span>
-              </div>
-              <div class="project-actions">
-                <button onclick="showModal('notessnap')" class="btn-project btn-project-live">
-                  <span>View 17 App Screenshots</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                </button>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 12. VideoSaver -->
-          <div class="project-card" data-category="mobile" data-origin="[TAG_TBD]">
-            <div class="project-viewport">
-              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #1E1B4B;">
-                <img src="apps/videosaver_logo.webp" alt="VideoSaver" style="max-height: 160px; width: auto; object-fit: contain;">
-              </div>
-            </div>
-            <div class="project-info-area">
-              <div class="project-header-row">
-                <h3 class="project-title">VideoSaver</h3>
-                <span class="project-category-badge">Utility Tool</span>
-                <span class="project-origin-tag">[TAG_TBD]</span>
-              </div>
-              <div class="project-result-line">Live on Google Play</div>
-              <p class="project-summary">
-                A high-speed media downloader utility for mobile devices. Users download media in the background, pause and resume downloads, and save files straight to their photo gallery.
-              </p>
-              <div class="project-tags-list">
-                <span class="project-tag">Background Downloading</span>
-                <span class="project-tag">Pause & Resume State</span>
-                <span class="project-tag">Gallery Media File Sync</span>
-                <span class="project-tag">High-Speed Engine</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://play.google.com/store/apps/details?id=video.download.downloader.snap.tubex&hl=en" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span>Google Play App</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-appstore" style="display: none;">
-                  <span>App Store</span>
-                </a>
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-green); margin-left: auto;">● Live on Google Play</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials-section" id="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Client Feedback</span>
-          <h2 class="section-title">What Founders Say</h2>
-          <p class="section-desc">
-            Direct feedback from founders and business operators who built their apps and software with me.
-          </p>
-        </div>
-
-        <div class="testimonials-grid" id="testimonials-grid">
-          <!-- Rendered dynamically from testimonials config in JavaScript -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Founders Partner With An All-Rounder (The All-Rounder Advantage) -->
-    <section class="comparison-section" id="why-partner">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Value Comparison</span>
-          <h2 class="section-title">Why Working With Me Saves You Time & Money</h2>
-          <p class="section-desc">
-            Traditional agencies cost $25,000+ because you're paying for sales reps, offices, and middle managers. Here is how working directly with an experienced builder protects your budget.
-          </p>
-        </div>
-
-        <div class="comparison-grid">
-          
-          <div class="comparison-points">
-            <div class="comp-point-card">
-              <div class="comp-icon">💬</div>
-              <div>
-                <h3 class="comp-title">You Deal Directly With The Builder</h3>
-                <p class="comp-desc">
-                  No "game of telephone" through account managers. You speak directly with the engineer coding your app, so your vision is executed without misunderstandings.
-                </p>
-              </div>
-            </div>
-
-            <div class="comp-point-card">
-              <div class="comp-icon">💰</div>
-              <div>
-                <h3 class="comp-title">Agency Quality at an Affordable, Moderate Budget</h3>
-                <p class="comp-desc">
-                  You get the same clean, production-grade software an agency delivers, without paying for their fancy offices or non-technical staff.
-                </p>
-              </div>
-            </div>
-
-            <div class="comp-point-card">
-              <div class="comp-icon">📱</div>
-              <div>
-                <h3 class="comp-title">One Person Builds Both Your App & Website</h3>
-                <p class="comp-desc">
-                  Your iPhone app, Android app, and website work together harmoniously. You don't have to hire three separate freelancers who blame each other when something breaks.
-                </p>
-              </div>
-            </div>
-
-            <div class="comp-point-card">
-              <div class="comp-icon">🛡️</div>
-              <div>
-                <h3 class="comp-title">100% Full Ownership of Your Code & Accounts</h3>
-                <p class="comp-desc">
-                  Every account, code repository, and store listing is created in your company's name. You own everything 100% with zero recurring fees to me.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Comparison Table Card -->
-          <div class="comparison-table-card">
-            <div class="comp-table-header">
-              <h3>Side-by-Side Comparison</h3>
-              <p>How hiring me compares to typical agency alternatives</p>
-              <div class="mobile-table-hint">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                <span>Swipe table horizontally to compare</span>
-              </div>
-            </div>
-            <div class="comparison-table-wrapper">
-              <table class="comp-table">
-                <thead>
-                  <tr>
-                    <th>Factor</th>
-                    <th>Working with Hamza</th>
-                    <th>Hiring an Agency</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>Pricing / Cost</strong></td>
-                    <td><span class="check-green">✓</span> From $[PRICE_TBD]</td>
-                    <td><span class="cross-red">✗</span> $25k – $50k+ Marked Up</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Speed to Launch</strong></td>
-                    <td><span class="check-green">✓</span> 3-6 Weeks Fast</td>
-                    <td><span class="cross-red">✗</span> 3 - 6 Months Slow</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Communication</strong></td>
-                    <td><span class="check-green">✓</span> Direct with the Developer</td>
-                    <td><span class="cross-red">✗</span> Filtered by Middlemen</td>
-                  </tr>
-                  <tr>
-                    <td><strong>App Store Setup</strong></td>
-                    <td><span class="check-green">✓</span> Fully Handled For You</td>
-                    <td><span class="cross-red">✗</span> Often Billed as an Add-On</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Post-Launch Warranty</strong></td>
-                    <td><span class="check-green">✓</span> Included Free (14-30 Days)</td>
-                    <td><span class="cross-red">✗</span> Expensive Monthly Retainer</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Transparent Engagement Models & Moderate Budget Packages -->
-    <section class="pricing-section" id="packages">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Packages & Pricing</span>
-          <h2 class="section-title">Clear, Predictable Packages</h2>
-          <p class="section-desc">
-            No surprise invoices. No confusing technical line items. Pick the package that fits your stage, and we'll ship it.
-          </p>
-        </div>
-
-        <div class="pricing-grid">
-
           <!-- Package 1: MVP Launchpad -->
-          <div class="pricing-card">
+          <div class="package-card">
             <h3 class="package-name">0-to-1 MVP Launchpad</h3>
-            <div class="package-price">From $[PRICE_TBD]</div>
-            <p class="package-tagline">Best for testing a brand new app or software idea fast with real users without spending a fortune.</p>
-            
-            <div class="package-pricing-badge">
-              <span class="package-scope-label">Turnaround Timeline</span>
-              <div class="package-timeline">3-4 Weeks</div>
-              <span class="package-budget-note">Fixed Scope • No surprise invoices</span>
-            </div>
-
-            <ul class="package-checklist">
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Visual App Blueprint & Screen Planning</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Working Mobile App or Web Platform</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Secure Customer Logins & User Accounts</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Core Business Features & Workflows</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Cloud Server Setup & Testing</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>14 Days Free Post-Launch Bugfix Warranty</span>
-              </li>
+            <div class="package-price">$2,400 <span>/ fixed</span></div>
+            <p class="package-desc">Best for testing a brand new app idea fast with real users without spending an agency fortune.</p>
+            <ul class="package-list">
+              <li class="package-item"><span>✓</span><span>Visual Screen Blueprint &amp; Specs</span></li>
+              <li class="package-item"><span>✓</span><span>iPhone &amp; Android App or Web SaaS</span></li>
+              <li class="package-item"><span>✓</span><span>Customer Accounts &amp; Stripe Setup</span></li>
+              <li class="package-item"><span>✓</span><span>Shipped in 3 to 4 Weeks</span></li>
+              <li class="package-item"><span>✓</span><span>14 Days Bugfix Warranty</span></li>
             </ul>
-
-            <div class="package-cta-group" style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-              <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20am%20interested%20in%20the%200-to-1%20MVP%20Launchpad%20package." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
-                <span>Discuss on WhatsApp</span>
-              </a>
-              <a href="[CALENDLY_URL_TBD]" target="_blank" rel="noopener noreferrer" class="btn btn-outline cal-booking-btn" style="width: 100%;">
-                <span>Book a 20-min Call</span>
-              </a>
-            </div>
+            <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20let%27s%20discuss%20the%20MVP%20Launchpad%20package." target="_blank" rel="noopener" class="package-btn">Start MVP Project ↗</a>
           </div>
 
-          <!-- Package 2: Full-Stack SaaS Platform (Featured) -->
-          <div class="pricing-card featured">
-            <span class="popular-badge">Most Popular</span>
-            <h3 class="package-name">Full Web SaaS Platform</h3>
-            <div class="package-price">From $[PRICE_TBD]</div>
-            <p class="package-tagline">Best for businesses needing a complete web system with subscriptions, customer logins, and an admin management dashboard.</p>
-            
-            <div class="package-pricing-badge">
-              <span class="package-scope-label">Turnaround Timeline</span>
-              <div class="package-timeline">4-6 Weeks</div>
-              <span class="package-budget-note">Complete System • No surprise invoices</span>
-            </div>
-
-            <ul class="package-checklist">
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Customer Web Portal & Clean Interface</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Credit Card Subscriptions & Stripe Invoicing</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Owner Admin Dashboard with Sales Stats</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Automated Email & SMS Notifications</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Fast Cloud Hosting & Custom Domain Setup</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>30 Days Free Post-Launch Bugfix Warranty</span>
-              </li>
+          <!-- Package 2: Full Web SaaS Platform (Featured) -->
+          <div class="package-card is-featured">
+            <span class="package-badge">Most Popular</span>
+            <h3 class="package-name">Full-Stack SaaS Platform</h3>
+            <div class="package-price">$4,800 <span>/ fixed</span></div>
+            <p class="package-desc">Complete multi-platform ecosystem with subscriptions, customer portal, and admin dashboard.</p>
+            <ul class="package-list">
+              <li class="package-item"><span>✓</span><span>iOS &amp; Android Apps + Web Portal</span></li>
+              <li class="package-item"><span>✓</span><span>Stripe Subscriptions &amp; Billing</span></li>
+              <li class="package-item"><span>✓</span><span>Owner Admin Control Dashboard</span></li>
+              <li class="package-item"><span>✓</span><span>Apple &amp; Google Store Submissions</span></li>
+              <li class="package-item"><span>✓</span><span>30 Days Priority Warranty</span></li>
             </ul>
-
-            <div class="package-cta-group" style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-              <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20am%20interested%20in%20building%20a%20Full%20Web%20SaaS%20Platform." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
-                <span>Discuss on WhatsApp</span>
-              </a>
-              <a href="[CALENDLY_URL_TBD]" target="_blank" rel="noopener noreferrer" class="btn btn-outline cal-booking-btn" style="width: 100%;">
-                <span>Book a 20-min Call</span>
-              </a>
-            </div>
+            <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20want%20to%20build%20a%20Full-Stack%20Platform." target="_blank" rel="noopener" class="package-btn">Start Full-Stack Project ↗</a>
           </div>
 
-          <!-- Package 3: Mobile Suite -->
-          <div class="pricing-card">
-            <h3 class="package-name">Mobile Suite (iOS & Android)</h3>
-            <div class="package-price">From $[PRICE_TBD]</div>
-            <p class="package-tagline">Best for launching a dedicated iPhone & Android app onto the Apple App Store and Google Play.</p>
-            
-            <div class="package-pricing-badge">
-              <span class="package-scope-label">Turnaround Timeline</span>
-              <div class="package-timeline">4-6 Weeks</div>
-              <span class="package-budget-note">Both App Stores • No surprise invoices</span>
-            </div>
-
-            <ul class="package-checklist">
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Single App for Both Apple iPhone & Android</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Fast Performance & Offline Access</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Push Notifications Direct to User Phones</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>In-App Purchases / Subscription Payments</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Full Apple App Store & Google Play Submission</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>30 Days Free Post-Release Bugfix Warranty</span>
-              </li>
+          <!-- Package 3: Monthly Sprints Retainer -->
+          <div class="package-card">
+            <h3 class="package-name">Fractional CTO &amp; Sprints</h3>
+            <div class="package-price">$2,900 <span>/ month</span></div>
+            <p class="package-desc">Continuous feature delivery, cloud architecture, and ongoing speed for established products.</p>
+            <ul class="package-list">
+              <li class="package-item"><span>✓</span><span>Bi-Weekly Continuous Sprints</span></li>
+              <li class="package-item"><span>✓</span><span>Direct WhatsApp Founder Access</span></li>
+              <li class="package-item"><span>✓</span><span>Database &amp; Performance Scaling</span></li>
+              <li class="package-item"><span>✓</span><span>Store Compliance Maintenance</span></li>
+              <li class="package-item"><span>✓</span><span>Pause or Cancel Anytime</span></li>
             </ul>
-
-            <div class="package-cta-group" style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-              <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20am%20interested%20in%20building%20a%20Mobile%20Suite%20app." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
-                <span>Discuss on WhatsApp</span>
-              </a>
-              <a href="[CALENDLY_URL_TBD]" target="_blank" rel="noopener noreferrer" class="btn btn-outline cal-booking-btn" style="width: 100%;">
-                <span>Book a 20-min Call</span>
-              </a>
-            </div>
+            <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20let%27s%20discuss%20the%20Monthly%20Retainer." target="_blank" rel="noopener" class="package-btn">Inquire Retainer ↗</a>
           </div>
 
         </div>
-      </div>
-    </section>
 
-    <!-- Interactive FAQ Section with Sticky Consultation Card -->
-    <section class="faq-section" id="faq">
-      <div class="container">
-        
-        <div class="faq-grid">
-          
-          <!-- Sticky Founder Card -->
-          <div class="sticky-contact-card">
-            <div class="founder-headshot-box">
-              <img src="apps/hamza_headshot.jpg" alt="Hamza Shahid">
+        <!-- Interactive Scope Chips Estimator Box -->
+        <div style="margin-top: 2rem; border: 1px solid rgb(var(--g200)); border-radius: 16px; padding: 1.5rem; background: rgb(var(--g50) / 0.5);">
+          <div style="margin-bottom: 1rem;">
+            <h3 class="font-pixel" style="font-size: 16px; color: rgb(var(--ink));">Configure Your Scope &amp; Budget:</h3>
+            <p style="font-size: 13px; color: rgb(var(--g500));">Select required modules to calculate estimated delivery time and budget:</p>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem;">
+            <button type="button" class="btn-inspect-pill is-selected" onclick="toggleScope('mobile_app', this)">📱 iOS &amp; Android App</button>
+            <button type="button" class="btn-inspect-pill is-selected" onclick="toggleScope('web_portal', this)">💻 Web SaaS Platform</button>
+            <button type="button" class="btn-inspect-pill is-selected" onclick="toggleScope('cloud_backend', this)">☁️ Cloud API &amp; Database</button>
+            <button type="button" class="btn-inspect-pill is-selected" onclick="toggleScope('auth_roles', this)">🔒 User Accounts &amp; Auth</button>
+            <button type="button" class="btn-inspect-pill" onclick="toggleScope('stripe_pay', this)">💳 Stripe Online Payments</button>
+            <button type="button" class="btn-inspect-pill" onclick="toggleScope('realtime_sync', this)">⚡ Live Push Notifications</button>
+            <button type="button" class="btn-inspect-pill is-selected" onclick="toggleScope('app_store_launch', this)">🚀 App Store Launch</button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; justify-content: space-between; border-top: 1px solid rgb(var(--g200)); padding-top: 1.25rem;">
+            <div>
+              <div id="estBudgetValue" class="font-pixel" style="font-size: 1.6rem; color: rgb(var(--ink));">$3,250 – $4,150</div>
+              <div id="estTimeValue" class="font-mono" style="font-size: 12px; color: rgb(var(--g500)); margin-top: 2px;">🚀 Delivery: 3 to 4 Weeks</div>
             </div>
-            <h3 class="founder-name">Hamza Shahid</h3>
-            <p class="founder-tagline">Senior App & Web Product Engineer</p>
+            <a href="#" id="estWhatsappBtn" target="_blank" rel="noopener" class="package-btn" style="background: #25D366; color: #fff; border-color: #25D366; width: auto; padding: 9px 20px;">
+              <span>Discuss This Scope on WhatsApp ↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
-            <div class="status-pill" id="contact-status-pill" style="margin-bottom: 20px;">
-              <span class="pulse-dot"></span>
-              <span id="contact-spots-text">Taking 1 New Project This Month</span>
-            </div>
+      <!-- ── 8. Founder Reviews & Recommendations (`#recommendations`) ── -->
+      <section id="recommendations" class="content-section">
+        <div class="section-head-bar">
+          <h2 class="section-num-tag">06 — founder recommendations</h2>
+          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">client feedback</span>
+        </div>
 
-            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 20px;">
-              Have an app idea, a sketch, or an existing software project? Let's have a friendly 20-minute chat to discuss how we can build it within your budget.
+        <div class="rec-list">
+          <div class="rec-card">
+            <p class="rec-quote">
+              "Hamza brought our roommate matching platform from an idea to live in weeks. He understands both architecture and founder velocity. No agency fluff, just pure high-speed execution."
             </p>
-
-            <div class="founder-contact-actions" style="display: flex; flex-direction: column; gap: 10px;">
-              <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20have%20an%20idea%20I%27d%20like%20to%20chat%20about." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                <span>Chat on WhatsApp</span>
-              </a>
-              <a href="[CALENDLY_URL_TBD]" target="_blank" rel="noopener noreferrer" class="btn btn-outline cal-booking-btn" style="width: 100%;">
-                <span>Book a 20-min Call</span>
-              </a>
-              <a href="mailto:hamzashahid682@gmail.com" class="btn btn-outline" style="width: 100%;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span>Send Hamza An Email</span>
-              </a>
+            <div class="rec-author">
+              <strong>Founder</strong> · The Co-Living Matrix
             </div>
           </div>
 
-          <!-- Plain-English FAQ Accordion -->
-          <div class="accordion-list">
-            
-            <div class="faq-item active">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                <span>I'm not technical at all. Can you handle everything for me?</span>
-                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="faq-answer">
-                Yes, 100%! Most of my clients are non-technical founders, operators, and business owners. I guide you in plain English through every step, from drawing the screens to launching on the App Store. You never need to write a line of code or manage confusing servers.
-              </div>
+          <div class="rec-card">
+            <p class="rec-quote">
+              "Working with Hamza was a breath of fresh air. Our repair shop software handled real customers, automated SMS notifications, and inventory immediately without operational hiccups."
+            </p>
+            <div class="rec-author">
+              <strong>Operations Director</strong> · Repairing Shop Manager
             </div>
-
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                <span>Why is hiring you much more affordable than an agency?</span>
-                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="faq-answer">
-                Agencies have massive markups because they pay for fancy offices, project managers, sales commissions, and administrative staff. When you work with me, 100% of your investment goes directly into real software built by an experienced engineer, getting you the same agency-quality product at a fraction of the cost.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                <span>How long will it take from idea to a working app?</span>
-                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="faq-answer">
-                A focused MVP typically takes 3-4 weeks. A full-scale mobile app or web SaaS platform with payments and an admin dashboard takes 4-6 weeks. General timelines range from 3-6 weeks. Before we begin, you receive a clear, simple weekly roadmap so you always know what is being delivered.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                <span>Who owns the app, source code, and accounts?</span>
-                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="faq-answer">
-                You do, 100%. All source code, store listings, domain names, and cloud accounts belong exclusively to your business. I am also happy to sign a standard Non-Disclosure Agreement (NDA) before we discuss your confidential idea.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                <span>Do you help get the app approved on Apple and Google?</span>
-                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="faq-answer">
-                Yes! Apple and Google have strict technical review rules. I handle the certificates, privacy guidelines, and store listing details, and communicate directly with the store reviewers until your app is officially approved and live for download.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                <span>What happens if something breaks or there's a bug after launch?</span>
-                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="faq-answer">
-                Every project includes a free 14-30 days warranty period where any bugs or adjustments are fixed immediately at zero extra cost. MVP includes 14 days, while Web SaaS and Mobile include 30 days. I also offer flexible monthly maintenance if you want ongoing feature updates as your business grows.
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Final Call to Action Banner -->
-    <section class="final-cta-section" id="contact">
-      <div class="container">
-        <div class="final-cta-card">
-          <h2 class="final-cta-title">Ready to Turn Your Idea Into a Working App?</h2>
-          <p class="final-cta-desc">
-            Stop waiting on expensive agency quotes or unreliable freelancers. Let's talk about what you want to build, and have it live in your customers' hands next month.
-          </p>
-
-          <div class="final-cta-buttons">
-            <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20have%20an%20idea%20I%27d%20like%20to%20build." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              <span>Discuss on WhatsApp</span>
-            </a>
-
-            <a href="[CALENDLY_URL_TBD]" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg cal-booking-btn" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">
-              <span>Book a 20-min Call</span>
-            </a>
-
-            <a href="mailto:hamzashahid682@gmail.com" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <span>Email Hamza Directly</span>
-            </a>
-
-            <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              <span>Connect on LinkedIn</span>
-            </a>
           </div>
         </div>
+      </section>
+
+      <!-- ── 9. FAQ Accordion (`#faq`) ── -->
+      <section id="faq" class="content-section">
+        <div class="section-head-bar">
+          <h2 class="section-num-tag">07 — frequently asked questions</h2>
+          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">clarity &amp; terms</span>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="faq-entry">
+            <button type="button" class="faq-trigger" onclick="toggleFaq(this)">
+              <span>I'm not technical. Can you handle everything from A to Z?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Yes, 100%. Most of my clients are non-technical founders, operators, and business owners. I guide you in plain English through every step—from drawing the screens to launching on the App Store. You never need to write a line of code or manage confusing servers.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-entry">
+            <button type="button" class="faq-trigger" onclick="toggleFaq(this)">
+              <span>Who owns the source code and accounts?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                You own 100% of the intellectual property, Git repositories, domain records, and cloud infrastructure from day one. There are zero licensing lock-ins or recurring fees to me.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-entry">
+            <button type="button" class="faq-trigger" onclick="toggleFaq(this)">
+              <span>What happens if Apple or Google requests changes during review?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                I handle the entire App Store and Google Play compliance lifecycle. If Apple or Google requests guideline adjustments, demo credentials, or metadata tweaks, I resolve and resubmit until approved.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-entry">
+            <button type="button" class="faq-trigger" onclick="toggleFaq(this)">
+              <span>Can you support my product after it launches?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Yes. Every project includes a free 14 to 30 day warranty covering any unexpected bugs. Afterward, you can either manage the code with your internal team or retain my studio for ongoing bi-weekly feature sprints.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 10. Site Footer ── -->
+      <footer class="site-footer">
+        <div>
+          <span>&copy; 2026 Hamza Shahid. All rights reserved.</span>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: center;">
+          <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="hero-social-link">WhatsApp ↗</a>
+          <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener" class="hero-social-link">LinkedIn ↗</a>
+          <a href="mailto:hamzashahid682@gmail.com" class="hero-social-link">Email ↗</a>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- ─────────────── Interactive Overlays ─────────────── -->
+
+  <!-- 1. Ask Overlay (⌘K / Alt+K) -->
+  <div id="askOverlay" role="dialog" aria-modal="true" aria-label="Ask Hamza">
+    <div class="ask-backdrop" onclick="closeAsk()"></div>
+    <div class="ask-content" onclick="document.getElementById('askInput')?.focus()">
+      <div class="ask-bubble" id="askBubble"><span id="askBubbleText"></span></div>
+      <h2 class="ask-title" id="askTitle">what do you want to ask?</h2>
+      <div class="ask-field">
+        <span id="askText"></span><span class="ask-caret"></span>
       </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-content">
-        <div class="nav-brand">
-          <span class="brand-dot"></span>
-          <span>Hamza<span style="color: var(--accent-orange);">.build</span></span>
-        </div>
-
-        <div class="footer-meta">
-          © 2026 Hamza Shahid. App & Web Product Engineer. Hamza.build
-        </div>
-
-        <div class="footer-links">
-          <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-          <a href="https://wa.me/923456575495" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp (+92 345 6575495)">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          </a>
-          <a href="mailto:hamzashahid682@gmail.com" class="social-link" title="Email: hamzashahid682@gmail.com">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-        </div>
-      </div>
-    </footer>
-
+      <input id="askInput" class="ask-hidden-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Type your question">
+    </div>
   </div>
 
-  <!-- MODALS FOR SCREENSHOT GALLERIES -->
-
-  <!-- Modal: Social App -->
-  <div class="modal" id="modal-socialapp">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('socialapp')">&times;</span>
-      <h2 class="modal-title">Social App & Gig Marketplace</h2>
-      <p class="modal-body-text">
-        A feature-rich social media app combining short-form video feeds with creator portfolios and direct customer bookings. Users post videos, explore trending talent, and book gigs right inside the app.
-      </p>
-      <div class="modal-tech-box">
-        <strong>What's Built Inside:</strong> Short-Video Streaming, Creator Portfolios, In-App Messaging, Push Notifications, Secure Database
+  <!-- 2. Typing Test Overlay (⌘J / Alt+J) -->
+  <div id="typingOverlay" role="dialog" aria-modal="true" aria-label="Typing Test">
+    <div class="typing-backdrop" onclick="closeTyping()"></div>
+    <div class="typing-modal-card">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+        <span class="font-pixel" style="font-size: 16px;">Test Your Typing Speed vs Hamza</span>
+        <button type="button" onclick="closeTyping()" style="background: none; border: none; font-size: 20px; cursor: pointer; color: rgb(var(--g500));">&times;</button>
       </div>
-      
-      <div class="screenshot-carousel-container">
-        <button class="carousel-scroll-btn" onclick="scrollScreenshots('left', this)">&#8592;</button>
-        <div class="screenshots-row">
-          <img src="apps/socialapp1.jpg" alt="Social App Screenshot 1" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp2.jpg" alt="Social App Screenshot 2" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp3.jpg" alt="Social App Screenshot 3" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp4.jpg" alt="Social App Screenshot 4" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp5.jpg" alt="Social App Screenshot 5" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp6.jpg" alt="Social App Screenshot 6" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp7.jpg" alt="Social App Screenshot 7" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp8.jpg" alt="Social App Screenshot 8" onclick="openLightbox(this.src)">
-          <img src="apps/socialapp9.jpg" alt="Social App Screenshot 9" onclick="openLightbox(this.src)">
-        </div>
-        <button class="carousel-scroll-btn" onclick="scrollScreenshots('right', this)">&#8594;</button>
+
+      <div class="tt-stats-row">
+        <div>WPM: <span id="ttWpm" style="color: #10B981;">0</span></div>
+        <div>Accuracy: <span id="ttAcc">100</span>%</div>
+        <div>Time: <span id="ttTime">0s</span></div>
+      </div>
+
+      <div class="tt-words-display" id="ttWordsDisplay">
+        <!-- Rendered in app.js -->
+      </div>
+
+      <div style="display: flex; justify-content: space-between; font-family: 'Geist Mono', monospace; font-size: 11px; color: rgb(var(--g400));">
+        <span>Start typing to begin · ESC to exit</span>
+        <button type="button" onclick="resetTypingTest()" style="background: none; border: none; color: rgb(var(--ink)); cursor: pointer; font-family: inherit;">Restart ↺</button>
       </div>
     </div>
   </div>
 
-  <!-- Modal: MusicShare -->
-  <div class="modal" id="modal-musicshare">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('musicshare')">&times;</span>
-      <h2 class="modal-title">Sync Beat - MusicShare</h2>
-      <p class="modal-body-text">
-        A real-time music sharing application where friends listen to songs together in perfect sync while chatting on a call. Automatically detects phone calls and routes sound smoothly to the earpiece.
-      </p>
-      <div class="modal-tech-box">
-        <strong>What's Built Inside:</strong> Live Audio Sync Across Devices, Call Audio Detection, Shared Playlists, Real-Time Chat
+  <!-- 3. Screenshot Showcase Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal" onclick="closeGalleryModal()">
+    <div class="lightbox-modal-card" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <h3 class="lightbox-title" id="lightboxTitle">Production App Screens</h3>
+        <button type="button" class="lightbox-close-btn" onclick="closeGalleryModal()" aria-label="Close">&times;</button>
       </div>
-      
-      <div class="screenshot-carousel-container">
-        <button class="carousel-scroll-btn" onclick="scrollScreenshots('left', this)">&#8592;</button>
-        <div class="screenshots-row">
-          <img src="apps/img01.jpg" alt="MusicShare Screenshot 1" onclick="openLightbox(this.src)">
-          <img src="apps/img02.jpg" alt="MusicShare Screenshot 2" onclick="openLightbox(this.src)">
-          <img src="apps/img03.jpg" alt="MusicShare Screenshot 3" onclick="openLightbox(this.src)">
-          <img src="apps/img04.jpg" alt="MusicShare Screenshot 4" onclick="openLightbox(this.src)">
-          <img src="apps/img05.jpg" alt="MusicShare Screenshot 5" onclick="openLightbox(this.src)">
-          <img src="apps/img06.jpeg" alt="MusicShare Screenshot 6" onclick="openLightbox(this.src)">
-          <img src="apps/img07.jpeg" alt="MusicShare Screenshot 7" onclick="openLightbox(this.src)">
-          <img src="apps/img08.jpeg" alt="MusicShare Screenshot 8" onclick="openLightbox(this.src)">
-          <img src="apps/img09.jpeg" alt="MusicShare Screenshot 9" onclick="openLightbox(this.src)">
-          <img src="apps/img10.jpeg" alt="MusicShare Screenshot 10" onclick="openLightbox(this.src)">
-          <img src="apps/img11.jpeg" alt="MusicShare Screenshot 11" onclick="openLightbox(this.src)">
-          <img src="apps/img12.jpeg" alt="MusicShare Screenshot 12" onclick="openLightbox(this.src)">
-          <img src="apps/img13.jpeg" alt="MusicShare Screenshot 13" onclick="openLightbox(this.src)">
-          <img src="apps/img14.jpeg" alt="MusicShare Screenshot 14" onclick="openLightbox(this.src)">
-        </div>
-        <button class="carousel-scroll-btn" onclick="scrollScreenshots('right', this)">&#8594;</button>
+
+      <div class="lightbox-viewport">
+        <button type="button" class="lightbox-nav-btn lightbox-nav-prev" onclick="nextGalleryImage(-1)" aria-label="Previous">‹</button>
+        <img id="lightboxImg" class="lightbox-img" src="" alt="Screenshot high-res showcase">
+        <button type="button" class="lightbox-nav-btn lightbox-nav-next" onclick="nextGalleryImage(1)" aria-label="Next">›</button>
+      </div>
+
+      <div class="lightbox-thumbs" id="lightboxThumbs">
+        <!-- Filmstrip thumbnails -->
       </div>
     </div>
-  </div>
-
-  <!-- Modal: GeoFarming -->
-  <div class="modal" id="modal-geofarming">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('geofarming')">&times;</span>
-      <h2 class="modal-title">GeoFarming - Smart Farm GPS App</h2>
-      <p class="modal-body-text">
-        A smart solution for livestock pasture management using GPS mapping. Cattle and dairy farmers map out their fields on a smartphone, and the app calculates the ideal electric wire placement to ensure healthy pasture rotation.
-      </p>
-      <div class="modal-tech-box">
-        <strong>What's Built Inside:</strong> GPS Satellite Map Integration, Automatic Grazing Area Calculation, Offline Field Mode
-      </div>
-      
-      <div class="screenshot-carousel-container">
-        <button class="carousel-scroll-btn" onclick="scrollScreenshots('left', this)">&#8592;</button>
-        <div class="screenshots-row">
-          <img src="apps/feofarming_screenshot_7.jpeg" alt="GeoFarming Screenshot 7" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_1.jpeg" alt="GeoFarming Screenshot 1" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_2.jpeg" alt="GeoFarming Screenshot 2" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_3.jpeg" alt="GeoFarming Screenshot 3" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_4.jpeg" alt="GeoFarming Screenshot 4" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_5.jpeg" alt="GeoFarming Screenshot 5" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_6.jpeg" alt="GeoFarming Screenshot 6" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_8.jpeg" alt="GeoFarming Screenshot 8" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_9.jpeg" alt="GeoFarming Screenshot 9" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_10.jpeg" alt="GeoFarming Screenshot 10" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_11.jpeg" alt="GeoFarming Screenshot 11" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_12.jpeg" alt="GeoFarming Screenshot 12" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_13.jpeg" alt="GeoFarming Screenshot 13" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_14.jpeg" alt="GeoFarming Screenshot 14" onclick="openLightbox(this.src)">
-          <img src="apps/feofarming_screenshot_15.jpeg" alt="GeoFarming Screenshot 15" onclick="openLightbox(this.src)">
-        </div>
-        <button class="carousel-scroll-btn" onclick="scrollScreenshots('right', this)">&#8594;</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: NoteSnap -->
-  <div class="modal" id="modal-notessnap">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('notessnap')">&times;</span>
-      <h2 class="modal-title">NoteSnap - Academic Resource Sharing</h2>
-      <p class="modal-body-text">
-        A student-driven study materials app. Empowers university and high school students to discover, share, and collaborate on past exam papers, lecture notes, and assignments with gamified reward stars.
-      </p>
-      <div class="modal-tech-box">
-        <strong>What's Built Inside:</strong> Document Search & PDF Previews, Category Subject Filtering, Star Reward Points System
-      </div>
-      
-      <div class="screenshot-carousel-container">
-        <button class="carousel-scroll-btn" onclick="scrollScreenshots('left', this)">&#8592;</button>
-        <div class="screenshots-row">
-          <img src="apps/notessnap_Screenshot_1.jpg" alt="NoteSnap Screenshot 1" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_2.jpg" alt="NoteSnap Screenshot 2" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_3.jpg" alt="NoteSnap Screenshot 3" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_4.jpg" alt="NoteSnap Screenshot 4" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_5.jpg" alt="NoteSnap Screenshot 5" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_6.jpg" alt="NoteSnap Screenshot 6" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_7.jpg" alt="NoteSnap Screenshot 7" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_8.jpg" alt="NoteSnap Screenshot 8" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_9.jpg" alt="NoteSnap Screenshot 9" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_10.jpg" alt="NoteSnap Screenshot 10" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_11.jpg" alt="NoteSnap Screenshot 11" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_12.jpg" alt="NoteSnap Screenshot 12" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_13.jpg" alt="NoteSnap Screenshot 13" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_14.jpg" alt="NoteSnap Screenshot 14" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_15.jpg" alt="NoteSnap Screenshot 15" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_16.jpg" alt="NoteSnap Screenshot 16" onclick="openLightbox(this.src)">
-          <img src="apps/notessnap_Screenshot_17.jpg" alt="NoteSnap Screenshot 17" onclick="openLightbox(this.src)">
-        </div>
-        <button class="carousel-scroll-btn" onclick="scrollScreenshots('right', this)">&#8594;</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mobile Floating Quick-Action Bar (High Conversion On-The-Go) -->
-  <div class="mobile-floating-bar" id="mobile-floating-bar">
-    <a href="https://wa.me/923456575495?text=Hi%20Hamza%2C%20I%20have%20an%20app%20idea%20I%27d%20like%20to%20discuss." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-floating">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-      <span>Chat on WhatsApp</span>
-    </a>
-    <a href="#contact" class="btn btn-primary btn-floating">
-      <span>Get in Touch</span>
-    </a>
   </div>
 
   <!-- Interactive Logic -->
-  <script>
-    // Mobile Navigation Drawer Toggle
-    function toggleMobileNav() {
-      const drawer = document.getElementById('mobile-nav');
-      const overlay = document.getElementById('mobile-nav-overlay');
-      const toggleBtn = document.getElementById('nav-toggle');
-      const isOpen = drawer.classList.contains('active');
-
-      if (isOpen) {
-        closeMobileNav();
-      } else {
-        drawer.classList.add('active');
-        overlay.classList.add('active');
-        toggleBtn.classList.add('active');
-        toggleBtn.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeMobileNav() {
-      const drawer = document.getElementById('mobile-nav');
-      const overlay = document.getElementById('mobile-nav-overlay');
-      const toggleBtn = document.getElementById('nav-toggle');
-      if (drawer) drawer.classList.remove('active');
-      if (overlay) overlay.classList.remove('active');
-      if (toggleBtn) {
-        toggleBtn.classList.remove('active');
-        toggleBtn.setAttribute('aria-expanded', 'false');
-      }
-      document.body.style.overflow = '';
-    }
-
-    // Scroll listener for Mobile Floating Quick-Action Bar
-    const floatingBar = document.getElementById('mobile-floating-bar');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 450) {
-        floatingBar.classList.add('visible');
-      } else {
-        floatingBar.classList.remove('visible');
-      }
-    }, { passive: true });
-
-    // ==========================================
-    // PORTFOLIO CONFIGURATION (SINGLE SOURCE OF TRUTH)
-    // ==========================================
-
-    // Urgency spots configuration. Set to 0 to disable urgency badges across the page.
-    const spotsLeft = 0;
-
-    // Task 8: Calendly / Consultation booking URL. If empty or placeholder, all booking buttons auto-hide.
-    const calendlyUrl = "[CALENDLY_URL_TBD]";
-
-    // Task 3: Testimonials configuration.
-    // Edit this single array to fill client reviews. If all cards contain placeholders, section auto-hides.
-    const testimonials = [
-      {
-        quote: "[QUOTE_TBD]",
-        name: "[NAME_TBD]",
-        role: "[ROLE_TBD]"
-      },
-      {
-        quote: "[QUOTE_TBD]",
-        name: "[NAME_TBD]",
-        role: "[ROLE_TBD]"
-      },
-      {
-        quote: "[QUOTE_TBD]",
-        name: "[NAME_TBD]",
-        role: "[ROLE_TBD]"
-      }
-    ];
-
-    // Task 5: Optional Apple App Store URLs per project. Set any App Store URL to display the iOS store badge.
-    const appStoreUrls = {
-      // 'videosaver': 'https://apps.apple.com/...',
-    };
-
-    // Initialize dynamic features, urgency badge, and placeholders
-    function initDynamicFeatures() {
-      // Urgency Spots Controller
-      const contactStatusPill = document.getElementById('contact-status-pill');
-      const contactSpotsText = document.getElementById('contact-spots-text');
-
-      if (spotsLeft > 0) {
-        const contactText = spotsLeft === 1 ? 'Taking 1 New Project This Month' : `Taking ${spotsLeft} New Projects This Month`;
-        if (contactSpotsText) contactSpotsText.textContent = contactText;
-        if (contactStatusPill) contactStatusPill.style.display = 'inline-flex';
-      } else {
-        if (contactStatusPill) contactStatusPill.style.display = 'none';
-      }
-
-      // Calendly / Booking Button Visibility
-      const isBookingActive = calendlyUrl && calendlyUrl.trim() !== '' && !calendlyUrl.includes('[CALENDLY_URL_TBD]');
-      document.querySelectorAll('.cal-booking-btn').forEach(btn => {
-        if (isBookingActive) {
-          btn.href = calendlyUrl;
-          btn.style.display = 'inline-flex';
-        } else {
-          btn.style.display = 'none';
-        }
-      });
-
-      // Testimonials Section Renderer & Auto-Hide
-      const testimonialsSection = document.getElementById('testimonials');
-      const testimonialsGrid = document.getElementById('testimonials-grid');
-      const hasRealFeedback = testimonials.some(t => 
-        t.quote && t.quote.trim() !== '' && !t.quote.includes('[QUOTE_TBD]')
-      );
-
-      if (!hasRealFeedback || testimonials.length === 0) {
-        if (testimonialsSection) testimonialsSection.style.display = 'none';
-      } else {
-        if (testimonialsSection) testimonialsSection.style.display = '';
-        if (testimonialsGrid) {
-          testimonialsGrid.innerHTML = testimonials.map(t => `
-            <div class="testimonial-card">
-              <div class="testimonial-quote">"${t.quote}"</div>
-              <div class="testimonial-author">
-                <div class="testimonial-author-info">
-                  <div class="testimonial-name">${t.name}</div>
-                  <div class="testimonial-role">${t.role}</div>
-                </div>
-              </div>
-            </div>
-          `).join('');
-        }
-      }
-
-      // Project Result Lines Auto-Hide for [RESULT_TBD]
-      document.querySelectorAll('.project-result-line').forEach(el => {
-        const text = el.textContent || '';
-        if (text.includes('[RESULT_TBD]') || text.trim() === '') {
-          el.style.display = 'none';
-        }
-      });
-
-      // Project Origin Tags Auto-Hide for [TAG_TBD]
-      document.querySelectorAll('.project-origin-tag').forEach(el => {
-        const text = el.textContent || '';
-        if (text.includes('[TAG_TBD]') || text.trim() === '') {
-          el.style.display = 'none';
-        }
-      });
-
-      // Filter Bar: Auto-hide Origin filter buttons if all cards still have [TAG_TBD]
-      const hasOriginTags = Array.from(document.querySelectorAll('.project-card')).some(card => {
-        const origin = card.getAttribute('data-origin') || '';
-        return origin && !origin.includes('[TAG_TBD]');
-      });
-      document.querySelectorAll('.filter-btn-origin').forEach(btn => {
-        btn.style.display = hasOriginTags ? '' : 'none';
-      });
-
-      // Project App Store Badges (Render only if url is provided)
-      document.querySelectorAll('.project-card').forEach(card => {
-        const appStoreBtn = card.querySelector('.btn-project-appstore');
-        const projectId = card.getAttribute('data-project-id') || '';
-        const appStoreUrl = (appStoreUrls && appStoreUrls[projectId]) || card.getAttribute('data-appstore') || '';
-        if (appStoreBtn) {
-          if (appStoreUrl && appStoreUrl.trim() !== '' && !appStoreUrl.includes('[APP_STORE_URL_TBD]')) {
-            appStoreBtn.href = appStoreUrl;
-            appStoreBtn.style.display = 'inline-flex';
-          } else {
-            appStoreBtn.style.display = 'none';
-          }
-        }
-      });
-
-      // Smooth Scrolling with Offset Compensation for Navigation Links
-      document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', function(e) {
-          const href = this.getAttribute('href');
-          if (!href || href === '#') return;
-          const target = document.querySelector(href);
-          if (target) {
-            e.preventDefault();
-            const nav = document.querySelector('.navbar');
-            const navOffset = nav ? nav.offsetHeight + 16 : 85;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - navOffset;
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-            if (history.pushState) {
-              history.pushState(null, '', href);
-            }
-          }
-        });
-      });
-
-      // Active Section Navigation Link Highlight on Scroll
-      const navLinks = document.querySelectorAll('.nav-menu .nav-link');
-      const observedSections = document.querySelectorAll('section[id]');
-      if ('IntersectionObserver' in window && navLinks.length > 0) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const id = entry.target.getAttribute('id');
-              navLinks.forEach(link => {
-                if (link.getAttribute('href') === '#' + id) {
-                  link.classList.add('active');
-                } else {
-                  link.classList.remove('active');
-                }
-              });
-            }
-          });
-        }, {
-          rootMargin: '-20% 0px -60% 0px'
-        });
-        observedSections.forEach(sec => observer.observe(sec));
-      }
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initDynamicFeatures);
-    } else {
-      initDynamicFeatures();
-    }
-
-    // Project Category & Origin Filtering
-    function filterProjects(category, button) {
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      const cards = document.querySelectorAll('.project-card');
-      cards.forEach(card => {
-        if (category === 'all') {
-          card.style.display = 'flex';
-        } else if (category === 'client') {
-          const origin = (card.getAttribute('data-origin') || '').toLowerCase();
-          card.style.display = origin.includes('client') ? 'flex' : 'none';
-        } else if (category === 'product') {
-          const origin = (card.getAttribute('data-origin') || '').toLowerCase();
-          card.style.display = (origin.includes('product') || origin.includes('own')) ? 'flex' : 'none';
-        } else {
-          const categories = card.getAttribute('data-category') || '';
-          if (categories.includes(category)) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        }
-      });
-    }
-
-    // FAQ Accordion Toggle
-    function toggleFaq(button) {
-      const item = button.parentElement;
-      const isActive = item.classList.contains('active');
-      
-      // Close all other items
-      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-      
-      // Toggle clicked item
-      if (!isActive) {
-        item.classList.add('active');
-      }
-    }
-
-    // Screenshot Carousel Scrolling
-    function scrollScreenshots(direction, button) {
-      const row = button.parentElement.querySelector('.screenshots-row');
-      const scrollAmount = Math.min(window.innerWidth * 0.75, 360);
-      row.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-
-    // Modal Handling
-    function showModal(id) {
-      const modal = document.getElementById('modal-' + id);
-      if (modal) {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-        if (typeof gtag === 'function') {
-          gtag('event', 'modal_view', {
-            event_category: 'Projects',
-            modal_id: id
-          });
-        }
-      }
-    }
-
-    function closeModal(id) {
-      const modal = document.getElementById('modal-' + id);
-      if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-      }
-    }
-
-    // Lightbox Handling
-    function openLightbox(src) {
-      const lightbox = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      img.src = src;
-      lightbox.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      if (typeof gtag === 'function') {
-        gtag('event', 'screenshot_view', {
-          event_category: 'Engagement',
-          image_src: src
-        });
-      }
-    }
-
-    function closeLightbox(e) {
-      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
-        document.getElementById('lightbox').style.display = 'none';
-        const anyModalOpen = Array.from(document.querySelectorAll('.modal')).some(m => m.style.display === 'flex');
-        if (!anyModalOpen) {
-          document.body.style.overflow = '';
-        }
-      }
-    }
-
-    // Window Click and Keydown Listeners
-    window.addEventListener('click', function(e) {
-      if (e.target.classList.contains('modal')) {
-        e.target.style.display = 'none';
-        document.body.style.overflow = '';
-      }
-    });
-
-    window.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        const lightbox = document.getElementById('lightbox');
-        if (lightbox && lightbox.style.display === 'flex') {
-          lightbox.style.display = 'none';
-        } else {
-          document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
-        }
-        closeMobileNav();
-        document.body.style.overflow = '';
-      }
-    });
-
-    // Close mobile nav on resize to desktop
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 992) {
-        closeMobileNav();
-      }
-    }, { passive: true });
-
-    // Automated Event Tracking for Firebase Analytics
-    document.addEventListener('DOMContentLoaded', function() {
-      // Track WhatsApp Clicks
-      document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-        link.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'Contact',
-              event_label: this.textContent.trim() || 'WhatsApp CTA'
-            });
-          }
-        });
-      });
-
-      // Track Booking / Calendly Clicks
-      document.querySelectorAll('.cal-booking-btn').forEach(link => {
-        link.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'calendly_click', {
-              event_category: 'Contact',
-              event_label: 'Book a 20-min Call'
-            });
-          }
-        });
-      });
-
-      // Track LinkedIn Clicks
-      document.querySelectorAll('a[href*="linkedin.com"]').forEach(link => {
-        link.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'linkedin_click', {
-              event_category: 'Contact',
-              event_label: 'LinkedIn Profile'
-            });
-          }
-        });
-      });
-
-      // Track Resume Downloads
-      document.querySelectorAll('a[href*="resume.pdf"]').forEach(link => {
-        link.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'resume_download', {
-              event_category: 'Engagement',
-              event_label: 'Download Resume PDF'
-            });
-          }
-        });
-      });
-
-      // Track Email Clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-        link.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'email_click', {
-              event_category: 'Contact',
-              event_label: this.href
-            });
-          }
-        });
-      });
-
-      // Track External Live Project Links
-      document.querySelectorAll('.project-footer-actions a').forEach(link => {
-        link.addEventListener('click', function() {
-          const card = this.closest('.project-card');
-          const projectName = card ? card.querySelector('.project-name')?.textContent.trim() : 'Project';
-          if (typeof gtag === 'function') {
-            gtag('event', 'project_visit', {
-              event_category: 'Projects',
-              project_name: projectName,
-              link_url: this.href
-            });
-          }
-        });
-      });
-    });
-  </script>
-
+  <script src="app.js"></script>
 </body>
 </html>
