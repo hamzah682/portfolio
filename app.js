@@ -252,7 +252,7 @@ async function handleAskSubmit() {
   } else if (qLower.includes('tech') || qLower.includes('stack') || qLower.includes('framework')) {
     answer = "I build in Flutter, React Native, Swift, Kotlin, Next.js, Node.js, Laravel, Supabase, Firebase, and PostgreSQL.";
   } else if (qLower.includes('contact') || qLower.includes('hire') || qLower.includes('whatsapp') || qLower.includes('email')) {
-    answer = "You can chat with me directly on WhatsApp at +92 345 6575495 or email hamzashahid682@gmail.com.";
+    answer = "You can chat with me directly on WhatsApp at +92 345 6575495 or email applyforhamza@gmail.com.";
   } else {
     // Playful browser sniff reveal like Bryl Lim's easter egg!
     const ua = navigator.userAgent;
@@ -552,6 +552,106 @@ function closeMobileNav() {
   setTimeout(() => nav.style.display = 'none', 300);
 }
 
+// ── 11. MULTI-PAGE SPA ROUTER & CATEGORY FILTERING (BRYL LIM AESTHETIC) ──
+const VALID_PAGES = ['home', 'projects', 'experience', 'stack', 'services', 'packages', 'recommendations', 'faq'];
+
+function navigateToPage(targetPage, updateHash = true) {
+  let pageId = (targetPage || '').replace(/^#/, '').toLowerCase();
+  if (!VALID_PAGES.includes(pageId)) pageId = 'home';
+
+  // Toggle active class on page views
+  let matched = false;
+  document.querySelectorAll('.page-view').forEach(view => {
+    const isCurrent = view.id === `page-${pageId}`;
+    view.classList.toggle('active', isCurrent);
+    if (isCurrent) matched = true;
+  });
+
+  if (!matched) {
+    const homeView = document.getElementById('page-home');
+    if (homeView) homeView.classList.add('active');
+    pageId = 'home';
+  }
+
+  // Update active states on sidebar navigation links (both desktop and mobile)
+  document.querySelectorAll('.sidebar-link, .mobile-nav-link').forEach(link => {
+    const href = link.getAttribute('href') || '';
+    const linkPage = href.replace(/^#/, '').toLowerCase();
+    const isBrand = href === '#' || href === '#home';
+    const active = (pageId === 'home' && isBrand) || (linkPage === pageId);
+    link.classList.toggle('active', active);
+  });
+
+  // Dynamic titles
+  const pageTitles = {
+    home: 'Hamza Shahid — Senior Full-Stack & Mobile Product Engineer',
+    projects: 'Projects — Hamza Shahid',
+    experience: 'Experience — Hamza Shahid',
+    stack: 'Tech Stack — Hamza Shahid',
+    services: 'What I Build — Hamza Shahid',
+    packages: 'Packages & Estimator — Hamza Shahid',
+    recommendations: 'Founder Reviews — Hamza Shahid',
+    faq: 'FAQ — Hamza Shahid'
+  };
+  if (pageTitles[pageId]) {
+    document.title = pageTitles[pageId];
+  }
+
+  // Instant scroll to top without flicker
+  window.scrollTo({ top: 0, behavior: 'instant' });
+
+  // Update URL hash
+  if (updateHash) {
+    if (pageId === 'home') {
+      if (window.location.hash) {
+        history.pushState(null, '', window.location.pathname + window.location.search);
+      }
+    } else {
+      if (window.location.hash !== `#${pageId}`) {
+        history.pushState(null, '', `#${pageId}`);
+      }
+    }
+  }
+
+  window.siteAudio?.play('tick');
+  closeMobileNav();
+}
+
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.cat-filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  const rows = document.querySelectorAll('.project-row[data-category]');
+  rows.forEach(row => {
+    const c = row.getAttribute('data-category') || '';
+    if (cat === 'all' || c.includes(cat)) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+
+  window.siteAudio?.play('tick');
+}
+
+// Global click delegation for hash links
+document.addEventListener('click', (e) => {
+  const target = e.target.closest('a[href^="#"]');
+  if (!target) return;
+  const href = target.getAttribute('href');
+  if (!href) return;
+  const hash = href.replace(/^#/, '').toLowerCase();
+  if (VALID_PAGES.includes(hash) || hash === '' || hash === 'home') {
+    e.preventDefault();
+    navigateToPage(hash || 'home');
+  }
+});
+
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash.replace(/^#/, '');
+  navigateToPage(hash || 'home', false);
+});
+
 // Init when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   recalcEstimator();
@@ -560,4 +660,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.ask-mod-key').forEach(el => {
     el.textContent = isMac ? '⌘' : 'Alt';
   });
+
+  // Handle direct hash navigation or pathname navigation on initial page load (e.g., #projects or projects.html)
+  const initialHash = window.location.hash.replace(/^#/, '');
+  const pathPage = (window.location.pathname.split('/').pop() || '').replace(/\.html$/i, '').toLowerCase();
+
+  if (initialHash && VALID_PAGES.includes(initialHash.toLowerCase())) {
+    navigateToPage(initialHash, false);
+  } else if (pathPage && VALID_PAGES.includes(pathPage)) {
+    navigateToPage(pathPage, false);
+  }
 });

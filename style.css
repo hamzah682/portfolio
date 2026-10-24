@@ -1647,3 +1647,267 @@ html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *
     justify-content: space-between;
   }
 }
+
+/* ── MULTI-PAGE VIEW SWITCHER (BRYL LIM ARCHITECTURE) ── */
+.page-view {
+  display: none;
+  opacity: 0;
+}
+
+.page-view.active {
+  display: block;
+  opacity: 1;
+  animation: pageEnterFadeUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageEnterFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-head {
+  padding-bottom: 2rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid rgb(var(--g200));
+}
+
+.page-title {
+  font-family: 'Geist Pixel', 'Geist Mono', monospace;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: rgb(var(--ink));
+  margin-bottom: 0.5rem;
+}
+
+.page-desc {
+  font-size: 14.5px;
+  color: rgb(var(--g500));
+  line-height: 1.6;
+  max-width: 620px;
+}
+
+.subpage-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  color: rgb(var(--g500));
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1.25rem;
+  transition: color 0.2s;
+}
+
+.subpage-back-btn:hover {
+  color: rgb(var(--ink));
+}
+
+.cat-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.cat-filter-btn {
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--g200));
+  background: rgb(var(--bg));
+  color: rgb(var(--g500));
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cat-filter-btn:hover {
+  border-color: rgb(var(--ink));
+  color: rgb(var(--ink));
+}
+
+.cat-filter-btn.active {
+  background: rgb(var(--ink));
+  color: rgb(var(--bg));
+  border-color: rgb(var(--ink));
+}
+
+.subpage-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--g300));
+  background: rgb(var(--g50));
+  color: rgb(var(--ink));
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.subpage-cta-btn:hover {
+  background: rgb(var(--ink));
+  color: rgb(var(--bg));
+  border-color: rgb(var(--ink));
+  transform: translateY(-1px);
+}
+
+.sidebar-link.active {
+  color: rgb(var(--ink));
+  font-weight: 600;
+}
+
+/* ── SUBPAGE DETAIL COMPONENTS (BRYL LIM AESTHETIC) ── */
+.exp-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exp-detail-card {
+  padding: 1.5rem;
+  border: 1px solid rgb(var(--g200));
+  border-radius: 16px;
+  background: rgb(var(--bg));
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.exp-detail-card:hover {
+  border-color: rgb(var(--g300));
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.06);
+}
+
+.exp-detail-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .exp-detail-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.exp-detail-role {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(var(--ink));
+}
+
+.exp-detail-company {
+  font-family: 'Geist Mono', monospace;
+  font-size: 12.5px;
+  color: rgb(var(--g500));
+}
+
+.exp-detail-body {
+  font-size: 13.5px;
+  color: rgb(var(--g600));
+  line-height: 1.6;
+}
+
+.exp-detail-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.exp-detail-body li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.exp-detail-body li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: rgb(var(--ink));
+  font-weight: 700;
+}
+
+/* Blueprint Grid */
+.blueprint-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .blueprint-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.blueprint-card {
+  border: 1px solid rgb(var(--g200));
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: rgb(var(--bg));
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.blueprint-card:hover {
+  transform: translateY(-2px);
+  border-color: rgb(var(--g300));
+}
+
+.blueprint-step {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  color: rgb(var(--g400));
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.blueprint-title {
+  font-family: 'Geist Pixel', 'Geist Mono', monospace;
+  font-size: 16px;
+  color: rgb(var(--ink));
+  margin-bottom: 0.5rem;
+}
+
+.blueprint-desc {
+  font-size: 13px;
+  color: rgb(var(--g500));
+  line-height: 1.5;
+}
+
+/* Stack Category Blocks */
+.stack-category-block {
+  margin-bottom: 2rem;
+}
+
+.stack-category-title {
+  font-family: 'Geist Pixel', 'Geist Mono', monospace;
+  font-size: 14px;
+  color: rgb(var(--ink));
+  text-transform: lowercase;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+

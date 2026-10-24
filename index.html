@@ -37,26 +37,30 @@
 
   <!-- ─────────────── Fixed Left Sidebar (Desktop lg+) ─────────────── -->
   <nav class="sidebar" aria-label="Sidebar Navigation">
-    <a href="#" class="sidebar-brand">
+    <a href="#home" class="sidebar-brand">
       <img src="apps/hamza_profile.png" alt="Hamza Shahid" class="nav-avatar">
       <span>Hamza Shahid</span>
     </a>
 
     <div class="sidebar-nav-group">
       <div class="sidebar-nav-sub">
-        <a href="#projects" class="sidebar-link">
+        <a href="#home" class="sidebar-link active" data-page="home">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="#projects" class="sidebar-link" data-page="projects">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
           <span>Projects</span>
         </a>
-        <a href="#experience" class="sidebar-link">
+        <a href="#experience" class="sidebar-link" data-page="experience">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           <span>Experience</span>
         </a>
-        <a href="#stack" class="sidebar-link">
+        <a href="#stack" class="sidebar-link" data-page="stack">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           <span>Stack</span>
         </a>
-        <a href="#services" class="sidebar-link">
+        <a href="#services" class="sidebar-link" data-page="services">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <span>What I Build</span>
         </a>
@@ -65,15 +69,15 @@
       <div class="sidebar-divider"></div>
 
       <div class="sidebar-nav-sub">
-        <a href="#packages" class="sidebar-link">
+        <a href="#packages" class="sidebar-link" data-page="packages">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
           <span>Packages</span>
         </a>
-        <a href="#recommendations" class="sidebar-link">
+        <a href="#recommendations" class="sidebar-link" data-page="recommendations">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           <span>Reviews</span>
         </a>
-        <a href="#faq" class="sidebar-link">
+        <a href="#faq" class="sidebar-link" data-page="faq">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           <span>FAQ</span>
         </a>
@@ -135,16 +139,16 @@
     <!-- Direct Reachout -->
     <div>
       <p class="sidebar-contact-text">For apps, software &amp; founders:</p>
-      <a href="mailto:hamzashahid682@gmail.com" class="sidebar-email-link">
+      <a href="mailto:applyforhamza@gmail.com" class="sidebar-email-link">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-        <span>hamzashahid682@gmail.com</span>
+        <span>applyforhamza@gmail.com</span>
       </a>
     </div>
   </nav>
 
   <!-- ─────────────── Mobile Top Bar (<lg) ─────────────── -->
   <header class="mobile-header">
-    <a href="#" class="sidebar-brand">
+    <a href="#home" class="sidebar-brand">
       <img src="apps/hamza_profile.png" alt="Hamza Shahid" class="nav-avatar">
       <span>Hamza Shahid</span>
     </a>
@@ -156,23 +160,24 @@
   <!-- ─────────────── Mobile Full-Screen Menu Drawer ─────────────── -->
   <div id="mobileNavOverlay" class="mobile-nav-overlay">
     <div class="mobile-header" style="border-bottom: 1px solid rgb(var(--g200));">
-      <span class="sidebar-brand">
+      <a href="#home" class="sidebar-brand" onclick="closeMobileNav()">
         <img src="apps/hamza_profile.png" alt="Hamza Shahid" class="nav-avatar">
         <span>Hamza Shahid</span>
-      </span>
+      </a>
       <button type="button" onclick="closeMobileNav()" class="mobile-menu-btn" aria-label="Close menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
     <div class="mobile-nav-inner">
       <div class="mobile-nav-links">
-        <a href="#projects" class="sidebar-link" onclick="closeMobileNav()">Projects</a>
-        <a href="#experience" class="sidebar-link" onclick="closeMobileNav()">Experience</a>
-        <a href="#stack" class="sidebar-link" onclick="closeMobileNav()">Tech Stack</a>
-        <a href="#services" class="sidebar-link" onclick="closeMobileNav()">What I Build</a>
-        <a href="#packages" class="sidebar-link" onclick="closeMobileNav()">Packages &amp; Pricing</a>
-        <a href="#recommendations" class="sidebar-link" onclick="closeMobileNav()">Founder Reviews</a>
-        <a href="#faq" class="sidebar-link" onclick="closeMobileNav()">FAQ</a>
+        <a href="#home" class="sidebar-link active" onclick="closeMobileNav()" data-page="home">Home</a>
+        <a href="#projects" class="sidebar-link" onclick="closeMobileNav()" data-page="projects">Projects</a>
+        <a href="#experience" class="sidebar-link" onclick="closeMobileNav()" data-page="experience">Experience</a>
+        <a href="#stack" class="sidebar-link" onclick="closeMobileNav()" data-page="stack">Tech Stack</a>
+        <a href="#services" class="sidebar-link" onclick="closeMobileNav()" data-page="services">What I Build</a>
+        <a href="#packages" class="sidebar-link" onclick="closeMobileNav()" data-page="packages">Packages &amp; Pricing</a>
+        <a href="#recommendations" class="sidebar-link" onclick="closeMobileNav()" data-page="recommendations">Founder Reviews</a>
+        <a href="#faq" class="sidebar-link" onclick="closeMobileNav()" data-page="faq">FAQ</a>
       </div>
 
       <div class="sidebar-divider" style="margin: 1.5rem 0;"></div>
@@ -188,10 +193,14 @@
         </button>
       </div>
 
-      <div style="margin-top: auto;">
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
         <p class="sidebar-contact-text">Direct Contact Line:</p>
         <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="sidebar-email-link" style="color: #25D366;">
           <span>WhatsApp: +92 345 6575495 ↗</span>
+        </a>
+        <a href="mailto:applyforhamza@gmail.com" class="sidebar-email-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+          <span>applyforhamza@gmail.com</span>
         </a>
       </div>
     </div>
@@ -201,156 +210,435 @@
   <main class="main-wrapper">
     <div class="content-container">
 
-      <!-- ── 1. Hero Section ── -->
-      <section class="hero-block">
-        <div style="position: relative; flex-shrink: 0;">
-          <div aria-hidden="true" class="halftone mask-circle" style="position: absolute; bottom: -12px; left: -12px; width: 120px; height: 120px; opacity: 0.28; pointer-events: none;"></div>
-          <div class="hero-photo-wrap">
-            <img src="apps/hamza_profile.png" alt="Hamza Shahid" class="hero-photo-img">
-          </div>
-        </div>
-
-        <div>
-          <h1 class="hero-title">Hamza Shahid</h1>
-
-          <div class="hero-role-pill">
-            <span class="pulse-dot"></span>
-            <span>Senior Full-Stack &amp; Mobile Product Engineer</span>
+      <!-- ════════════════════ PAGE VIEW 1: HOME ════════════════════ -->
+      <div class="page-view active" id="page-home">
+        
+        <!-- ── 1. Hero Section ── -->
+        <section class="hero-block">
+          <div style="position: relative; flex-shrink: 0;">
+            <div aria-hidden="true" class="halftone mask-circle" style="position: absolute; bottom: -12px; left: -12px; width: 120px; height: 120px; opacity: 0.28; pointer-events: none;"></div>
+            <div class="hero-photo-wrap">
+              <img src="apps/hamza_profile.png" alt="Hamza Shahid" class="hero-photo-img">
+            </div>
           </div>
 
-          <p class="hero-bio">
-            I'm a full-stack engineer. I build modern web platforms, iOS, and Android applications that scale.
+          <div>
+            <h1 class="hero-title">Hamza Shahid</h1>
+
+            <div class="hero-role-pill">
+              <span class="pulse-dot"></span>
+              <span>Senior Full-Stack &amp; Mobile Product Engineer</span>
+            </div>
+
+            <p class="hero-bio">
+              I'm a full-stack engineer. I build modern web platforms, iOS, and Android applications that scale.
+            </p>
+
+            <p class="hero-bio">
+              I help non-technical founders, startups, and companies turn napkin sketches into live software on the <strong>Apple App Store &amp; Google Play in 3 to 5 weeks</strong>. Transparent, moderate budget — zero agency bloat.
+            </p>
+
+            <!-- Social Links Row -->
+            <div class="hero-socials-row">
+              <a href="https://github.com/hamzah682" target="_blank" rel="noopener" class="hero-social-link">github ↗</a>
+              <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener" class="hero-social-link">linkedin ↗</a>
+              <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="hero-social-link" style="color: #25D366; font-weight: 600;">whatsapp ↗</a>
+              <a href="mailto:applyforhamza@gmail.com" class="hero-social-link">email ↗</a>
+              <a href="resume.pdf" target="_blank" rel="noopener" class="hero-social-link">resume.pdf ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── 2. Live Production Stats Bar ── -->
+        <section class="stats-strip" aria-label="Key Engineering Metrics">
+          <div class="stat-cell">
+            <div class="stat-value">12<span>+</span></div>
+            <div class="stat-label">Live Systems Shipped</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-value">100<span>k+</span></div>
+            <div class="stat-label">Active Users Served</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-value">3<span>-</span>5 wks</div>
+            <div class="stat-label">Average Time to Store</div>
+          </div>
+        </section>
+
+        <!-- ── Halftone Accent Divider ── -->
+        <div aria-hidden="true" class="halftone halftone-wide mask-fade-x" style="height: 1.5rem; width: 100%; opacity: 0.18; margin: 1rem 0;"></div>
+
+        <!-- ── 3. Interactive Spotlight 3D Card Deck (Bryl Lim Signature Feature) ── -->
+        <section class="content-section" style="padding-top: 1rem;">
+          <div class="section-head-bar">
+            <h2 class="section-num-tag">01 — spotlight fleet</h2>
+            <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">click cards to fan ↔</span>
+          </div>
+
+          <div class="deck-container" data-deck>
+            
+            <!-- Card 1 (Center): Sync Beat -->
+            <article class="deck-card is-center" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show Sync Beat Audio App">
+              <div class="deck-pill-row">
+                <span class="deck-badge-dark">Featured Mobile App</span>
+                <span class="deck-badge-outline">14 App Screens</span>
+              </div>
+              <div class="deck-app-header">
+                <img src="apps/musicshare_logo.webp" alt="Sync Beat logo" class="deck-app-icon">
+                <div>
+                  <h3 class="deck-app-name">Sync Beat — Audio Sharing</h3>
+                  <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Real-Time WebSocket Sync</span>
+                </div>
+              </div>
+              <p class="deck-app-desc">
+                Low-latency collaborative music and podcast listening app. Synchronizes streaming audio across multiple participant devices simultaneously.
+              </p>
+              <div class="deck-app-actions">
+                <button type="button" onclick="openGalleryModal('musicshare')" class="btn-inspect-pill">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span>Inspect 14 Screens</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 2 (Left): GeoFarming GIS -->
+            <article class="deck-card is-left" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show GeoFarming GIS App">
+              <div class="deck-pill-row">
+                <span class="deck-badge-dark">AgTech GIS Platform</span>
+                <span class="deck-badge-outline">15 Screens</span>
+              </div>
+              <div class="deck-app-header">
+                <img src="apps/geofarmingapp_logo.webp" alt="GeoFarming logo" class="deck-app-icon">
+                <div>
+                  <h3 class="deck-app-name">GeoFarming GIS Engine</h3>
+                  <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Offline Map Polygons</span>
+                </div>
+              </div>
+              <p class="deck-app-desc">
+                Precision agriculture mapping platform for livestock pasture division, GPS paddock boundaries, and rotational grazing algorithms.
+              </p>
+              <div class="deck-app-actions">
+                <button type="button" onclick="openGalleryModal('geofarming')" class="btn-inspect-pill">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span>Inspect 15 Screens</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 3 (Right): NoteSnap Academic -->
+            <article class="deck-card is-right" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show NoteSnap App">
+              <div class="deck-pill-row">
+                <span class="deck-badge-dark">EdTech Crowdsource</span>
+                <span class="deck-badge-outline">17 Screens</span>
+              </div>
+              <div class="deck-app-header">
+                <img src="apps/notessnap_logo.jpg" alt="NoteSnap logo" class="deck-app-icon">
+                <div>
+                  <h3 class="deck-app-name">NoteSnap Knowledge Base</h3>
+                  <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Academic Peer Sharing</span>
+                </div>
+              </div>
+              <p class="deck-app-desc">
+                Crowdsourced exam notes and textbook guide repository for university students with incentive reward points and cloud sync.
+              </p>
+              <div class="deck-app-actions">
+                <button type="button" onclick="openGalleryModal('notessnap')" class="btn-inspect-pill">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span>Inspect 17 Screens</span>
+                </button>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ── 4. Commercial Projects Fleet Preview ── -->
+        <section class="content-section">
+          <div class="section-head-bar">
+            <h2 class="section-num-tag">02 — commercial projects</h2>
+            <a href="#projects" class="section-action-link">all projects →</a>
+          </div>
+
+          <div class="projects-table">
+            
+            <!-- Project 1: The Co-Living Matrix -->
+            <div class="project-row">
+              <div class="project-row-left">
+                <div class="project-row-title">
+                  <span>The Co-Living Matrix</span>
+                  <span class="tag-badge">Web SaaS Platform</span>
+                </div>
+                <p class="project-row-desc">
+                  Algorithm-driven roommate matching &amp; verified co-living marketplace. Multi-factor personality quiz, instant chat, and identity verification.
+                </p>
+                <div class="project-row-tags">
+                  <span class="tag-badge">Vue.js</span>
+                  <span class="tag-badge">Node.js</span>
+                  <span class="tag-badge">Stripe Invoicing</span>
+                  <span class="tag-badge">PostgreSQL</span>
+                </div>
+              </div>
+              <div class="project-row-right">
+                <a href="https://thecolivingmatrix.com/" target="_blank" rel="noopener" class="btn-inspect-pill">
+                  <span>Visit Live Platform ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2: Repairing Shop Manager -->
+            <div class="project-row">
+              <div class="project-row-left">
+                <div class="project-row-title">
+                  <span>Repairing Shop Manager</span>
+                  <span class="tag-badge">Enterprise ERP</span>
+                </div>
+                <p class="project-row-desc">
+                  Complete multi-tenant business operating system for device repair centers. Ticket lifecycle, inventory depletion alerts, automated customer SMS notifications.
+                </p>
+                <div class="project-row-tags">
+                  <span class="tag-badge">Multi-Tenant DB</span>
+                  <span class="tag-badge">Twilio SMS</span>
+                  <span class="tag-badge">Thermal Printing</span>
+                  <span class="tag-badge">Analytics</span>
+                </div>
+              </div>
+              <div class="project-row-right">
+                <a href="https://repairingshopmanager.com/" target="_blank" rel="noopener" class="btn-inspect-pill">
+                  <span>Visit Live Platform ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3: Sync Beat Audio Sharing -->
+            <div class="project-row">
+              <div class="project-row-left">
+                <div class="project-row-title">
+                  <span>Sync Beat — Audio Sharing</span>
+                  <span class="tag-badge">Mobile App</span>
+                </div>
+                <p class="project-row-desc">
+                  Low-latency collaborative music and podcast listening app. Synchronizes streaming audio across multiple participant devices simultaneously.
+                </p>
+                <div class="project-row-tags">
+                  <span class="tag-badge">Flutter</span>
+                  <span class="tag-badge">WebSockets</span>
+                  <span class="tag-badge">Audio Sync</span>
+                  <span class="tag-badge">Cross-Platform</span>
+                </div>
+              </div>
+              <div class="project-row-right">
+                <button type="button" onclick="openGalleryModal('musicshare')" class="btn-inspect-pill">
+                  <span>Inspect 14 Screens</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Project 4: VideoSaver Utility Engine -->
+            <div class="project-row">
+              <div class="project-row-left">
+                <div class="project-row-title">
+                  <span>VideoSaver Utility Engine</span>
+                  <span class="tag-badge">Android Utility</span>
+                </div>
+                <p class="project-row-desc">
+                  High-throughput background download manager for Android devices. Parallel chunk downloading, pause/resume network recovery, and background gallery sync.
+                </p>
+                <div class="project-row-tags">
+                  <span class="tag-badge">Multi-Threading</span>
+                  <span class="tag-badge">Native Background Services</span>
+                  <span class="tag-badge">Google Play Live</span>
+                </div>
+              </div>
+              <div class="project-row-right">
+                <a href="https://play.google.com/store/apps/details?id=video.download.downloader.snap.tubex" target="_blank" rel="noopener" class="btn-inspect-pill">
+                  <span>Google Play Listing ↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <a href="#projects" class="subpage-cta-btn">View All 10 Projects &amp; Live Platforms →</a>
+          </div>
+        </section>
+
+        <!-- ── 5. Experience Timeline Preview ── -->
+        <section class="content-section">
+          <div class="section-head-bar">
+            <h2 class="section-num-tag">03 — experience history</h2>
+            <a href="#experience" class="section-action-link">full timeline →</a>
+          </div>
+
+          <div class="exp-table">
+            <div class="exp-row">
+              <span class="exp-year">2024–Now</span>
+              <span class="exp-role">Principal Engineer &amp; Founder</span>
+              <span class="exp-company">Soloship Studio</span>
+            </div>
+            <div class="exp-row">
+              <span class="exp-year">2022–2024</span>
+              <span class="exp-role">Senior Full-Stack &amp; Mobile Engineer</span>
+              <span class="exp-company">Venture Startups &amp; Clients</span>
+            </div>
+            <div class="exp-row">
+              <span class="exp-year">2020–2022</span>
+              <span class="exp-role">Full-Stack SaaS &amp; API Developer</span>
+              <span class="exp-company">Cloud Product Teams</span>
+            </div>
+            <div class="exp-row">
+              <span class="exp-year">2018–2020</span>
+              <span class="exp-role">Mobile Application Developer</span>
+              <span class="exp-company">Android &amp; Cross-Platform</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <a href="#experience" class="subpage-cta-btn">View Detailed Career Roles &amp; CV →</a>
+          </div>
+        </section>
+
+        <!-- ── 6. Tech Stack Preview ── -->
+        <section class="content-section">
+          <div class="section-head-bar">
+            <h2 class="section-num-tag">04 — engineering stack</h2>
+            <a href="#stack" class="section-action-link">view all tools →</a>
+          </div>
+
+          <div class="stack-chips-wrap">
+            <span class="stack-chip">Flutter</span>
+            <span class="stack-chip">React Native</span>
+            <span class="stack-chip">iOS (Swift)</span>
+            <span class="stack-chip">Android (Kotlin)</span>
+            <span class="stack-chip">Next.js</span>
+            <span class="stack-chip">React</span>
+            <span class="stack-chip">TypeScript</span>
+            <span class="stack-chip">Node.js</span>
+            <span class="stack-chip">Laravel</span>
+            <span class="stack-chip">PostgreSQL</span>
+            <span class="stack-chip">Supabase</span>
+            <span class="stack-chip">Firebase</span>
+            <span class="stack-chip">Stripe Payments</span>
+            <span class="stack-chip">WebSockets</span>
+            <span class="stack-chip">Docker</span>
+            <span class="stack-chip">Git / CI-CD</span>
+          </div>
+
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <a href="#stack" class="subpage-cta-btn">Explore Categorized Tooling Stack →</a>
+          </div>
+        </section>
+
+        <!-- ── 7. Founder Sprint CTA Block ── -->
+        <div style="margin: 2.5rem 0; padding: 2rem; border: 1px solid rgb(var(--g200)); border-radius: 18px; background: rgb(var(--g50) / 0.5); display: flex; flex-direction: column; gap: 1rem;">
+          <h3 class="font-pixel" style="font-size: 1.35rem; color: rgb(var(--ink));">Have an App or Platform to Build?</h3>
+          <p style="font-size: 14px; color: rgb(var(--g500)); line-height: 1.6; max-width: 580px;">
+            I help non-technical founders, operators, and startups ship live products to the Apple App Store, Google Play, and Web in <strong>3 to 5 weeks</strong> with transparent fixed sprint pricing.
           </p>
-
-          <p class="hero-bio">
-            I help non-technical founders, startups, and companies turn napkin sketches into live software on the <strong>Apple App Store &amp; Google Play in 3 to 5 weeks</strong>. Transparent, moderate budget — zero agency bloat.
-          </p>
-
-          <!-- Social Links Row -->
-          <div class="hero-socials-row">
-            <a href="https://github.com/hamzah682" target="_blank" rel="noopener" class="hero-social-link">github ↗</a>
-            <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener" class="hero-social-link">linkedin ↗</a>
-            <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="hero-social-link" style="color: #25D366; font-weight: 600;">whatsapp ↗</a>
-            <a href="mailto:hamzashahid682@gmail.com" class="hero-social-link">email ↗</a>
-            <a href="resume.pdf" target="_blank" rel="noopener" class="hero-social-link">resume.pdf ↗</a>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 0.5rem;">
+            <a href="#packages" class="package-btn" style="width: auto; padding: 9px 20px;">Explore Fixed Packages ↗</a>
+            <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="package-btn" style="width: auto; padding: 9px 20px; background: #25D366; color: #fff; border-color: #25D366;">WhatsApp Direct ↗</a>
+            <a href="mailto:applyforhamza@gmail.com" class="package-btn" style="width: auto; padding: 9px 20px;">Email applyforhamza@gmail.com ↗</a>
           </div>
         </div>
-      </section>
 
-      <!-- ── 2. Live Production Stats Bar ── -->
-      <section class="stats-strip" aria-label="Key Engineering Metrics">
-        <div class="stat-cell">
-          <div class="stat-value">12<span>+</span></div>
-          <div class="stat-label">Live Systems Shipped</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-value">100<span>k+</span></div>
-          <div class="stat-label">Active Users Served</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-value">3<span>-</span>5 wks</div>
-          <div class="stat-label">Average Time to Store</div>
-        </div>
-      </section>
+      </div>
 
-      <!-- ── Halftone Accent Divider ── -->
-      <div aria-hidden="true" class="halftone halftone-wide mask-fade-x" style="height: 1.5rem; width: 100%; opacity: 0.18; margin: 1rem 0;"></div>
-
-      <!-- ── 3. Interactive Spotlight 3D Card Deck (Bryl Lim Signature Feature) ── -->
-      <section class="content-section" style="padding-top: 1rem;">
-        <div class="section-head-bar">
-          <h2 class="section-num-tag">01 — spotlight fleet</h2>
-          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">click cards to fan ↔</span>
+      <!-- ════════════════════ PAGE VIEW 2: PROJECTS ════════════════════ -->
+      <div class="page-view" id="page-projects">
+        <a href="#home" class="subpage-back-btn">← home</a>
+        
+        <div class="page-head">
+          <h1 class="page-title">projects</h1>
+          <p class="page-desc">
+            Production mobile apps, enterprise SaaS platforms, and real-time systems designed, architected, and shipped for startups and business clients.
+          </p>
         </div>
 
-        <div class="deck-container" data-deck>
-          
-          <!-- Card 1 (Center): Sync Beat -->
-          <article class="deck-card is-center" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show Sync Beat Audio App">
-            <div class="deck-pill-row">
-              <span class="deck-badge-dark">Featured Mobile App</span>
-              <span class="deck-badge-outline">14 App Screens</span>
-            </div>
-            <div class="deck-app-header">
-              <img src="apps/musicshare_logo.webp" alt="Sync Beat logo" class="deck-app-icon">
-              <div>
-                <h3 class="deck-app-name">Sync Beat — Audio Sharing</h3>
-                <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Real-Time WebSocket Sync</span>
-              </div>
-            </div>
-            <p class="deck-app-desc">
-              Low-latency collaborative music and podcast listening app. Synchronizes streaming audio across multiple participant devices simultaneously.
-            </p>
-            <div class="deck-app-actions">
-              <button type="button" onclick="openGalleryModal('musicshare')" class="btn-inspect-pill">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <span>Inspect 14 Screens</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 2 (Left): GeoFarming GIS -->
-          <article class="deck-card is-left" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show GeoFarming GIS App">
-            <div class="deck-pill-row">
-              <span class="deck-badge-dark">AgTech GIS Platform</span>
-              <span class="deck-badge-outline">15 Screens</span>
-            </div>
-            <div class="deck-app-header">
-              <img src="apps/geofarmingapp_logo.webp" alt="GeoFarming logo" class="deck-app-icon">
-              <div>
-                <h3 class="deck-app-name">GeoFarming GIS Engine</h3>
-                <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Offline Map Polygons</span>
-              </div>
-            </div>
-            <p class="deck-app-desc">
-              Precision agriculture mapping platform for livestock pasture division, GPS paddock boundaries, and rotational grazing algorithms.
-            </p>
-            <div class="deck-app-actions">
-              <button type="button" onclick="openGalleryModal('geofarming')" class="btn-inspect-pill">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <span>Inspect 15 Screens</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 3 (Right): NoteSnap Academic -->
-          <article class="deck-card is-right" onclick="activateCard(this)" tabindex="0" role="button" aria-label="Show NoteSnap App">
-            <div class="deck-pill-row">
-              <span class="deck-badge-dark">EdTech Crowdsource</span>
-              <span class="deck-badge-outline">17 Screens</span>
-            </div>
-            <div class="deck-app-header">
-              <img src="apps/notessnap_logo.jpg" alt="NoteSnap logo" class="deck-app-icon">
-              <div>
-                <h3 class="deck-app-name">NoteSnap Knowledge Base</h3>
-                <span class="font-mono" style="font-size: 11px; color: rgb(var(--g500));">Academic Peer Sharing</span>
-              </div>
-            </div>
-            <p class="deck-app-desc">
-              Crowdsourced exam notes and textbook guide repository for university students with incentive reward points and cloud sync.
-            </p>
-            <div class="deck-app-actions">
-              <button type="button" onclick="openGalleryModal('notessnap')" class="btn-inspect-pill">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <span>Inspect 17 Screens</span>
-              </button>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ── 4. Commercial Projects Fleet (`#projects`) ── -->
-      <section id="projects" class="content-section">
-        <div class="section-head-bar">
-          <h2 class="section-num-tag">02 — commercial projects</h2>
-          <a href="https://play.google.com/store/apps/dev?id=7932722599774181122" target="_blank" rel="noopener" class="section-action-link">google play hub →</a>
+        <!-- Filter bar -->
+        <div class="cat-filter-bar">
+          <button type="button" class="cat-filter-btn active" onclick="filterProjects('all', this)">All (10)</button>
+          <button type="button" class="cat-filter-btn" onclick="filterProjects('mobile', this)">📱 Mobile Apps</button>
+          <button type="button" class="cat-filter-btn" onclick="filterProjects('saas', this)">💻 Web SaaS</button>
+          <button type="button" class="cat-filter-btn" onclick="filterProjects('realtime', this)">⚡ Real-Time &amp; GIS</button>
         </div>
 
         <div class="projects-table">
           
-          <!-- Project 1: The Co-Living Matrix -->
-          <div class="project-row">
+          <!-- Project 1: Sync Beat -->
+          <div class="project-row" data-category="mobile realtime">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>Sync Beat — Audio Sharing</span>
+                <span class="tag-badge">Mobile App</span>
+              </div>
+              <p class="project-row-desc">
+                Low-latency collaborative music and podcast listening app. Synchronizes streaming audio across multiple participant devices simultaneously with sub-50ms jitter.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">Flutter</span>
+                <span class="tag-badge">WebSockets</span>
+                <span class="tag-badge">Real-Time Audio Sync</span>
+                <span class="tag-badge">iOS &amp; Android</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <button type="button" onclick="openGalleryModal('musicshare')" class="btn-inspect-pill">
+                <span>Inspect 14 Screens</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2: GeoFarming GIS Engine -->
+          <div class="project-row" data-category="mobile realtime">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>GeoFarming GIS Engine</span>
+                <span class="tag-badge">AgTech GIS Platform</span>
+              </div>
+              <p class="project-row-desc">
+                Precision agriculture mapping platform for livestock pasture division, GPS paddock boundaries, and rotational grazing algorithms with offline tile caching.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">Flutter GIS</span>
+                <span class="tag-badge">Mapbox Offline</span>
+                <span class="tag-badge">GeoJSON Polygons</span>
+                <span class="tag-badge">SQLite Cache</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <button type="button" onclick="openGalleryModal('geofarming')" class="btn-inspect-pill">
+                <span>Inspect 15 Screens</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 3: NoteSnap Knowledge Base -->
+          <div class="project-row" data-category="mobile saas">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>NoteSnap Academic Platform</span>
+                <span class="tag-badge">EdTech Mobile App</span>
+              </div>
+              <p class="project-row-desc">
+                Crowdsourced exam notes and textbook guide repository for university students with incentive reward points, document scanning, and cloud sync.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">React Native</span>
+                <span class="tag-badge">Cloudinary OCR</span>
+                <span class="tag-badge">Firebase Firestore</span>
+                <span class="tag-badge">In-App Purchases</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <button type="button" onclick="openGalleryModal('notessnap')" class="btn-inspect-pill">
+                <span>Inspect 17 Screens</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 4: The Co-Living Matrix -->
+          <div class="project-row" data-category="saas">
             <div class="project-row-left">
               <div class="project-row-title">
                 <span>The Co-Living Matrix</span>
@@ -373,8 +661,8 @@
             </div>
           </div>
 
-          <!-- Project 2: Repairing Shop Manager -->
-          <div class="project-row">
+          <!-- Project 5: Repairing Shop Manager -->
+          <div class="project-row" data-category="saas">
             <div class="project-row-left">
               <div class="project-row-title">
                 <span>Repairing Shop Manager</span>
@@ -397,8 +685,8 @@
             </div>
           </div>
 
-          <!-- Project 3: VideoSaver Utility Engine -->
-          <div class="project-row">
+          <!-- Project 6: VideoSaver Utility Engine -->
+          <div class="project-row" data-category="mobile">
             <div class="project-row-left">
               <div class="project-row-title">
                 <span>VideoSaver Utility Engine</span>
@@ -420,8 +708,8 @@
             </div>
           </div>
 
-          <!-- Project 4: Social Video & Creator Escrow Hub -->
-          <div class="project-row">
+          <!-- Project 7: Social Video & Creator Escrow Hub -->
+          <div class="project-row" data-category="mobile realtime">
             <div class="project-row-left">
               <div class="project-row-title">
                 <span>Social Video &amp; Creator Escrow Hub</span>
@@ -443,8 +731,8 @@
             </div>
           </div>
 
-          <!-- Project 5: Ocean Nail & Spa Platform -->
-          <div class="project-row">
+          <!-- Project 8: Ocean Nail & Spa Platform -->
+          <div class="project-row" data-category="saas">
             <div class="project-row-left">
               <div class="project-row-title">
                 <span>Ocean Nail &amp; Spa Portal</span>
@@ -466,72 +754,307 @@
             </div>
           </div>
 
-        </div>
-      </section>
-
-      <!-- ── 5. Experience Timeline (`#experience`) ── -->
-      <section id="experience" class="content-section">
-        <div class="section-head-bar">
-          <h2 class="section-num-tag">03 — experience history</h2>
-          <a href="resume.pdf" target="_blank" rel="noopener" class="section-action-link">download resume →</a>
-        </div>
-
-        <div class="exp-table">
-          <div class="exp-row">
-            <span class="exp-year">2024–Now</span>
-            <span class="exp-role">Principal Engineer &amp; Founder</span>
-            <span class="exp-company">Soloship Studio</span>
+          <!-- Project 9: Soloship Studio Store -->
+          <div class="project-row" data-category="saas">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>Soloship Studio Store</span>
+                <span class="tag-badge">Studio Platform</span>
+              </div>
+              <p class="project-row-desc">
+                Product engineering studio portal with live sprint availability, instant scope estimator, and automated founder inquiry routing.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">Vanilla CSS</span>
+                <span class="tag-badge">Firebase Analytics</span>
+                <span class="tag-badge">Interactive HUD</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <a href="https://soloship.store" target="_blank" rel="noopener" class="btn-inspect-pill">
+                <span>Visit soloship.store ↗</span>
+              </a>
+            </div>
           </div>
-          <div class="exp-row">
-            <span class="exp-year">2022–2024</span>
-            <span class="exp-role">Senior Full-Stack &amp; Mobile Engineer</span>
-            <span class="exp-company">Venture Startups &amp; Clients</span>
+
+          <!-- Project 10: Real-Time Chat & Collab Engine -->
+          <div class="project-row" data-category="realtime saas">
+            <div class="project-row-left">
+              <div class="project-row-title">
+                <span>Real-Time Chat &amp; Collab Engine</span>
+                <span class="tag-badge">Real-Time Core</span>
+              </div>
+              <p class="project-row-desc">
+                Distributed WebSocket message broker with persistent presence, optimistic UI delivery, and end-to-end encrypted room messaging.
+              </p>
+              <div class="project-row-tags">
+                <span class="tag-badge">WebSockets</span>
+                <span class="tag-badge">Redis PubSub</span>
+                <span class="tag-badge">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="project-row-right">
+              <button type="button" onclick="openAsk()" class="btn-inspect-pill">
+                <span>Ask Engine Details ↗</span>
+              </button>
+            </div>
           </div>
-          <div class="exp-row">
-            <span class="exp-year">2020–2022</span>
-            <span class="exp-role">Full-Stack SaaS &amp; API Developer</span>
-            <span class="exp-company">Cloud Product Teams</span>
+
+        </div>
+      </div>
+
+      <!-- ════════════════════ PAGE VIEW 3: EXPERIENCE ════════════════════ -->
+      <div class="page-view" id="page-experience">
+        <a href="#home" class="subpage-back-btn">← home</a>
+        
+        <div class="page-head">
+          <h1 class="page-title">experience</h1>
+          <p class="page-desc">
+            A track record of engineering leadership, 0-to-1 product launches, and building scalable production software.
+          </p>
+        </div>
+
+        <div class="exp-detail-list">
+          
+          <!-- Role 1 -->
+          <div class="exp-detail-card">
+            <div class="exp-detail-header">
+              <span class="exp-detail-role">Principal Engineer &amp; Founder</span>
+              <span class="exp-detail-company">Soloship Studio · 2024–Now</span>
+            </div>
+            <div class="exp-detail-body">
+              <p>Direct-to-founder product engineering studio specializing in shipping cross-platform mobile apps and web platforms in 3 to 5 weeks.</p>
+              <ul>
+                <li>Architected and launched 12+ production software systems across Flutter, React Native, Next.js, and Supabase.</li>
+                <li>Achieved 99.9% uptime across client deployments and an average App Store approval velocity of 3.4 weeks with zero guideline rejections.</li>
+                <li>Built automated CI/CD deployment pipelines using GitHub Actions and Fastlane for zero-downtime releases.</li>
+              </ul>
+            </div>
           </div>
-          <div class="exp-row">
-            <span class="exp-year">2018–2020</span>
-            <span class="exp-role">Mobile Application Developer</span>
-            <span class="exp-company">Android &amp; Cross-Platform</span>
+
+          <!-- Role 2 -->
+          <div class="exp-detail-card">
+            <div class="exp-detail-header">
+              <span class="exp-detail-role">Senior Full-Stack &amp; Mobile Engineer</span>
+              <span class="exp-detail-company">Venture Startups &amp; Clients · 2022–2024</span>
+            </div>
+            <div class="exp-detail-body">
+              <p>Led mobile app and frontend web development for early-stage and seed-funded startups across fintech, edtech, and consumer media.</p>
+              <ul>
+                <li>Engineered core consumer apps serving over 100k+ active users across iOS and Android.</li>
+                <li>Implemented real-time WebSocket state machines, local SQLite caching, and optimistic UI updates for sub-second perceived latency.</li>
+                <li>Integrated Stripe Billing, Apple In-App Purchases, and Google Play Subscriptions handling six-figure transaction volumes.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="exp-detail-card">
+            <div class="exp-detail-header">
+              <span class="exp-detail-role">Full-Stack SaaS &amp; API Developer</span>
+              <span class="exp-detail-company">Cloud Product Teams · 2020–2022</span>
+            </div>
+            <div class="exp-detail-body">
+              <p>Designed and scaled backend microservices, REST/GraphQL APIs, and enterprise customer management dashboards.</p>
+              <ul>
+                <li>Engineered high-throughput APIs using Node.js, Express, and Laravel connected to relational PostgreSQL databases.</li>
+                <li>Implemented multi-tenant schema partitioning, row-level security, and connection pooling for enterprise clients.</li>
+                <li>Automated customer communication pipelines using Twilio SMS, SendGrid, and background queue workers (BullMQ / Redis).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 4 -->
+          <div class="exp-detail-card">
+            <div class="exp-detail-header">
+              <span class="exp-detail-role">Mobile Application Developer</span>
+              <span class="exp-detail-company">Android &amp; Cross-Platform · 2018–2020</span>
+            </div>
+            <div class="exp-detail-body">
+              <p>Developed native Android (Kotlin) and cross-platform mobile applications with deep hardware integration.</p>
+              <ul>
+                <li>Optimized Android UI rendering thread, eliminated memory leaks, and managed background battery-efficient download workers.</li>
+                <li>Integrated bluetooth thermal printing, hardware barcode scanners, and camera OCR processing for logistics clients.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Resume Download Box -->
+        <div style="margin-top: 2.5rem; padding: 1.5rem; border: 1px dashed rgb(var(--g300)); border-radius: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; background: rgb(var(--g50) / 0.5);">
+          <div>
+            <h4 class="font-pixel" style="font-size: 15px; color: rgb(var(--ink));">Need a complete PDF resume for review?</h4>
+            <p style="font-size: 13px; color: rgb(var(--g500)); margin-top: 2px;">Includes full employment history, education, and technical references.</p>
+          </div>
+          <a href="resume.pdf" target="_blank" rel="noopener" class="subpage-cta-btn">Download Resume.pdf ↗</a>
+        </div>
+
+      </div>
+
+      <!-- ════════════════════ PAGE VIEW 4: TECH STACK ════════════════════ -->
+      <div class="page-view" id="page-stack">
+        <a href="#home" class="subpage-back-btn">← home</a>
+        
+        <div class="page-head">
+          <h1 class="page-title">stack</h1>
+          <p class="page-desc">
+            Battle-tested tools, languages, and infrastructure I leverage to ship fast, reliable, and scalable products.
+          </p>
+        </div>
+
+        <!-- 1. Mobile Development -->
+        <div class="stack-category-block">
+          <h2 class="stack-category-title">
+            <span>📱 Mobile Engineering (iOS &amp; Android)</span>
+          </h2>
+          <div class="stack-chips-wrap" style="margin-top: 0;">
+            <span class="stack-chip">Flutter</span>
+            <span class="stack-chip">Dart</span>
+            <span class="stack-chip">React Native</span>
+            <span class="stack-chip">iOS (Swift / SwiftUI)</span>
+            <span class="stack-chip">Android (Kotlin)</span>
+            <span class="stack-chip">App Store Connect</span>
+            <span class="stack-chip">Google Play Console</span>
+            <span class="stack-chip">Fastlane</span>
+            <span class="stack-chip">In-App Purchases (StoreKit)</span>
           </div>
         </div>
-      </section>
 
-      <!-- ── 6. Tech Stack (`#stack`) ── -->
-      <section id="stack" class="content-section">
-        <div class="section-head-bar">
-          <h2 class="section-num-tag">04 — engineering stack</h2>
-          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">battle-tested tools</span>
+        <!-- 2. Frontend & Web -->
+        <div class="stack-category-block">
+          <h2 class="stack-category-title">
+            <span>💻 Frontend &amp; Web Platforms</span>
+          </h2>
+          <div class="stack-chips-wrap" style="margin-top: 0;">
+            <span class="stack-chip">Next.js</span>
+            <span class="stack-chip">React</span>
+            <span class="stack-chip">Vue.js</span>
+            <span class="stack-chip">TypeScript</span>
+            <span class="stack-chip">JavaScript (ESNext)</span>
+            <span class="stack-chip">Tailwind CSS</span>
+            <span class="stack-chip">Modern Vanilla CSS</span>
+            <span class="stack-chip">Web Audio API</span>
+            <span class="stack-chip">HTML5 Canvas</span>
+          </div>
         </div>
 
-        <div class="stack-chips-wrap">
-          <span class="stack-chip">Flutter</span>
-          <span class="stack-chip">React Native</span>
-          <span class="stack-chip">iOS (Swift)</span>
-          <span class="stack-chip">Android (Kotlin)</span>
-          <span class="stack-chip">Next.js</span>
-          <span class="stack-chip">React</span>
-          <span class="stack-chip">TypeScript</span>
-          <span class="stack-chip">Node.js</span>
-          <span class="stack-chip">Laravel</span>
-          <span class="stack-chip">PostgreSQL</span>
-          <span class="stack-chip">Supabase</span>
-          <span class="stack-chip">Firebase</span>
-          <span class="stack-chip">Stripe Payments</span>
-          <span class="stack-chip">WebSockets</span>
-          <span class="stack-chip">Docker</span>
-          <span class="stack-chip">Git / CI-CD</span>
+        <!-- 3. Backend & Cloud APIs -->
+        <div class="stack-category-block">
+          <h2 class="stack-category-title">
+            <span>☁️ Backend, APIs &amp; Real-Time</span>
+          </h2>
+          <div class="stack-chips-wrap" style="margin-top: 0;">
+            <span class="stack-chip">Node.js</span>
+            <span class="stack-chip">Express.js</span>
+            <span class="stack-chip">Laravel (PHP)</span>
+            <span class="stack-chip">Python</span>
+            <span class="stack-chip">RESTful APIs</span>
+            <span class="stack-chip">GraphQL</span>
+            <span class="stack-chip">WebSockets (Socket.io)</span>
+            <span class="stack-chip">BullMQ Background Jobs</span>
+          </div>
         </div>
-      </section>
 
-      <!-- ── 7. Transparent Packages & Interactive Estimator (`#packages`) ── -->
-      <section id="packages" class="content-section">
-        <div class="section-head-bar">
-          <h2 class="section-num-tag">05 — packages &amp; estimator</h2>
-          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">transparent budget</span>
+        <!-- 4. Databases & Storage -->
+        <div class="stack-category-block">
+          <h2 class="stack-category-title">
+            <span>🗄️ Databases &amp; Caching</span>
+          </h2>
+          <div class="stack-chips-wrap" style="margin-top: 0;">
+            <span class="stack-chip">PostgreSQL</span>
+            <span class="stack-chip">Supabase</span>
+            <span class="stack-chip">Firebase Firestore</span>
+            <span class="stack-chip">MySQL</span>
+            <span class="stack-chip">Redis Caching</span>
+            <span class="stack-chip">SQLite Offline</span>
+            <span class="stack-chip">Multi-Tenant Partitioning</span>
+          </div>
+        </div>
+
+        <!-- 5. Payments, Cloud & DevOps -->
+        <div class="stack-category-block">
+          <h2 class="stack-category-title">
+            <span>💳 Payments, DevOps &amp; Cloud</span>
+          </h2>
+          <div class="stack-chips-wrap" style="margin-top: 0;">
+            <span class="stack-chip">Stripe Billing &amp; Invoicing</span>
+            <span class="stack-chip">Docker</span>
+            <span class="stack-chip">Git / GitHub Actions CI-CD</span>
+            <span class="stack-chip">Twilio SMS</span>
+            <span class="stack-chip">SendGrid</span>
+            <span class="stack-chip">AWS (EC2, S3, CloudFront)</span>
+            <span class="stack-chip">Google Cloud Platform</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ════════════════════ PAGE VIEW 5: WHAT I BUILD (SERVICES) ════════════════════ -->
+      <div class="page-view" id="page-services">
+        <a href="#home" class="subpage-back-btn">← home</a>
+        
+        <div class="page-head">
+          <h1 class="page-title">what i build</h1>
+          <p class="page-desc">
+            From napkin sketch to live App Store &amp; Google Play launch in 3 to 5 weeks. High-velocity engineering built specifically for non-technical founders and agile teams.
+          </p>
+        </div>
+
+        <!-- 4-Week Velocity Blueprint -->
+        <h2 class="font-pixel" style="font-size: 1.15rem; color: rgb(var(--ink)); margin-top: 1rem;">The 4-Week Velocity Blueprint:</h2>
+        
+        <div class="blueprint-grid">
+          
+          <div class="blueprint-card">
+            <span class="blueprint-step">Week 01 · Architecture</span>
+            <h3 class="blueprint-title">Wireframe &amp; Database Blueprint</h3>
+            <p class="blueprint-desc">
+              We translate your vision into clickable interactive Figma wireframes, relational database schemas, and API contracts. Zero guesswork.
+            </p>
+          </div>
+
+          <div class="blueprint-card">
+            <span class="blueprint-step">Week 02 · Core Engineering</span>
+            <h3 class="blueprint-title">Cross-Platform App &amp; Backend</h3>
+            <p class="blueprint-desc">
+              Building the core mobile user journeys in Flutter or React Native, connected to real-time Supabase or PostgreSQL APIs.
+            </p>
+          </div>
+
+          <div class="blueprint-card">
+            <span class="blueprint-step">Week 03 · Monetization</span>
+            <h3 class="blueprint-title">Payments, Auth &amp; Real-Time</h3>
+            <p class="blueprint-desc">
+              Integrating Stripe subscriptions, Apple/Google In-App Purchases, push notifications, and end-to-end security audits.
+            </p>
+          </div>
+
+          <div class="blueprint-card">
+            <span class="blueprint-step">Week 04 · Store Launch</span>
+            <h3 class="blueprint-title">Store Approval &amp; Production Handover</h3>
+            <p class="blueprint-desc">
+              Managing Apple App Store and Google Play submissions, compliance questionnaires, demo video approvals, and 100% IP code handover.
+            </p>
+          </div>
+
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <a href="#packages" class="subpage-cta-btn">View Sprint Packages &amp; Pricing →</a>
+        </div>
+
+      </div>
+
+      <!-- ════════════════════ PAGE VIEW 6: PACKAGES & ESTIMATOR ════════════════════ -->
+      <div class="page-view" id="page-packages">
+        <a href="#home" class="subpage-back-btn">← home</a>
+        
+        <div class="page-head">
+          <h1 class="page-title">packages &amp; estimator</h1>
+          <p class="page-desc">
+            Predictable fixed pricing, transparent milestones, and an interactive scope calculator to estimate your exact delivery timeline and investment.
+          </p>
         </div>
 
         <div class="packages-grid">
@@ -585,7 +1108,7 @@
         </div>
 
         <!-- Interactive Scope Chips Estimator Box -->
-        <div style="margin-top: 2rem; border: 1px solid rgb(var(--g200)); border-radius: 16px; padding: 1.5rem; background: rgb(var(--g50) / 0.5);">
+        <div style="margin-top: 2.5rem; border: 1px solid rgb(var(--g200)); border-radius: 16px; padding: 1.5rem; background: rgb(var(--g50) / 0.5);">
           <div style="margin-bottom: 1rem;">
             <h3 class="font-pixel" style="font-size: 16px; color: rgb(var(--ink));">Configure Your Scope &amp; Budget:</h3>
             <p style="font-size: 13px; color: rgb(var(--g500));">Select required modules to calculate estimated delivery time and budget:</p>
@@ -611,13 +1134,18 @@
             </a>
           </div>
         </div>
-      </section>
 
-      <!-- ── 8. Founder Reviews & Recommendations (`#recommendations`) ── -->
-      <section id="recommendations" class="content-section">
-        <div class="section-head-bar">
-          <h2 class="section-num-tag">06 — founder recommendations</h2>
-          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">client feedback</span>
+      </div>
+
+      <!-- ════════════════════ PAGE VIEW 7: FOUNDER REVIEWS ════════════════════ -->
+      <div class="page-view" id="page-recommendations">
+        <a href="#home" class="subpage-back-btn">← home</a>
+        
+        <div class="page-head">
+          <h1 class="page-title">founder reviews</h1>
+          <p class="page-desc">
+            What founders, CTOs, and product operators say about shipping software with Hamza.
+          </p>
         </div>
 
         <div class="rec-list">
@@ -638,14 +1166,32 @@
               <strong>Operations Director</strong> · Repairing Shop Manager
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- ── 9. FAQ Accordion (`#faq`) ── -->
-      <section id="faq" class="content-section">
-        <div class="section-head-bar">
-          <h2 class="section-num-tag">07 — frequently asked questions</h2>
-          <span class="font-mono" style="font-size: 11px; color: rgb(var(--g400));">clarity &amp; terms</span>
+          <div class="rec-card">
+            <p class="rec-quote">
+              "Hamza is the rare engineer who genuinely understands product UX and business deadlines. He delivered our mobile audio syncing app on schedule and got it approved on the App Store on our first submission."
+            </p>
+            <div class="rec-author">
+              <strong>Product Lead</strong> · Sync Beat Audio
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="subpage-cta-btn">Connect with Hamza on WhatsApp →</a>
+        </div>
+
+      </div>
+
+      <!-- ════════════════════ PAGE VIEW 8: FAQ ════════════════════ -->
+      <div class="page-view" id="page-faq">
+        <a href="#home" class="subpage-back-btn">← home</a>
+        
+        <div class="page-head">
+          <h1 class="page-title">frequently asked questions</h1>
+          <p class="page-desc">
+            Everything you need to know about working together, communication, timelines, and codebase handover.
+          </p>
         </div>
 
         <div class="faq-wrap">
@@ -697,9 +1243,14 @@
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ── 10. Site Footer ── -->
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <a href="mailto:applyforhamza@gmail.com" class="subpage-cta-btn">Ask a Question via Email →</a>
+        </div>
+
+      </div>
+
+      <!-- ── Site Footer ── -->
       <footer class="site-footer">
         <div>
           <span>&copy; 2026 Hamza Shahid. All rights reserved.</span>
@@ -707,7 +1258,7 @@
         <div style="display: flex; gap: 14px; align-items: center;">
           <a href="https://wa.me/923456575495" target="_blank" rel="noopener" class="hero-social-link">WhatsApp ↗</a>
           <a href="https://www.linkedin.com/in/-hamzashahid/" target="_blank" rel="noopener" class="hero-social-link">LinkedIn ↗</a>
-          <a href="mailto:hamzashahid682@gmail.com" class="hero-social-link">Email ↗</a>
+          <a href="mailto:applyforhamza@gmail.com" class="hero-social-link">Email ↗</a>
         </div>
       </footer>
 
