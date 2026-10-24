@@ -427,6 +427,14 @@ function openGalleryModal(projectKey, initialIndex = 0) {
   if (modal) modal.classList.add('is-active');
   document.documentElement.style.overflow = 'hidden';
   window.siteAudio?.play('tick');
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'inspect_gallery', {
+      event_category: 'engagement',
+      project_key: projectKey,
+      gallery_title: gallery.title
+    });
+  }
 }
 
 function closeGalleryModal() {
@@ -613,6 +621,15 @@ function navigateToPage(targetPage, updateHash = true) {
     }
   }
 
+  // Send virtual page_view to Firebase Analytics
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: pageId === 'home' ? '/' : `/${pageId}`
+    });
+  }
+
   window.siteAudio?.play('tick');
   closeMobileNav();
 }
@@ -670,4 +687,35 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (pathPage && VALID_PAGES.includes(pathPage)) {
     navigateToPage(pathPage, false);
   }
+
+  // Global Conversion Tracking (WhatsApp, Email, Resume)
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    if (href.includes('wa.me')) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_whatsapp', {
+          event_category: 'conversion',
+          channel: 'whatsapp',
+          link_url: href
+        });
+      }
+    } else if (href.startsWith('mailto:')) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_email', {
+          event_category: 'conversion',
+          channel: 'email',
+          email_address: href.replace('mailto:', '')
+        });
+      }
+    } else if (href.includes('resume.pdf')) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'download_resume', {
+          event_category: 'engagement',
+          file_name: 'resume.pdf'
+        });
+      }
+    }
+  });
 });
