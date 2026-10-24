@@ -200,21 +200,22 @@ html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *
 }
 
 .nav-avatar {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 8%;
-  border: 1.5px solid rgb(var(--g300));
+  border: 2px solid rgb(var(--ink));
   background-color: rgb(var(--g100));
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
   flex-shrink: 0;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .sidebar-brand:hover .nav-avatar {
   transform: scale(1.08);
   border-color: rgb(var(--ink));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .sidebar-nav-group {
